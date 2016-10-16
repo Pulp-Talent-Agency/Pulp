@@ -1,4 +1,4 @@
-node_modules
-public
-.ds_store
+/node_modules
+/public
+.DS_Store
 /server/config.js
