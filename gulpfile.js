@@ -28,7 +28,7 @@ var paths = {
 		'./src/**/*.js'
 	],
   sassSource: [
-		'./src/styles/main.scss'
+		'./src/styles/all.scss'
 	],
 	htmlSource: [
 		'./src/index.html',
