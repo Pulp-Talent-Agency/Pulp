@@ -23,9 +23,17 @@ var path = require('path');
 \*------------------------------------*/
 
 var paths = {
-  jsSource: ['./src/app.js', './src/angulargrid.js', './src/mainCtrl.js', 'src/**/*.js'],
-  sassSource: ['./src/styles/all.scss'],
-	htmlSource: ['./src/index.html', 'src/**/*.html']
+  jsSource: [
+		'./src/index.js',
+		'./src/**/*.js'
+	],
+  sassSource: [
+		'./src/styles/main.scss'
+	],
+	htmlSource: [
+		'./src/index.html',
+		'src/**/*.html'
+	]
 };
 
 
@@ -37,35 +45,36 @@ var paths = {
 \*------------------------------------*/
 
 gulp.task('js', function() {
-  return gulp.src(paths.jsSource)
-  .pipe(sourcemaps.init())
-  .pipe(babel()) //Uncomment if using ES6
-  .pipe(concat('bundle.js'))
-	// .pipe(annotate())
-  // .pipe(uglify()) //Uncomment when code is production ready
-  .pipe(gulp.dest('./public'));
+  return gulp.src( paths.jsSource )
+  .pipe( sourcemaps.init() )
+  .pipe( babel() ) //Uncomment if using ES6
+  .pipe( concat( 'bundle.js' ) )
+	.pipe( annotate() )
+  // .pipe( uglify() ) //Uncomment when code is production ready
+	.pipe( sourcemaps.write('.') )
+  .pipe( gulp.dest('./public') );
 });
 
-gulp.task('start', function () {
-  nodemon({
+gulp.task( 'start', function () {
+  nodemon( {
     script: './server/server.js',
 	  ext: 'js html scss',
-	  env: { 'NODE_ENV': 'development' },
-  	ignore: ['public/*.*'],
-  	tasks: function(files) {
+	  env: { 'NODE_ENV': 'src' },
+  	ignore: [ 'public/*.*' ],
+  	tasks: function( files ) {
       const tasks = [];
-      files.forEach(function(file) {
-        if (path.extname(file) === '.js' && !tasks.includes('.js')) {
-          tasks.push('js')
+      files.forEach(function( file ) {
+        if ( path.extname( file ) === '.js' && !tasks.includes( '.js' ) ) {
+          tasks.push( 'js' )
         }
-        if (path.extname(file) === '.scss' && !tasks.includes('.scss')) {
-          tasks.push('sass')
+        if ( path.extname( file ) === '.scss' && !tasks.includes( '.scss' ) ) {
+          tasks.push( 'sass' )
         }
-      })
+      } )
       return tasks;
     }
-  })
-});
+  } )
+} );
 
 gulp.task('sass', function () {
   return gulp.src(paths.sassSource)
@@ -87,21 +96,7 @@ gulp.task('html', function() {
 
 
 /*------------------------------------*\
-  #WATCH TASKS
-\*------------------------------------*/
-
-gulp.task('watch', function() {
-  // gulp.watch(paths.jsSource, ['js']);
-  // gulp.watch(paths.sassSource, ['scss']);
-  // gulp.watch(paths.htmlSource, ['html']);
-});
-
-
-
-
-
-/*------------------------------------*\
   #RUN DEFAULT TASKS
 \*------------------------------------*/
 
-gulp.task('default', ['js', 'sass', 'html', 'watch', 'start']);
+gulp.task('default', ['js', 'sass', 'html', 'start']);
