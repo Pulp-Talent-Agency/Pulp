@@ -2,7 +2,7 @@
 
 
 /*------------------------------------*\
-  #DEPENDENCIES
+  #VENDOR DEPENDENCIES
 \*------------------------------------*/
 
 var express = require( `express` );
@@ -10,6 +10,15 @@ var mongoose = require( `mongoose` );
 var bodyParser = require( `body-parser` );
 var passport = require( `passport` );
 var session = require( `express-session` );
+
+
+
+
+
+/*------------------------------------*\
+  #MY DEPENDENCIES
+\*------------------------------------*/
+
 var config = require( `./config.js` );
 
 
@@ -29,14 +38,6 @@ app.use( bodyParser.urlencoded( { limit: '50mb', extended: true } ) );
 app.use( session( config.session ) );
 app.use( passport.initialize() );
 app.use( passport.session() );
-
-
-
-
-
-/*------------------------------------*\
-  #AUTH SETUP
-\*------------------------------------*/
 
 
 
