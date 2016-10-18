@@ -1,0 +1,25 @@
+<div class="hamburger" ng-click="sideNavCtrl.toggleSideNav()">
+	<div class="bar-container">
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+	</div>
+</div>
+<nav class="sidenav">
+	<ul>
+		<li class="menuitem" ng-repeat="menuItem in sideNavCtrl.menuItems">
+			<p ng-click="menuItem.showSubMenu = !menuItem.showSubMenu">{{ menuItem.title }}</p>
+			<ul class="sub-menu" ng-show="menuItem.showSubMenu">
+				<li class="sub-menuitem" ng-repeat="talent in menuItem.talent">
+					<p>{{ talent.name }}</p>
+				</li>
+			</ul>
+		</li>
+		<li class="menuitem" ui-sref="about">
+			<p>ABOUT</p>
+		</li>
+		<li class="menuitem" ui-sref="contact">
+			<p>CONTACT</p>
+		</li>
+	</ul>
+</nav>

@@ -2,14 +2,27 @@
 <html ng-app="Pulp">
 	<head>
 		<meta charset="utf-8">
-		<title>Pulp Agency</title>
+		<title>PULP AGENCY</title>
+
+		<!-- Mobile Specific Metas ––––––––––––––––––––––––––––––––––––––––––––––-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link rel="stylesheet" href="./bundle.css">
 	</head>
 	<body>
+		<header ui-sref="home">
+			<h1>PULP TALENT AGENCY</h1>
+		</header>
+
+		<side-nav></side-nav>
 
 		<ui-view></ui-view>
 
-		<!-- Angular 1.5.8 -->
+
+		<!-- jQuery v3.1.1 -->
+		<script src="./jquery/dist/jquery.js" charset="utf-8"></script>
+
+		<!-- Angular v1.5.8 -->
 		<script src="./angular/angular.js" charset="utf-8"></script>
 
 		<!-- Angular-UI-Router v0.3.1 -->
