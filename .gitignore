@@ -2,3 +2,4 @@
 /public
 .DS_Store
 /server/config.js
+/.vscode
