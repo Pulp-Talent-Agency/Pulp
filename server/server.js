@@ -1,15 +1,14 @@
 'use strict';
 
-
 /*------------------------------------*\
   #VENDOR DEPENDENCIES
 \*------------------------------------*/
 
-var express = require( `express` );
-var mongoose = require( `mongoose` );
-var bodyParser = require( `body-parser` );
-var passport = require( `passport` );
-var session = require( `express-session` );
+const express = require( `express` );
+const mongoose = require( `mongoose` );
+const bodyParser = require( `body-parser` );
+const passport = require( `passport` );
+const session = require( `express-session` );
 
 
 
@@ -19,7 +18,7 @@ var session = require( `express-session` );
   #MY DEPENDENCIES
 \*------------------------------------*/
 
-var config = require( `./config.js` );
+const config = require( `./config.js` );
 
 
 
@@ -29,7 +28,7 @@ var config = require( `./config.js` );
   #APP
 \*------------------------------------*/
 
-var app = express();
+const app = express();
 
 app.use( express.static( `./public` ) ) ;
 app.use( express.static( `${__dirname}/../node_modules` ) );
@@ -52,6 +51,7 @@ app.use( passport.session() );
 passport.serializeUser( function( user, done ) {
   done( null, user._id );
 } );
+
 passport.deserializeUser( function( _id, done ) {
   User.findById( _id, function( err, user ) {
     done( err, user );
@@ -66,11 +66,20 @@ passport.deserializeUser( function( _id, done ) {
   #DATABASE
 \*------------------------------------*/
 
-mongoose.connect( config.mongo.localmongoURI, function ( err, res ) {
+mongoose.connect( config.mongo.mongoURI, function ( err, res ) {
 	if ( err ) console.log( 'Error connecting to database' )
 	else console.log( 'Yente database now connected!' )
 } );
 
+
+
+
+
+/*------------------------------------*\
+  #ROUTES
+\*------------------------------------*/
+
+require( './masterRoutes.js' )( app );
 
 
 
