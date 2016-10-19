@@ -40,7 +40,7 @@ var paths = {
 			'./src/assets/icons/1476860445_Instagram_Solid.svg',
 			'./src/assets/icons/1476860449_Facebook_Solid.svg',
 			'./src/assets/icons/1476860455_Google_Plus_Solid.svg'
-		]
+		],
 		fonts: [
 			'./src/assets/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.eot',
 			'./src/assets/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.woff2',
