@@ -36,17 +36,22 @@ var paths = {
 		'src/**/*.html'
 	],
 	assets: {
+		icons: [
+			'./src/assets/icons/1476860445_Instagram_Solid.svg',
+			'./src/assets/icons/1476860449_Facebook_Solid.svg',
+			'./src/assets/icons/1476860455_Google_Plus_Solid.svg'
+		]
 		fonts: [
-			'./src/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.eot',
-			'./src/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.woff2',
-			'./src/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.woff',
-			'./src/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.ttf',
-			'./src/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.svg',
-			'./src/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.eot',
-			'./src/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.woff2',
-			'./src/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.woff',
-			'./src/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.ttf',
-			'./src/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.svg'
+			'./src/assets/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.eot',
+			'./src/assets/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.woff2',
+			'./src/assets/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.woff',
+			'./src/assets/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.ttf',
+			'./src/assets/fonts/Engravers/Regular/7d5c1a61a53b1bf1d7893da5309ad1c1.svg',
+			'./src/assets/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.eot',
+			'./src/assets/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.woff2',
+			'./src/assets/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.woff',
+			'./src/assets/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.ttf',
+			'./src/assets/fonts/Engravers/Bold/c1366ca2e69f54f37349d7c538f17e82.svg'
 		]
 	}
 };
@@ -106,7 +111,12 @@ gulp.task( 'html', function() {
 		.pipe( gulp.dest( './public' ) );
 } );
 
-gulp.task( 'move', function() {
+gulp.task( 'moveIcons', function() {
+	return gulp.src( paths.assets.icons )
+		.pipe( gulp.dest( './public/assets/icons' ) );
+} );
+
+gulp.task( 'moveFonts', function() {
 	return gulp.src( paths.assets.fonts )
 		.pipe( gulp.dest( './public/assets/fonts' ) );
 } );
@@ -123,4 +133,4 @@ gulp.task( 'watch', function () {
   #RUN DEFAULT TASKS
 \*------------------------------------*/
 
-gulp.task( 'default', [ 'js', 'sass', 'html', 'move', 'watch', 'start' ] );
+gulp.task( 'default', [ 'js', 'sass', 'html', 'moveFonts', 'watch', 'start' ] );
