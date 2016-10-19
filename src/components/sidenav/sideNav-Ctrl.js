@@ -2,6 +2,10 @@
 
 	angular.module( 'PulpComponents' )
 		.controller( 'sideNavCtrl', sideNavCtrl );
+	
+	sideNavCtrl.$inject = [
+		'talentService'
+	];
 
 
 
@@ -14,15 +18,13 @@
 	function sideNavCtrl( talentService ) {
 		var vm = this;
 		
-
-		talentService.getAllTalent()
+		talentService.getMenuItems()
 			.then( function( menuItems ) {
 				vm.menuItems = menuItems;
 			} );
 
 		vm.toggleSideNav = toggleSideNav;
-
-
+		vm.closeOthers = closeOthers;
 
 
 
@@ -35,15 +37,22 @@
 			var $sideNav = $( '.sidenav' );
 
 			if( $sideNav.css( 'left' ) === '0px' ) {
-				$sideNav.animate( { left: '-50rem' }, 200, 'swing' );
+				$sideNav.animate( { left: '-100rem' }, 200, 'swing' );
 			}
 			else {
-				$sideNav.animate( { left: '0' }, 200, 'swing' )
+				$sideNav.animate( { left: '0' }, 200, 'swing' );
+			}
+			closeOthers();
+		}
+
+		function closeOthers() {
+			for( var i = 0; i < vm.menuItems.length; i++ ) {
+				if( vm.menuItems[ i ].open ) {
+					vm.menuItems[ i ].open = false
+				}
 			}
 		}
 
 	}
-
-	sideNavCtrl.$inject = [ 'talentService' ];
 
 } )();

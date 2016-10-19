@@ -1,24 +1,20 @@
-<div class="hamburger" ng-click="sideNavCtrl.toggleSideNav()">
-	<div class="bar-container">
-		<div class="bar"></div>
-		<div class="bar"></div>
-		<div class="bar"></div>
-	</div>
+<div class="hamburger" ng-click="snCtrl.toggleSideNav()">
+	<p>☰</p>
 </div>
 <nav class="sidenav">
 	<ul>
-		<li class="menuitem" ng-repeat="menuItem in sideNavCtrl.menuItems">
-			<p ng-click="menuItem.showSubMenu = !menuItem.showSubMenu">{{ menuItem.title }}</p>
-			<ul class="sub-menu" ng-show="menuItem.showSubMenu">
+		<li class="menuitem" ng-repeat="menuItem in snCtrl.menuItems">
+			<p ng-click="snCtrl.closeOthers(); menuItem.open = !menuItem.open">{{ menuItem.title }}</p>
+			<ul class="sub-menu" ng-show="menuItem.open">
 				<li class="sub-menuitem" ng-repeat="talent in menuItem.talent">
-					<p>{{ talent.name }}</p>
+					<p ng-click="snCtrl.toggleSideNav()" ui-sref='talent({ id: talent.id })'>{{ talent.name }}</p>
 				</li>
 			</ul>
 		</li>
-		<li class="menuitem" ui-sref="about">
+		<li class="menuitem" ui-sref="about" ng-click="snCtrl.toggleSideNav()">
 			<p>ABOUT</p>
 		</li>
-		<li class="menuitem" ui-sref="contact">
+		<li class="menuitem" ui-sref="contact" ng-click="snCtrl.toggleSideNav()">
 			<p>CONTACT</p>
 		</li>
 		<li class="menuitem">

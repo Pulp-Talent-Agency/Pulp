@@ -4,7 +4,7 @@
 		.component( 'sideNav', {
 			templateUrl: './components/sideNav/sideNav-tmpl.html',
 			controller: 'sideNavCtrl',
-			controllerAs: 'sideNavCtrl'
+			controllerAs: 'snCtrl'
 		} );
 
 } )();

@@ -2,6 +2,11 @@
 
 	angular.module( 'PulpServices' )
 		.factory( 'talentService', talentService );
+	
+	talentService.$inject = [
+		'$q',
+		'$http'
+	];
 
 
 
@@ -14,7 +19,7 @@
 	function talentService( $q, $http ) {
 
 		return {
-			getAllTalent: getAllTalent
+			getMenuItems: getMenuItems
 		};
 
 
@@ -26,20 +31,10 @@
 			All detailed logic(function definitions) goes below this comment.
 		\**************************************************************************/
 
-		function getAllTalent() {
-			var menuItems = [];
+		function getMenuItems() {
 			return $http.get( '/api/talent' )
 				.then( function( talent ) {
-					var talentData = talent.data;
-					for( var i = 0; i < talentData.length; i++ ) {
-						if( talentData[i].department.length === 1 ) {
-							var yup = deptExists( talentData[ i ].department[ 0 ], 'title', menuItems );
-							pushTalentToMenu( yup, menuItems, talentData, i );
-						} else {
-
-						}
-					}
-					return menuItems;
+					return formatDataForMenu( talent.data );
 				} );
 		}
 
@@ -50,6 +45,19 @@
 		/**************************************************************************\
 			# Helper functions
 		\**************************************************************************/
+
+		function formatDataForMenu( talentData ) {
+			var menuItems = [];
+			for( var i = 0; i < talentData.length; i++ ) {
+				if( talentData[i].department.length === 1 ) {
+					var yup = deptExists( talentData[ i ].department[ 0 ], 'title', menuItems );
+					pushTalentToMenu( yup, menuItems, talentData, i );
+				} else {
+					// handle talent with multiple departments
+				}
+			}
+			return menuItems;
+		}
 
 		function deptExists( dept, prop, list ) {
 			var i;
@@ -63,17 +71,26 @@
 
 		function pushTalentToMenu( arr, list, talent, index ) {
 			if( arr[ 0 ] ) {
-				list[ arr[ 1 ] ].talent.push( { name: talent[ index ].name } );
+				list[ arr[ 1 ] ].talent.push(
+					{
+						name: talent[ index ].name,
+						id: talent[ index ]._id
+					}
+				);
 			} else {
 				list.push( {
+					open: false,
 					title: talent[ index ].department[ 0 ],
-					talent: [ { name: talent[ index ].name } ]
+					talent: [ 
+						{
+							name: talent[ index ].name,
+							id: talent[ index ]._id
+						}
+					]
 				} );
 			}
 		}
 
 	}
-
-	talentService.$inject = [ '$q', '$http' ];
 
 } )();
