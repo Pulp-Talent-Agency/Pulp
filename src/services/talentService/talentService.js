@@ -8,14 +8,13 @@
 
 
 	/****************************************************************************\
-		# Service Definition
+		# talentService Definition
 	\****************************************************************************/
 
 	function talentService( $q, $http ) {
 
 		return {
 			getAllTalent: getAllTalent
-			// TEMPgetAllTalent: TEMPgetAllTalent
 		};
 
 
@@ -44,8 +43,12 @@
 				} );
 		}
 
+
+
+
+
 		/**************************************************************************\
-			Helper functions
+			# Helper functions
 		\**************************************************************************/
 
 		function deptExists( dept, prop, list ) {
