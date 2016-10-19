@@ -27,10 +27,6 @@
 			All detailed logic(function definitions) goes below this comment.
 		\**************************************************************************/
 
-		// function getAllTalent() {
-		// 	return $q.when( menuItems );
-		// }
-
 		function getAllTalent() {
 			var menuItems = [];
 			return $http.get( '/api/talent' )

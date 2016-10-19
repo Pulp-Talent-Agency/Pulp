@@ -13,10 +13,11 @@
 
 	function sideNavCtrl( talentService ) {
 		var vm = this;
+		
 
 		talentService.getAllTalent()
 			.then( function( menuItems ) {
-				vm.menuItems = menuItems
+				vm.menuItems = menuItems;
 			} );
 
 		vm.toggleSideNav = toggleSideNav;
