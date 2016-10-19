@@ -34,6 +34,10 @@
 			.state( 'contact', {
 				url: '/contact',
 				template: `<h2>CONTACT</h2>`
+			} )
+			.state( 'talent', {
+				url: '/talent/:id',
+				template: `<h2>TALENT</h2>`
 			} );
 
 	}
