@@ -133,4 +133,4 @@ gulp.task( 'watch', function () {
   #RUN DEFAULT TASKS
 \*------------------------------------*/
 
-gulp.task( 'default', [ 'js', 'sass', 'html', 'moveFonts', 'watch', 'start' ] );
+gulp.task( 'default', [ 'js', 'sass', 'html', 'moveIcons', 'moveFonts', 'watch', 'start' ] );
