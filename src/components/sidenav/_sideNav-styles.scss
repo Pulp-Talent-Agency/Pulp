@@ -33,6 +33,7 @@
 	left: -50rem;
 	box-shadow: 0.25rem 0 0.25rem hsla(0, 0%, 53%, 1);
 	background-color: $sidenav_bg;
+	overflow: scroll;
 	.menuitem {
 		margin-bottom: 2rem;
 		font-family: $main_font;
