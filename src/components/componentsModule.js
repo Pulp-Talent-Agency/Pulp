@@ -1,8 +1,11 @@
 ( function() {
 
 	angular.module( 'PulpComponents', [] )
-
 		.config( config );
+
+	config.$inject = [
+		'$compileProvider'
+	];
 
 
 
@@ -18,9 +21,5 @@
 		$compileProvider.debugInfoEnabled( false );
 
 	}
-
-	config.$inject = [
-		'$compileProvider'
-	];
 
 } )();
