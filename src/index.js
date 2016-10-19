@@ -7,8 +7,17 @@
 	] )
 		.config( config );
 
+
+
+
+
+	/****************************************************************************\
+		# config Definition
+	\****************************************************************************/
+
 	function config( $stateProvider, $urlRouterProvider, $compileProvider ) {
 
+		// https://docs.angularjs.org/guide/production
 		$compileProvider.debugInfoEnabled( false );
 
 		$urlRouterProvider.otherwise( '/' );
