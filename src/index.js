@@ -3,7 +3,8 @@
 	angular.module( 'Pulp', [
 		'ui.router',
 		'PulpServices',
-		'PulpComponents'
+		'PulpComponents',
+		'wu.masonry'
 	] )
 		.config( config );
 
