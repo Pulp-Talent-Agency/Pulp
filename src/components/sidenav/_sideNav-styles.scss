@@ -10,17 +10,17 @@
 	align-items: center;
 	p {
 		font-size: 3rem;
+		cursor: pointer;
 	}
 }
 .sidenav {
 	width: 250px;
 	height: 100vh;
 	padding: 3rem;
-	// display: none;
 	position: fixed;
 	top: 0;
 	left: -50rem;
-	box-shadow: 0.25rem 0 0.25rem hsla(0, 0%, 53%, 1);
+	box-shadow: $right_box_shadow;
 	background-color: $sidenav_bg;
 	overflow-y: scroll;
 	&::-webkit-scrollbar{
@@ -36,8 +36,14 @@
 		font-family: $main_font;
 		font-size: 1.8rem;
 		letter-spacing: 0.2rem;
-		p:active {
-			color: white;
+		p {
+			cursor: pointer;
+			&:hover {
+				color: hsla(0, 0%, 0%, 0.5);
+			}
+			&:active {
+				color: white;
+			}
 		}
 		.sub-menu {
 			padding: 3rem 0 0.8rem 2rem;
@@ -45,9 +51,6 @@
 				margin-bottom: 2rem;
 				font-family: $main_font;
 				font-size: 1.8rem;
-				p:active {
-					color: white;
-				}
 			}
 		}
 		.social-container {
@@ -73,12 +76,11 @@
 
 }
 
-@media (min-width: 768px) {
-	
+@media (min-width: 769px) {
+
 	.hamburger {
 		display: none;
 	}
-
 	.sidenav {
 		display: none;
 	}
