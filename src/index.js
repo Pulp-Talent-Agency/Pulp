@@ -25,7 +25,7 @@
 		$stateProvider
 			.state( 'home', {
 				url: '/',
-				template: `<h2>HOME</h2>`
+				templateUrl: './views/home/home-tmpl.html'
 			} )
 			.state( 'about', {
 				url: '/about',
