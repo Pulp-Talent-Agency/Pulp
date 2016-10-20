@@ -1,0 +1,15 @@
+<nav class="headernav">
+
+	<div class="item-container" ng-repeat="menuitem in hnCtrl.menuItems">
+		<p class="menuitem">{{ menuitem.title }}</p>
+		<p>/</p>
+	</div>
+	<div class="item-container">
+		<p class="menuitem" ui-sref="about">ABOUT</p>
+		<p>/</p>
+	</div>
+	<div class="item-container">
+		<p class="menuitem" id="lastMenuItem" ui-sref="contact">CONTACT</p>
+	</div>
+
+</nav>
