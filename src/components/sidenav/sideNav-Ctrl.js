@@ -28,6 +28,12 @@
 
 		talentService.getMenuItems()
 			.then( function( menuItems ) {
+				menuItems.forEach( function( val, index, array ) {
+					val.talent.forEach( function( v, i , a ) {
+						v.uppercase_name = v.name.toUpperCase();
+						v.url_name = v.name.split( ' ' ).join( '_' );
+					} );
+				} );
 				vm.menuItems = menuItems;
 			} );
 		
