@@ -3,8 +3,8 @@
 	angular.module( 'Pulp', [
 		'ui.router',
 		'PulpServices',
-		'PulpComponents',
-		'wu.masonry'
+		'PulpComponents'
+		// 'wu.masonry'
 	] )
 		.config( config );
 
@@ -28,17 +28,17 @@
 				url: '/',
 				templateUrl: './views/home/home-tmpl.html'
 			} )
+			.state( 'talent', {
+				url: '/talent/:id/:name',
+				template: `<h2>TALENT</h2>`
+			} )
 			.state( 'about', {
 				url: '/about',
 				template: `<h2>ABOUT</h2>`
 			} )
 			.state( 'contact', {
 				url: '/contact',
-				template: `<h2>CONTACT</h2>`
-			} )
-			.state( 'talent', {
-				url: '/talent/:id',
-				template: `<h2>TALENT</h2>`
+				templateUrl: `./views/contact/contact-tmpl.html`
 			} );
 
 	}
