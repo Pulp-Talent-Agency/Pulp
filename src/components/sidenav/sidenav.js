@@ -2,7 +2,7 @@
 
 	angular.module( 'PulpComponents' )
 		.component( 'sideNav', {
-			templateUrl: './components/sideNav/sideNav-tmpl.html',
+			templateUrl: './components/sidenav/sideNav-tmpl.html',
 			controller: 'sideNavCtrl',
 			controllerAs: 'snCtrl'
 		} );
