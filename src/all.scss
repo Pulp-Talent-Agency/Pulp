@@ -6,7 +6,11 @@
 @import './styles/base/my-base';
 
 // COMPONENTS
+@import './components/headernav/headerNav-styles';
 @import './components/sidenav/sideNav-styles';
 
 // INDEX
 @import './styles/index';
+
+// VIEWS
+@import './views/home/home';
