@@ -4,6 +4,7 @@
 		.controller( 'sideNavCtrl', sideNavCtrl );
 	
 	sideNavCtrl.$inject = [
+		'$rootScope',
 		'talentService'
 	];
 
@@ -15,23 +16,30 @@
 		# sideNavCtrl Definition
 	\****************************************************************************/
 
-	function sideNavCtrl( talentService ) {
+	function sideNavCtrl( $rootScope, talentService ) {
 		var vm = this;
-		
+
+		$rootScope.$on( '$stateChangeStart', 
+			function( event, toState, toParams, fromState, fromParams, options ){ 
+					if( $( '.sidenav' ).css( 'left' ) === '0px' ) {
+						toggleSideNav();
+					}
+			} )
+
 		talentService.getMenuItems()
 			.then( function( menuItems ) {
 				vm.menuItems = menuItems;
 			} );
-
+		
 		vm.toggleSideNav = toggleSideNav;
 		vm.closeOthers = closeOthers;
 
 
 
-		/****************************************************************************\
+		/**************************************************************************\
 			All general logic goes above this comment.
 			All detailed logic(function definitions) goes below this comment.
-		\****************************************************************************/
+		\**************************************************************************/
 
 		function toggleSideNav() {
 			var $sideNav = $( '.sidenav' );
