@@ -22,7 +22,11 @@ header {
 ui-view {
   width: 320px;
   height: 200vh;
-  background-color: blue;
+}
+.container {
+	padding-top: 2rem;
+	width: 90%;
+		margin: 0 auto;
 }
 
 
@@ -62,5 +66,8 @@ ui-view {
     position: relative;
     top: $totalheader_height;
   }
+	.container {
+		padding-top: 4rem;
+	}
 
 }
