@@ -10,8 +10,9 @@
 @import './components/sidenav/sideNav-styles';
 
 // INDEX
-@import './styles/index';
+@import './index';
 
 // VIEWS
 @import './views/home/home';
+@import './views/about/about';
 @import './views/contact/contact';
