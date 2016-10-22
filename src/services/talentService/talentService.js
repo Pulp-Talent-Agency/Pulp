@@ -1,11 +1,12 @@
 ( function() {
 
-	angular.module( 'PulpServices' )
+	angular.module( 'Pulp' )
 		.factory( 'talentService', talentService );
 	
 	talentService.$inject = [
 		'$q',
-		'$http'
+		'$http',
+		'runtimeStates'
 	];
 
 
@@ -16,7 +17,7 @@
 		# talentService Definition
 	\****************************************************************************/
 
-	function talentService( $q, $http ) {
+	function talentService( $q, $http, runtimeStates ) {
 
 		return {
 			getMenuItems: getMenuItems
@@ -32,9 +33,19 @@
 		\**************************************************************************/
 
 		function getMenuItems() {
+			console.log( runtimeStates.$get().duh );
 			return $http.get( '/api/talent' )
 				.then( function( talent ) {
-					return formatDataForMenu( talent.data );
+					var menuItems = formatDataForMenu( talent.data );
+					menuItems.forEach( function( el, i, arr ) {
+						var titleNoSpace = el.title.split( ' ' ).join( '' );
+						setParentState( el.title.toLowerCase(), {
+							url: '/' + titleNoSpace,
+							template: '<h1>' + el.title + '</h1>'
+						} );
+					} );
+					console.log( menuItems );
+					return menuItems;
 				} );
 		}
 
@@ -45,6 +56,11 @@
 		/**************************************************************************\
 			# Helper functions
 		\**************************************************************************/
+
+		function setParentState( name, state ) {
+			runtimeStates.$get()
+				.addState( name, state );
+		}
 
 		function formatDataForMenu( talentData ) {
 			var menuItems = [];

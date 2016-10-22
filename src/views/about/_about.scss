@@ -1,9 +1,6 @@
 .container {
-  .contact-container {
+  .about-container {
     margin: 0 auto;
-    h6 {
-      line-height: 1.8rem;
-    }
     p {
       font-weight: 300;
     }
@@ -15,19 +12,19 @@
 
 
 @media (min-width: 769px) {
-  .contact-container {
+  .about-container {
     width: 80%;
   }
 }
 
 @media (min-width: 1025px) {
-  .contact-container {
+  .about-container {
     width: 60%;
   }
 }
 
 @media (min-width: 1441px) {
-  .contact-container {
+  .about-container {
     width: 80rem;
   }
 }
