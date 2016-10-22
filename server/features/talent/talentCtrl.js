@@ -2,7 +2,7 @@ const Talent = require( './Talent.js' );
 
 module.exports = {
 
-	postTalent: function( req, res ) {
+	postNewTalent: function( req, res ) {
 		Talent.create( req.body, function( err, talent ) {
 			if( err ) {
 				return res.json( err );
@@ -20,6 +20,14 @@ module.exports = {
 				return res.json( talents );
 			}
 		} );
+	},
+
+	updateExistingTalent: function(arguments) {
+		// body
+	},
+
+	deleteExistingTalent: function(arguments) {
+		// body
 	}
 
 }
