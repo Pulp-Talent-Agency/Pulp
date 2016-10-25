@@ -1,34 +1,34 @@
+var path = require( 'path' );
+
 module.exports = {
-	entry: [
-		'webpack-dev-server/client?http://localhost:8080'
-		, './src/app.js'
-	]
-	, module: {
+	entry: {
+		pulp: path.join( __dirname, 'src' )
+	},
+	output: {
+		path: path.join( __dirname, '/dist/bundle' ),
+		filename: '[name].bundle.js'
+	},
+	module: {
 		loaders: [
 			{
-				test: /\.js/
-				, exclude: /node_modules/
-				, loader: 'babel'
-			}
-			, {
-				test: /\.css/
-				, exclude: /node_modules/
-				, loader: 'style!css'
-			}
-			, {
-				test: /\.html$/
-				, loader: 'html'
+				test: /\.js$/,
+				include: /src/,
+				loader: 'babel'
+			},
+			{
+				test: /\.scss$/,
+				include: /src/,
+				loaders: [ "style", "css", "autoprefixer", "sass" ]
+			},
+			{
+				test: /\.html$/,
+				loader: 'html'
+			},
+			{
+				// IMAGES
+			  test: /\.(png|jpg|gif|svg)$/,
+			  loader: "file-loader?name=assets/icons/[name].[ext]"
 			}
 		]
-	}
-	, resolve: {
-		extensions: [ '', '.js', '.css' ]
-	}
-	, output: {
-		path: __dirname + '/'
-		, filename: 'bundle.js'
-	}
-	, devSErver: {
-		contentBase: './'
 	}
 };

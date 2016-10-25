@@ -1,25 +1,27 @@
-( function() {
+import angular from 'angular';
+import sideNav from './sidenav/sidenav.js';
+import headerNav from './headernav/headernav.js';
 
-	angular.module( 'PulpComponents', [] )
-		.config( config );
+export default angular.module( 'PulpComponents', [] )
+	.config( config )
+	.component( 'sideNav', sideNav )
+	.component( 'headerNav', headerNav );
 
-	config.$inject = [
-		'$compileProvider'
-	];
+config.$inject = [
+	'$compileProvider'
+];
 
 
 
 
 
-	/****************************************************************************\
-		# config Definition
-	\****************************************************************************/
+/******************************************************************************\
+	# config Definition
+\******************************************************************************/
 
-	function config( $compileProvider ) {
+function config( $compileProvider ) {
 
-		// https://docs.angularjs.org/guide/production
-		$compileProvider.debugInfoEnabled( false );
+	// https://docs.angularjs.org/guide/production
+	$compileProvider.debugInfoEnabled( false );
 
-	}
-
-} )();
+}

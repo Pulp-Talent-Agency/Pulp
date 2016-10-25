@@ -30,8 +30,7 @@ const config = require( `./config.js` );
 
 const app = express();
 
-app.use( express.static( `./public` ) ) ;
-app.use( express.static( `${__dirname}/../node_modules` ) );
+app.use( express.static( `./dist` ) ) ;
 app.use( bodyParser.json( { limit: '50mb' } ) );
 app.use( bodyParser.urlencoded( { limit: '50mb', extended: true } ) );
 app.use( session( config.session ) );
@@ -68,7 +67,7 @@ passport.deserializeUser( function( _id, done ) {
 
 mongoose.connect( config.mongo.mongoURI, function ( err, res ) {
 	if ( err ) console.log( 'Error connecting to database' )
-	else console.log( 'Yente database now connected!' )
+	else console.log( 'Pulp database now connected!' )
 } );
 
 
