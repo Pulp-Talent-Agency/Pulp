@@ -8,7 +8,7 @@
 			<p ng-click="snCtrl.closeOthers(); menuItem.open = !menuItem.open">{{ menuItem.title }}</p>
 			<ul class="sub-menu" ng-show="menuItem.open">
 				<li class="sub-menuitem" ng-repeat="talent in menuItem.talent">
-					<p ui-sref="{{ menuItem.title.toLowerCase() }}.talent({ id: talent.id, name: talent.url_name })">{{ talent.uppercase_name }}</p>
+					<p ui-sref="talent( { category: menuItem.title.toLowerCase(), id: talent.id, name: talent.url_name } )">{{ talent.uppercase_name }}</p>
 				</li>
 			</ul>
 		</li>

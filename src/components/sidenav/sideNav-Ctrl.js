@@ -24,6 +24,7 @@ function sideNavCtrl( $rootScope, talentService ) {
 				} );
 			} );
 			vm.menuItems = menuItems;
+			console.log(menuItems);
 		} );
 
 	vm.toggleSideNav = toggleSideNav;
