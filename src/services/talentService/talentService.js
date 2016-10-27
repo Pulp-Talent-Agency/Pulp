@@ -22,8 +22,11 @@ function talentService( $q, $http ) {
 		return $http.get( '/api/talent' )
 			.then( function( talent ) {
 				var menuItems = formatDataForMenu( talent.data );
-				menuItems.forEach( function( el, i, arr ) {
-					var titleNoSpace = el.title.split( ' ' ).join( '' );
+				menuItems.forEach( function( val, index, array ) {
+					val.talent.forEach( function( v, i , a ) {
+						v.uppercase_name = v.name.toUpperCase();
+						v.url_name = v.name.split( ' ' ).join( '_' );
+					} );
 				} );
 				return menuItems;
 			} );

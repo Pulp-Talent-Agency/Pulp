@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<div class="hamburger" ng-click="snCtrl.toggleSideNav()">
+<div class="hamburger" ng-click="snCtrl.toggleSideNav( snCtrl.menuItems )">
 	<p>☰</p>
 </div>
 <nav class="sidenav">
 	<ul>
 		<li class="menuitem" ng-repeat="menuItem in snCtrl.menuItems">
-			<p ng-click="snCtrl.closeOthers(); menuItem.open = !menuItem.open">{{ menuItem.title }}</p>
+			<p ng-click="snCtrl.closeOthers( snCtrl.menuItems ); menuItem.open = !menuItem.open">{{ menuItem.title }}</p>
 			<ul class="sub-menu" ng-show="menuItem.open">
 				<li class="sub-menuitem" ng-repeat="talent in menuItem.talent">
 					<p ui-sref="talent( { category: menuItem.title.toLowerCase(), id: talent.id, name: talent.url_name } )">{{ talent.uppercase_name }}</p>

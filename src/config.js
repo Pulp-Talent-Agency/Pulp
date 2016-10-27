@@ -1,4 +1,6 @@
-import talentTmpl from './views/talent/talent-tmpl.html';
+import talentHtml from './views/talent/talent-tmpl.html';
+import aboutHtml from './views/about/about-tmpl.html';
+import contactHtml from './views/contact/contact-tmpl.html';
 
 config.$inject = [
 		'$stateProvider',
@@ -20,15 +22,15 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 			} )
 			.state( 'talent', {
 				url: '/:category/:id/:name',
-				template: talentTmpl
+				template: talentHtml
 			} )
 			.state( 'about', {
 				url: '/about',
-				templateUrl: './views/about/about-tmpl.html'
+				template: aboutHtml
 			} )
 			.state( 'contact', {
 				url: '/contact',
-				templateUrl: './views/contact/contact-tmpl.html'
+				template: contactHtml
 			} );
 
 }
