@@ -11,10 +11,12 @@ function sideNavCtrl( $rootScope, talentService, navService ) {
 
 	$rootScope.$on( '$stateChangeStart',
 		function( event, toState, toParams, fromState, fromParams, options ){
-				if( $( '.sidenav' ).css( 'left' ) === '0px' ) {
-					navService.toggleSideNav( vm.menuItems );
-				}
-		} )
+			var $sidenav = document.getElementsByClassName( 'sidenav' )[ 0 ];
+			console.log( $sidenav.style.left );
+			if( $sidenav.style.left === '0rem' ) {
+				navService.toggleSideNav( vm.menuItems );
+			}
+		} );
 
 	talentService.getMenuItems()
 		.then( function( menuItems ) {

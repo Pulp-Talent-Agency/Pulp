@@ -12,8 +12,6 @@ function headerNavCtrl( talentService ) {
 			vm.menuItems = menuItems;
 		} );
 
-	
-
 }
 
 export default headerNavCtrl;

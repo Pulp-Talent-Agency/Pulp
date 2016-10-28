@@ -20,9 +20,11 @@ function navService() {
 		var $sideNav = document.getElementsByClassName( 'sidenav' )[ 0 ];
 
 		if( $sideNav.style.left === '0rem' ) {
+			document.getElementById( 'hamburger-symbol' ).innerHTML = '☰';
 			moveAnimation( $sideNav, 'left', 0, -50, 'rem' );
 		}
 		else {
+			document.getElementById( 'hamburger-symbol' ).innerHTML = '✕';
 			moveAnimation( $sideNav, 'left', -50, 0, 'rem' );
 		}
 		closeOthers( menuItems );
