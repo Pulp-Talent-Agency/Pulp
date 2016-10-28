@@ -4,10 +4,6 @@ navService.$inject = [];
 
 function navService() {
 
-	window.onresize = function() {
-		console.log( window.outerWidth );
-	}
-
 	return {
 		toggleSideNav: toggleSideNav,
 		closeOthers: closeOthers
@@ -23,13 +19,13 @@ function navService() {
 	\**************************************************************************/
 
 	function toggleSideNav( menuItems ) {
-		var $sideNav = $( '.sidenav' );
+		var $sideNav = document.getElementsByClassName( 'sidenav' )[ 0 ];
 
-		if( $sideNav.css( 'left' ) === '0px' ) {
-			$sideNav.animate( { left: '-100rem' }, 200, 'swing' );
+		if( $sideNav.style.left === '0rem' ) {
+			move( $sideNav, 'left', 0, -50, 'rem' );
 		}
 		else {
-			$sideNav.animate( { left: '0' }, 200, 'swing' );
+			move( $sideNav, 'left', -50, 0, 'rem' );
 		}
 		closeOthers( menuItems );
 	}
@@ -62,7 +58,27 @@ function navService() {
 		# Helper functions
 	\**************************************************************************/
 
+	function move( elem, prop, startValue, endValue, unit ) {
 
+    function frame() {
+			if( startValue < endValue ) {
+				startValue++;
+				startAnimation();
+			} else {
+				startValue--;
+				startAnimation();
+			}
+			function startAnimation() {
+	      elem.style[ prop ] = startValue + unit; // show frame
+
+	      if ( startValue === endValue ) { // check finish condition
+	        clearInterval( id );
+				}
+			}
+    }
+
+    var id = setInterval( frame, 5 ); // draw every 10ms
+  }
 
 }
 
