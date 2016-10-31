@@ -34,10 +34,6 @@ function navService() {
 		closeOthers( menuItems );
 	}
 
-	function toggleHeaderSubNav( menuItems ) {
-
-	}
-
 	function closeOthers( menuItems ) {
 		for( var i = 0; i < menuItems.length; i++ ) {
 			if( menuItems[ i ].open ) {
