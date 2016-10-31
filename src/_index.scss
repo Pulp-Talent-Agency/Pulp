@@ -58,7 +58,7 @@ ui-view {
 		}
 		header-nav {
 			width: 100%;
-			height: $headernav_height;
+			z-index: 5;
 			display: block;
 		}
 	}

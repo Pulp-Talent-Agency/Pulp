@@ -11,4 +11,4 @@ const sideNavOptions = {
 	controllerAs: 'snCtrl'
 };
 
-export default sideNavOptions
+export default sideNavOptions;

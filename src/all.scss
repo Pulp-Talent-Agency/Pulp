@@ -5,12 +5,12 @@
 @import './styles/base/reset';
 @import './styles/base/my-base';
 
+// INDEX
+@import './index';
+
 // COMPONENTS
 @import './components/headernav/headerNav-styles';
 @import './components/sidenav/sideNav-styles';
-
-// INDEX
-@import './index';
 
 // VIEWS
 @import './views/home/home';

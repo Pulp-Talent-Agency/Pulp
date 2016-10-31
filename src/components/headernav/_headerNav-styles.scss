@@ -1,6 +1,7 @@
 .headernav {
   width: auto;
   height: $headernav_height;
+	background-color: white;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -8,8 +9,13 @@
 	box-shadow: $bottom_box_shadow;
   .item-container {
     width: auto;
+		height: $headernav_height;
+		background-color: white;
     display: flex;
     justify-content: flex-start;
+		align-items: center;
+		z-index: 5;
+		position: relative;
     p {
       margin-right: 2rem;
       font-size: 1.2rem;
@@ -19,12 +25,13 @@
     }
 		.talentlist {
 			width: 100%;
-			background-color: hsla(0, 0%, 93%, 0.5);
+			background-color: hsla(0, 0%, 93%, 0.95);
 			padding: 2rem 0;
+			display: none;
 			position: fixed;
 			top: $totalheader_height;
 			left: 0;
-			z-index: -5;
+			z-index: -100;
 			.talentlist-container {
 				width: 80%;
 				margin: 0 auto;
@@ -34,6 +41,14 @@
 				flex-wrap: wrap;
 				.talent-container {
 					width: 25%;
+					p {
+						cursor: pointer;
+						padding-left: 1rem;
+						&:hover {
+							background-color: hsla(0, 0%, 63%, 1);
+							color: hsla(0, 0%, 93%, 1);
+						}
+					}
 				}
 			}
 		}
@@ -41,4 +56,5 @@
       margin-right: 0;
     }
   }
+
 }

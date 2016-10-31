@@ -1,20 +1,24 @@
+import $ from 'jquery';
+
 navService.$inject = [];
 
 function navService() {
 
 	return {
 		toggleSideNav: toggleSideNav,
-		closeOthers: closeOthers
+		closeOthers: closeOthers,
+		showTalentList: showTalentList,
+		hideTalentList: hideTalentList
 	};
 
 
 
 
 
-	/**************************************************************************\
+	/****************************************************************************\
 		All general logic goes above this comment.
 		All detailed logic(function definitions) goes below this comment.
-	\**************************************************************************/
+	\****************************************************************************/
 
 	function toggleSideNav( menuItems ) {
 		var $sideNav = document.getElementsByClassName( 'sidenav' )[ 0 ];
@@ -40,6 +44,14 @@ function navService() {
 				menuItems[ i ].open = false
 			}
 		}
+	}
+
+	function showTalentList( index, event ) {
+		$( `#talentlist${ index }` ).slideDown();
+	}
+
+	function hideTalentList( index, event ) {
+		$( `#talentlist${ index }` ).slideUp();
 	}
 
 

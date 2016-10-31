@@ -1,16 +1,18 @@
+<!DOCTYPE html>
 <nav class="headernav">
 
-	<div class="item-container" ng-repeat="menuitem in hnCtrl.menuItems">
+	<div class="item-container" ng-repeat="menuitem in hnCtrl.menuItems track by $index" ng-click="hnCtrl.showTalentList( $index, $event )" ng-mouseleave="hnCtrl.hideTalentList( $index, $event )">
 		<p class="menuitem">{{ menuitem.title }}</p>
 		<p>/</p>
-		<div class="talentlist">
+		<div class="talentlist" id="talentlist{{ $index }}">
 			<div class="talentlist-container">
 				<div class="talent-container" ng-repeat="talent in menuitem.talent">
-					<p>{{ talent.name }}</p>
+					<p ui-sref="talent( { category: menuitem.title.toLowerCase(), id: talent.id, name: talent.url_name } )">{{ talent.name }}</p>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="item-container">
 		<p class="menuitem" ui-sref="about">ABOUT</p>
 		<p>/</p>
