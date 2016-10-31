@@ -3,6 +3,9 @@ const mongoose = require( 'mongoose' );
 const Talent = new mongoose.Schema( {
 
 	name: { type: String, trim: true },
+	biography: { type: String, trim: true },
+	instagram: { type: String, trim: true },
+	facebook: { type: String, trim: true },
 	department: [
 		{
 			type: String,
@@ -15,6 +18,12 @@ const Talent = new mongoose.Schema( {
 				'SET DESIGN',
 				'CASTING'
 			]
+		}
+	],
+	photos: [
+		{
+			fullsize: { type: String, required: true, trim: true },
+			thumbnail: { type: String, required: true, trim: true }
 		}
 	]
 
