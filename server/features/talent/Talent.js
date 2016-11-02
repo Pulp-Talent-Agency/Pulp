@@ -21,10 +21,7 @@ const Talent = new mongoose.Schema( {
 		}
 	],
 	photos: [
-		{
-			fullsize: { type: String, required: true, trim: true },
-			thumbnail: { type: String, required: true, trim: true }
-		}
+		{ type: mongoose.Schema.Types.ObjectId, ref: 'Photo' }
 	]
 
 } )

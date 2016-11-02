@@ -15,22 +15,22 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 
 	$urlRouterProvider.otherwise( '/' );
 
-		$stateProvider
-			.state( 'home', {
-				url: '/',
-				template: `<h2>HOME</h2>`
-			} )
-			.state( 'talent', {
-				url: '/:category/:id/:name',
-				template: talentHtml
-			} )
-			.state( 'about', {
-				url: '/about',
-				template: aboutHtml
-			} )
-			.state( 'contact', {
-				url: '/contact',
-				template: contactHtml
-			} );
+	$stateProvider
+		.state( 'home', {
+			url: '/',
+			template: `<h2>HOME</h2>`
+		} )
+		.state( 'talent', {
+			url: '/:category/:id/:name',
+			template: talentHtml
+		} )
+		.state( 'about', {
+			url: '/about',
+			template: aboutHtml
+		} )
+		.state( 'contact', {
+			url: '/contact',
+			template: contactHtml
+		} );
 
 }
