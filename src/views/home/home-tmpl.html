@@ -1,4 +1,15 @@
 <!DOCTYPE html>
-<div class="view">
+<div class="wrapper">
+
+	<div class="talent-title">
+		
+	</div>
+
+	<div class="masonry" data-masonry="{ 'gutter': '.gutter-sizer', 'percentPosition': true }">
+		<div class="gutter-sizer"></div>
+    <div masonry-brick class="masonry-brick" ng-repeat="brick in homeCtrl.bricks">
+      <img ng-src="{{ brick.src }}" alt="" />
+    </div>
+	</div>
 
 </div>

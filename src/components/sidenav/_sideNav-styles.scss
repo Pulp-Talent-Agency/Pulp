@@ -8,6 +8,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 5;
+	box-shadow: $right_box_shadow;
 	p {
 		font-size: 3rem;
 		cursor: pointer;
@@ -20,6 +22,7 @@
 	position: fixed;
 	top: 0;
 	left: -50rem;
+	z-index: 5;
 	box-shadow: $right_box_shadow;
 	background-color: $sidenav_bg;
 	overflow-y: scroll;

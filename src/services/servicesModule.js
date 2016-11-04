@@ -1,4 +1,4 @@
-import angular from 'angular';
+// import angular from 'angular';
 import talentService from './talentService/talentService.js';
 import navService from './navService/navService.js';
 

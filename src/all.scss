@@ -8,11 +8,15 @@
 // INDEX
 @import './index';
 
+// MASONRY
+@import './styles/base/masonry';
+
 // COMPONENTS
 @import './components/headernav/headerNav-styles';
 @import './components/sidenav/sideNav-styles';
 
 // VIEWS
 @import './views/home/home';
+@import './views/talent/talent';
 @import './views/about/about';
 @import './views/contact/contact';

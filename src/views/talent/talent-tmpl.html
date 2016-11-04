@@ -1,1 +1,16 @@
-<h1>TALENT</h1>
+<!DOCTYPE html>
+<div class="wrapper">
+
+	<div class="talent-title">
+		<h2>{{ talentCtrl.talent.name }}</h2>
+		<p>{{ talentCtrl.talent.dept }}</p>
+	</div>
+
+	<div class="masonry" data-masonry="{ 'gutter': '.gutter-sizer', 'percentPosition': true }">
+		<div class="gutter-sizer"></div>
+    <div masonry-brick class="masonry-brick" ng-repeat="photo in talentCtrl.talent.photos">
+      <img ng-src="{{ photo.src }}" alt="" />
+    </div>
+	</div>
+
+</div>

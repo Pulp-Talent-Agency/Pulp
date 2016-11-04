@@ -1,3 +1,4 @@
+import homeHtml from './views/home/home-tmpl.html';
 import talentHtml from './views/talent/talent-tmpl.html';
 import aboutHtml from './views/about/about-tmpl.html';
 import contactHtml from './views/contact/contact-tmpl.html';
@@ -18,11 +19,15 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 	$stateProvider
 		.state( 'home', {
 			url: '/',
-			template: `<h2>HOME</h2>`
+			template: homeHtml,
+			controller: 'HomeController',
+			controllerAs: 'homeCtrl'
 		} )
 		.state( 'talent', {
 			url: '/:category/:id/:name',
-			template: talentHtml
+			template: talentHtml,
+			controller: 'TalentController',
+			controllerAs: 'talentCtrl'
 		} )
 		.state( 'about', {
 			url: '/about',

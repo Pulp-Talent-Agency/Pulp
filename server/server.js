@@ -31,6 +31,7 @@ const config = require( `./config.js` );
 const app = express();
 
 app.use( express.static( `./dist` ) ) ;
+app.use( express.static( `${__dirname}/../node_modules` ) ) ;
 app.use( bodyParser.json( { limit: '50mb' } ) );
 app.use( bodyParser.urlencoded( { limit: '50mb', extended: true } ) );
 app.use( session( config.session ) );
