@@ -16,6 +16,16 @@ const session = require( `express-session` );
 
 
 /*------------------------------------*\
+  #MY DEPENDENCIES
+\*------------------------------------*/
+
+const config = require( `./config.js` );
+
+
+
+
+
+/*------------------------------------*\
   #VARIABLES
 \*------------------------------------*/
 
@@ -25,15 +35,6 @@ const sessionSecret = process.env.SESSION_SECRET || config.session.secret;
 const facebookClientID = process.env.FACEBOOK_CLIENT_ID || config.facebook.clientID;
 const facebookClientSecret = process.env.FACEBOOK_CLIENT_SECRET || config.facebook.clientSecret;
 const facebookCallbackUrl = process.env.FACEBOOK_CALLBACK_URL || config.facebook.callbackURL;
-
-
-
-
-/*------------------------------------*\
-  #MY DEPENDENCIES
-\*------------------------------------*/
-
-// const config = require( `./config.js` );
 
 
 

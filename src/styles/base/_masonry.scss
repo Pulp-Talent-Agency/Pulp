@@ -111,33 +111,33 @@
 			.masonry-brick {
 				width: 24%;
 				margin-bottom: 1%;
-				img {
-					transition: opacity 0.5s ease;
-					width: 100%;
-				}
-				.photo-description {
-					transition: display 0.5s ease;
-					display: none;
-				}
-				&:hover {
-					.photo-description {
-						font: Helvetica, sans-serif;
-						font-weight: 600;
-						display: block;
-						position: absolute;
-						color: black;
-						// z-index: 5;
-					}
-					img {
-						opacity: 0.3;
-					}
-				}
-				&:active {
-					img {
-						transition: opacity 0.2s ease;
-						opacity: 0.6;
-					}
-				}
+				// img {
+				// 	transition: opacity 0.5s ease;
+				// 	width: 100%;
+				// }
+				// .photo-description {
+				// 	transition: display 0.5s ease;
+				// 	display: none;
+				// }
+				// &:hover {
+				// 	.photo-description {
+				// 		font: Helvetica, sans-serif;
+				// 		font-weight: 600;
+				// 		display: block;
+				// 		position: absolute;
+				// 		color: black;
+				// 		// z-index: 5;
+				// 	}
+				// 	img {
+				// 		opacity: 0.3;
+				// 	}
+				// }
+				// &:active {
+				// 	img {
+				// 		transition: opacity 0.2s ease;
+				// 		opacity: 0.6;
+				// 	}
+				// }
 			}
 		}
 	}
