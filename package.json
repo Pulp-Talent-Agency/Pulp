@@ -6,7 +6,7 @@
   "env": "DEVELOPMENT",
   "scripts": {
     "build": "webpack -d",
-    "postinstall": "webpack --config ./webpack-prod.config.js --progress --colors",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",
     "start": "node server/server.js",
     "dev": "concurrently 'webpack -w -d' 'nodemon server/server.js'"
   },
