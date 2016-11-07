@@ -6,7 +6,7 @@
   "env": "DEVELOPMENT",
   "scripts": {
     "build": "webpack -d",
-    "start": "concurrently 'webpack -d' 'node server/server.js'",
+    "start": "concurrently \"webpack -d\" \"node server/server.js\"",
     "dev": "concurrently 'webpack -w -d' 'nodemon server/server.js'"
   },
   "keywords": [],
