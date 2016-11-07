@@ -2,6 +2,8 @@ import homeHtml from './views/home/home-tmpl.html';
 import talentHtml from './views/talent/talent-tmpl.html';
 import aboutHtml from './views/about/about-tmpl.html';
 import contactHtml from './views/contact/contact-tmpl.html';
+import adminLogin from './views/admin/login/login-tmpl.html';
+import adminDashboard from './views/admin/dashboard/dashboard-tmpl.html';
 
 config.$inject = [
 		'$stateProvider',
@@ -36,6 +38,20 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 		.state( 'contact', {
 			url: '/contact',
 			template: contactHtml
-		} );
+		} )
+
+		// ADMIN STATES
+		.state( 'admin', {
+			url: '/admin',
+			template: '<h1>Admin</h1><ui-view></ui-view>'
+		} )
+			.state( 'admin.login', {
+				url: '/login',
+				template: adminLogin
+			} )
+			.state( 'admin.dashboard', {
+				url: '/dashboard',
+				template: adminDashboard
+			} );
 
 }

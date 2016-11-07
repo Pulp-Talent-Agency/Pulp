@@ -8,8 +8,8 @@ const express = require( `express` );
 const mongoose = require( `mongoose` );
 const bodyParser = require( `body-parser` );
 const passport = require( `passport` );
+const FacebookStrategy = require( 'passport-facebook' ).Strategy;
 const session = require( `express-session` );
-
 
 
 
@@ -48,15 +48,19 @@ app.use( passport.session() );
   #PASSPORT
 \*------------------------------------*/
 
-passport.serializeUser( function( user, done ) {
-  done( null, user._id );
-} );
+passport.use( new FacebookStrategy( config.facebook, function( token, refreshToken, profile, done ) {
+  return done( null, profile );
+} ) );
 
-passport.deserializeUser( function( _id, done ) {
-  User.findById( _id, function( err, user ) {
-    done( err, user );
-  } );
-} );
+// passport.serializeUser( function( user, done ) {
+//   done( null, user._id );
+// } );
+//
+// passport.deserializeUser( function( _id, done ) {
+//   User.findById( _id, function( err, user ) {
+//     done( err, user );
+//   } );
+// } );
 
 
 

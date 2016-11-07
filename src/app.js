@@ -6,7 +6,7 @@ import uiRouter from 'angular-ui-router';
 import './all.scss';
 
 // CONFIG
-import config from './config.js';
+import config from './appconfig.js';
 
 // SERVICES
 import './services/servicesModule.js';

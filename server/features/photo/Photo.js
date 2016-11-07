@@ -5,8 +5,9 @@ const Photo = new mongoose.Schema( {
 	title: { type: String, trim: true },
 	talent: { type: mongoose.Schema.Types.ObjectId, ref: 'Talent' },
 	fullsize: { type: String, required: true, trim: true },
-	thumbnail: { type: String, required: true, trim: true }
+	thumbnail: { type: String, required: true, trim: true },
+	isFeatured: { type: Boolean, default: false }
 
-} )
+} );
 
 module.exports = mongoose.model( 'Photo', Photo );

@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Pulp Talent Agency",
   "main": "index.js",
+  "env": "DEVELOPMENT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p",
-    "start": "concurrently 'webpack -w -d' 'nodemon server/server.js'"
+    "build": "webpack -d",
+		"start": "PORT=3000 forever start server/server.js",
+    "dev": "concurrently 'webpack -w -d' 'nodemon server/server.js'"
   },
   "keywords": [],
   "author": "Joseph Toh Djojo <joseph.tohdjojo@gmail.com>",
@@ -48,7 +49,7 @@
     "mongoose": "^4.6.3",
     "outlayer": "^2.1.0",
     "passport": "^0.3.2",
-    "ui-router-extras": "^0.1.3"
+    "passport-facebook": "^2.1.1"
   },
   "repository": {
     "url": "https://github.com/Pulp-Talent-Agency/Pulp.git",
