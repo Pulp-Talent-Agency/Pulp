@@ -33,7 +33,7 @@ const facebookCallbackUrl = process.env.FACEBOOK_CALLBACK_URL || config.facebook
   #MY DEPENDENCIES
 \*------------------------------------*/
 
-const config = require( `./config.js` );
+// const config = require( `./config.js` );
 
 
 
