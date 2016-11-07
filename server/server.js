@@ -8,7 +8,7 @@ const express = require( `express` );
 const mongoose = require( `mongoose` );
 const bodyParser = require( `body-parser` );
 const passport = require( `passport` );
-const FacebookStrategy = require( 'passport-facebook' ).Strategy;
+const FacebookStrategy = require( `passport-facebook` ).Strategy;
 const session = require( `express-session` );
 
 
@@ -19,7 +19,7 @@ const session = require( `express-session` );
   #MY DEPENDENCIES
 \*------------------------------------*/
 
-// const config = require( `./config.js` );
+const config = require( `./config.js` );
 
 
 
@@ -75,16 +75,6 @@ passport.use( new FacebookStrategy( {
 }, function( token, refreshToken, profile, done ) {
   return done( null, profile );
 } ) );
-
-// passport.serializeUser( function( user, done ) {
-//   done( null, user._id );
-// } );
-//
-// passport.deserializeUser( function( _id, done ) {
-//   User.findById( _id, function( err, user ) {
-//     done( err, user );
-//   } );
-// } );
 
 
 
