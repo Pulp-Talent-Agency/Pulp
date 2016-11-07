@@ -14,6 +14,21 @@ const session = require( `express-session` );
 
 
 
+
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/
+
+const port = process.env.PORT || 8080;
+const mongoURI = process.env.MONGO_URI || config.mongo.mongoURI;
+const sessionSecret = process.env.SESSION_SECRET || config.session.secret;
+const facebookClientID = process.env.FACEBOOK_CLIENT_ID || config.facebook.clientID;
+const facebookClientSecret = process.env.FACEBOOK_CLIENT_SECRET || config.facebook.clientSecret;
+const facebookCallbackUrl = process.env.FACEBOOK_CALLBACK_URL || config.facebook.callbackURL;
+
+
+
+
 /*------------------------------------*\
   #MY DEPENDENCIES
 \*------------------------------------*/
@@ -35,7 +50,7 @@ app.use( express.static( `${__dirname}/../node_modules` ) ) ;
 app.use( bodyParser.json( { limit: '50mb' } ) );
 app.use( bodyParser.urlencoded( { limit: '50mb', extended: true } ) );
 app.use( session( {
-	secret: process.env.SESSION_SECRET || config.session.secret,
+	secret: sessionSecret,
 	resave: true,
 	saveUninitialized: true
 } ) );
@@ -52,7 +67,11 @@ app.use( passport.session() );
   #PASSPORT
 \*------------------------------------*/
 
-passport.use( new FacebookStrategy( config.facebook, function( token, refreshToken, profile, done ) {
+passport.use( new FacebookStrategy( {
+	clientID: facebookClientID,
+	clientSecret: facebookClientSecret,
+	callbackURL: facebookCallbackUrl
+}, function( token, refreshToken, profile, done ) {
   return done( null, profile );
 } ) );
 
@@ -74,7 +93,7 @@ passport.use( new FacebookStrategy( config.facebook, function( token, refreshTok
   #DATABASE
 \*------------------------------------*/
 
-mongoose.connect( config.mongo.mongoURI, function ( err, res ) {
+mongoose.connect( mongoURI, function ( err, res ) {
 	if ( err ) console.log( 'Error connecting to database' )
 	else console.log( 'Pulp database now connected!' )
 } );
@@ -96,6 +115,6 @@ require( './masterRoutes.js' )( app );
   #LISTEN
 \*------------------------------------*/
 
-app.listen( config.port, function() {
-	console.log( 'Pulp Express server listening on port', config.port );
+app.listen( port, function() {
+	console.log( 'Pulp Express server listening on port', port );
 } );
