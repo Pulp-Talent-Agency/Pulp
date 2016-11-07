@@ -59,6 +59,10 @@
 	
 	var _appconfig2 = _interopRequireDefault(_appconfig);
 	
+	var _apprun = __webpack_require__(/*! ./apprun.js */ 28);
+	
+	var _apprun2 = _interopRequireDefault(_apprun);
+	
 	__webpack_require__(/*! ./services/servicesModule.js */ 13);
 	
 	__webpack_require__(/*! ./components/componentsModule.js */ 17);
@@ -78,18 +82,18 @@
 	
 	// SERVICES
 	
-	// import 'angular-masonry';
 	
-	// STYLES
+	// CONFIG & RUN
+	// import angular from 'angular';
 	angular.module('Pulp', [_angularUiRouter2.default, 'wu.masonry', 'PulpServices', // Custom services placed in their own module
 	'PulpComponents' // Custom components placed in their own module
-	]).config(_appconfig2.default).controller('HomeController', _homeCtrl2.default).controller('TalentController', _talentCtrl2.default);
+	]).config(_appconfig2.default).run(_apprun2.default).controller('HomeController', _homeCtrl2.default).controller('TalentController', _talentCtrl2.default);
 	
 	// COMPONENTS
 	
+	// import 'angular-masonry';
 	
-	// CONFIG
-	// import angular from 'angular';
+	// STYLES
 
 /***/ },
 /* 1 */
@@ -16018,6 +16022,28 @@
 	}
 	
 	exports.default = TalentController;
+
+/***/ },
+/* 28 */
+/*!***********************!*\
+  !*** ./src/apprun.js ***!
+  \***********************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = run;
+	run.$inject = ['$rootScope'];
+	
+	function run($rootScope) {
+	
+		$rootScope.$on('$stateChangeSuccess', function () {
+			document.body.scrollTop = document.documentElement.scrollTop = 0;
+		});
+	}
 
 /***/ }
 /******/ ]);

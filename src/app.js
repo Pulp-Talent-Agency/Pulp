@@ -5,8 +5,9 @@ import uiRouter from 'angular-ui-router';
 // STYLES
 import './all.scss';
 
-// CONFIG
+// CONFIG & RUN
 import config from './appconfig.js';
+import run from './apprun.js';
 
 // SERVICES
 import './services/servicesModule.js';
@@ -25,5 +26,6 @@ angular.module( 'Pulp', [
 	'PulpComponents'// Custom components placed in their own module
 ] )
 	.config( config )
+	.run( run )
 	.controller( 'HomeController', HomeController )
 	.controller( 'TalentController', TalentController );
