@@ -19,5 +19,5 @@
 	<p>✕</p>
 </div>
 <div class="overlay" ng-if="talentCtrl.selectedPhoto">
-	<img ng-src="{{ talentCtrl.selectedPhoto.src }}" alt="">
+	<img ng-src="{{ talentCtrl.selectedPhoto.src }}" alt="" ng-click="talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto">
 </div>
