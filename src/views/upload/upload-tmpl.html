@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 
 <div class="wrapper">
-	<div class="upload">
-		<!-- <input type="file" images="images" accept="image/*"> -->
-		<input type="file" images="images" accept="image/*" name="file" id="file" class="inputfile" />
-		<label for="file">Choose a photo</label>
+	<div class="button-container">
+		<div class="choose-photo">
+			<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->
+			<input type="file" images="images" accept="image/*" name="file" id="file" class="inputfile" />
+			<label for="file">Choose a photo</label>
+		</div>
+		<div class="upload-photo">
+			<button ng-click="uploadCtrl.uploadPhoto( uploadCtrl.file )">Upload photo</button>
+		</div>
 	</div>
-	<div class="preview">
-test
+	<div class="preview" >
+		<img class="preview-image" src="" alt="">
 	</div>
 </div>
