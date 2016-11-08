@@ -1,0 +1,38 @@
+.wrapper {
+	.upload {
+		padding: 3rem 0;
+		.inputfile {
+			width: 0.1px;
+			height: 0.1px;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			z-index: -1;
+		}
+		.inputfile + label {
+			background-color: white;
+			padding: 15px;
+	    font-size: 1.25rem;
+	    border: 1px solid #333;
+			box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+	    display: inline-block;
+			cursor: pointer;
+			transition: all 0.2s;
+		}
+		.inputfile:focus + label,
+		.inputfile + label:hover {
+	    background-color: #333;
+			color: white;
+			box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+		}
+		.inputfile:focus + label {
+			outline: 1px solid #333;
+		}
+	}
+	.preview {
+		width: 5rem;
+		height: 5rem;
+		background-color: #333;
+		box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.3);
+	}
+}

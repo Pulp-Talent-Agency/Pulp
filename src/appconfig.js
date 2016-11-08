@@ -4,6 +4,7 @@ import aboutHtml from './views/about/about-tmpl.html';
 import contactHtml from './views/contact/contact-tmpl.html';
 import adminLogin from './views/admin/login/login-tmpl.html';
 import adminDashboard from './views/admin/dashboard/dashboard-tmpl.html';
+import uploadHtml from './views/upload/upload-tmpl.html';
 
 config.$inject = [
 		'$stateProvider',
@@ -38,6 +39,10 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 		.state( 'contact', {
 			url: '/contact',
 			template: contactHtml
+		} )
+		.state( 'upload', {
+			url: '/upload',
+			template: uploadHtml
 		} )
 
 		// ADMIN STATES
