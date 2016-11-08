@@ -42,7 +42,9 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 		} )
 		.state( 'upload', {
 			url: '/upload',
-			template: uploadHtml
+			template: uploadHtml,
+			controller: 'UploadController',
+			controllerAs: 'uploadCtrl'
 		} )
 
 		// ADMIN STATES

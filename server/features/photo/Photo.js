@@ -2,7 +2,13 @@ const mongoose = require( 'mongoose' );
 
 const Photo = new mongoose.Schema( {
 
-	location: { type: String, required: true },
+	amazonS3: {
+		ETag: { type: String, required: true },
+		Location: { type: String, required: true },
+		key: { type: String, required: true },
+		Key: { type: String, required: true },
+		Bucket: { type: String, required: true }
+	},
 	isFeatured: { type: Boolean, default: false }
 
 } );

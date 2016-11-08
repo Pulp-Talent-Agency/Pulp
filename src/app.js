@@ -16,14 +16,16 @@ import './components/componentsModule.js';
 // CONTROLLERS
 import HomeController from './views/home/homeCtrl.js';
 import TalentController from './views/talent/talentCtrl.js';
+import UploadController from './views/upload/uploadCtrl.js';
 
 angular.module( 'Pulp', [
 	uiRouter,
 	'wu.masonry',
 	'PulpServices', // Custom services placed in their own module
-	'PulpComponents'// Custom components placed in their own module
+	'PulpComponents' // Custom components placed in their own module
 ] )
 	.config( config )
 	.run( run )
 	.controller( 'HomeController', HomeController )
-	.controller( 'TalentController', TalentController );
+	.controller( 'TalentController', TalentController )
+	.controller( 'UploadController', UploadController );

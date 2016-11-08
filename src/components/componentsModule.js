@@ -1,4 +1,3 @@
-// import angular from 'angular';
 import sideNav from './sidenav/sidenav.js';
 import headerNav from './headernav/headernav.js';
 
