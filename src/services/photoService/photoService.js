@@ -23,13 +23,13 @@ function photoService( $http ) {
 		return $http.post( '/api/photo', imageObj );
 	}
 
-	function createObjForAWS( base64File, fileName ) {
+	function createObjForAWS( base64File, fileName, talent ) {
 		const imageExtension = base64File.split( ';' )[ 0 ].split( '/' )[ 1 ];
 		return {
       imageName: fileName,
       imageBody: base64File,
       imageExtension: imageExtension,
-      userEmail: 'obama@usa.gov'
+      talent: 'obama@usa.gov'
     };
 	}
 

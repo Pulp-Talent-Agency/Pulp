@@ -48,17 +48,13 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 		} )
 
 		// ADMIN STATES
-		.state( 'admin', {
-			url: '/admin',
-			template: '<h1>Admin</h1><ui-view></ui-view>'
+		.state( 'adminLogin', {
+			url: '/admin/login',
+			template: adminLogin
 		} )
-			.state( 'admin.login', {
-				url: '/login',
-				template: adminLogin
-			} )
-			.state( 'admin.dashboard', {
-				url: '/dashboard',
-				template: adminDashboard
-			} );
+		.state( 'adminDashboard', {
+			url: '/admin/dashboard',
+			template: adminDashboard
+		} );
 
 }

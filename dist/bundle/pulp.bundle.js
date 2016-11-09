@@ -59,23 +59,23 @@
 	
 	var _appconfig2 = _interopRequireDefault(_appconfig);
 	
-	var _apprun = __webpack_require__(/*! ./apprun.js */ 14);
+	var _apprun = __webpack_require__(/*! ./apprun.js */ 13);
 	
 	var _apprun2 = _interopRequireDefault(_apprun);
 	
-	__webpack_require__(/*! ./services/servicesModule.js */ 16);
+	__webpack_require__(/*! ./services/servicesModule.js */ 15);
 	
-	__webpack_require__(/*! ./components/componentsModule.js */ 20);
+	__webpack_require__(/*! ./components/componentsModule.js */ 18);
 	
-	var _homeCtrl = __webpack_require__(/*! ./views/home/homeCtrl.js */ 29);
+	var _homeCtrl = __webpack_require__(/*! ./views/home/homeCtrl.js */ 27);
 	
 	var _homeCtrl2 = _interopRequireDefault(_homeCtrl);
 	
-	var _talentCtrl = __webpack_require__(/*! ./views/talent/talentCtrl.js */ 30);
+	var _talentCtrl = __webpack_require__(/*! ./views/talent/talentCtrl.js */ 28);
 	
 	var _talentCtrl2 = _interopRequireDefault(_talentCtrl);
 	
-	var _uploadCtrl = __webpack_require__(/*! ./views/upload/uploadCtrl.js */ 31);
+	var _uploadCtrl = __webpack_require__(/*! ./views/upload/uploadCtrl.js */ 34);
 	
 	var _uploadCtrl2 = _interopRequireDefault(_uploadCtrl);
 	
@@ -5080,7 +5080,7 @@
 	
 	var _dashboardTmpl2 = _interopRequireDefault(_dashboardTmpl);
 	
-	var _uploadTmpl = __webpack_require__(/*! ./views/upload/upload-tmpl.html */ 13);
+	var _uploadTmpl = __webpack_require__(/*! ./views/upload/upload-tmpl.html */ 29);
 	
 	var _uploadTmpl2 = _interopRequireDefault(_uploadTmpl);
 	
@@ -5119,14 +5119,11 @@
 		})
 	
 		// ADMIN STATES
-		.state('admin', {
-			url: '/admin',
-			template: '<h1>Admin</h1><ui-view></ui-view>'
-		}).state('admin.login', {
-			url: '/login',
+		.state('adminLogin', {
+			url: '/admin/login',
 			template: _loginTmpl2.default
-		}).state('admin.dashboard', {
-			url: '/dashboard',
+		}).state('adminDashboard', {
+			url: '/admin/dashboard',
 			template: _dashboardTmpl2.default
 		});
 	}
@@ -5174,7 +5171,7 @@
   \***********************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<h1>LOGIN</h1>\n";
+	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\t\n\t<div class=\"login-container\">\n\t\t<h1>LOGIN</h1>\n\t\t<button type=\"button\" name=\"button\"></button>\n\t</div>\n\n</div>\n";
 
 /***/ },
 /* 12 */
@@ -5187,15 +5184,6 @@
 
 /***/ },
 /* 13 */
-/*!*******************************************!*\
-  !*** ./src/views/upload/upload-tmpl.html ***!
-  \*******************************************/
-/***/ function(module, exports) {
-
-	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.258288964276407240.03408935931838952xxx\" alt=\"\">\n\t</div>\n</div>\n";
-
-/***/ },
-/* 14 */
 /*!***********************!*\
   !*** ./src/apprun.js ***!
   \***********************/
@@ -5208,7 +5196,7 @@
 	});
 	exports.default = run;
 	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
+	var _jquery = __webpack_require__(/*! jquery */ 14);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -5228,7 +5216,7 @@
 	}
 
 /***/ },
-/* 15 */
+/* 14 */
 /*!*********************************!*\
   !*** ./~/jquery/dist/jquery.js ***!
   \*********************************/
@@ -15457,7 +15445,7 @@
 
 
 /***/ },
-/* 16 */
+/* 15 */
 /*!****************************************!*\
   !*** ./src/services/servicesModule.js ***!
   \****************************************/
@@ -15469,15 +15457,15 @@
 		value: true
 	});
 	
-	var _talentService = __webpack_require__(/*! ./talentService/talentService.js */ 17);
+	var _talentService = __webpack_require__(/*! ./talentService/talentService.js */ 16);
 	
 	var _talentService2 = _interopRequireDefault(_talentService);
 	
-	var _navService = __webpack_require__(/*! ./navService/navService.js */ 18);
+	var _navService = __webpack_require__(/*! ./navService/navService.js */ 17);
 	
 	var _navService2 = _interopRequireDefault(_navService);
 	
-	var _photoService = __webpack_require__(/*! ./photoService/photoService.js */ 19);
+	var _photoService = __webpack_require__(/*! ./photoService/photoService.js */ 35);
 	
 	var _photoService2 = _interopRequireDefault(_photoService);
 	
@@ -15499,7 +15487,7 @@
 	}
 
 /***/ },
-/* 17 */
+/* 16 */
 /*!*****************************************************!*\
   !*** ./src/services/talentService/talentService.js ***!
   \*****************************************************/
@@ -15585,7 +15573,7 @@
 	exports.default = talentService;
 
 /***/ },
-/* 18 */
+/* 17 */
 /*!***********************************************!*\
   !*** ./src/services/navService/navService.js ***!
   \***********************************************/
@@ -15597,7 +15585,7 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
+	var _jquery = __webpack_require__(/*! jquery */ 14);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -15679,63 +15667,7 @@
 	exports.default = navService;
 
 /***/ },
-/* 19 */
-/*!***************************************************!*\
-  !*** ./src/services/photoService/photoService.js ***!
-  \***************************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	photoService.$inject = ['$http'];
-	
-	function photoService($http) {
-	
-		return {
-			uploadToAWS: uploadToAWS,
-			createObjForAWS: createObjForAWS,
-			getAllPhotos: getAllPhotos
-		};
-	
-		/****************************************************************************\
-	 	All general logic goes above this comment.
-	 	All detailed logic(function definitions) goes below this comment.
-	 \****************************************************************************/
-	
-		function uploadToAWS(imageObj) {
-			return $http.post('/api/photo', imageObj);
-		}
-	
-		function createObjForAWS(base64File, fileName) {
-			var imageExtension = base64File.split(';')[0].split('/')[1];
-			return {
-				imageName: fileName,
-				imageBody: base64File,
-				imageExtension: imageExtension,
-				userEmail: 'obama@usa.gov'
-			};
-		}
-	
-		function getAllPhotos() {
-			return $http.get('/api/photo').then(function (photos) {
-				return photos.data;
-			});
-		}
-	
-		/**************************************************************************\
-	 	# Helper functions
-	 \**************************************************************************/
-	
-		//CODE HERE
-	}
-	
-	exports.default = photoService;
-
-/***/ },
-/* 20 */
+/* 18 */
 /*!********************************************!*\
   !*** ./src/components/componentsModule.js ***!
   \********************************************/
@@ -15747,11 +15679,11 @@
 		value: true
 	});
 	
-	var _sidenav = __webpack_require__(/*! ./sidenav/sidenav.js */ 21);
+	var _sidenav = __webpack_require__(/*! ./sidenav/sidenav.js */ 19);
 	
 	var _sidenav2 = _interopRequireDefault(_sidenav);
 	
-	var _headernav = __webpack_require__(/*! ./headernav/headernav.js */ 26);
+	var _headernav = __webpack_require__(/*! ./headernav/headernav.js */ 24);
 	
 	var _headernav2 = _interopRequireDefault(_headernav);
 	
@@ -15773,7 +15705,7 @@
 	}
 
 /***/ },
-/* 21 */
+/* 19 */
 /*!*******************************************!*\
   !*** ./src/components/sidenav/sidenav.js ***!
   \*******************************************/
@@ -15785,17 +15717,17 @@
 		value: true
 	});
 	
-	var _sidenavTmpl = __webpack_require__(/*! ./sidenav-tmpl.html */ 22);
+	var _sidenavTmpl = __webpack_require__(/*! ./sidenav-tmpl.html */ 20);
 	
 	var _sidenavTmpl2 = _interopRequireDefault(_sidenavTmpl);
 	
-	var _sidenavCtrl = __webpack_require__(/*! ./sidenav-ctrl.js */ 23);
+	var _sidenavCtrl = __webpack_require__(/*! ./sidenav-ctrl.js */ 21);
 	
 	var _sidenavCtrl2 = _interopRequireDefault(_sidenavCtrl);
 	
-	__webpack_require__(/*! ./assets/icons/Facebook_Solid.svg */ 24);
+	__webpack_require__(/*! ./assets/icons/Facebook_Solid.svg */ 22);
 	
-	__webpack_require__(/*! ./assets/icons/Instagram_Solid.svg */ 25);
+	__webpack_require__(/*! ./assets/icons/Instagram_Solid.svg */ 23);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -15809,7 +15741,7 @@
 	exports.default = sideNavOptions;
 
 /***/ },
-/* 22 */
+/* 20 */
 /*!**************************************************!*\
   !*** ./src/components/sidenav/sidenav-tmpl.html ***!
   \**************************************************/
@@ -15818,7 +15750,7 @@
 	module.exports = "<!DOCTYPE html>\n<div class=\"hamburger\" ng-click=\"snCtrl.toggleSideNav( snCtrl.menuItems )\">\n\t<p id=\"hamburger-symbol\">☰</p>\n</div>\n<nav class=\"sidenav\">\n\t<ul>\n\t\t<li class=\"menuitem\" ng-repeat=\"menuItem in snCtrl.menuItems\">\n\t\t\t<p ng-click=\"snCtrl.closeOthers( snCtrl.menuItems ); menuItem.open = !menuItem.open\">{{ menuItem.title }}</p>\n\t\t\t<ul class=\"sub-menu\" ng-show=\"menuItem.open\">\n\t\t\t\t<li class=\"sub-menuitem\" ng-repeat=\"talent in menuItem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuItem.title.toLowerCase(), id: talent.id, name: talent.url_name } )\">{{ talent.uppercase_name }}</p>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"about\">\n\t\t\t<p>ABOUT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"contact\">\n\t\t\t<p>CONTACT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\">\n\t\t\t<div class=\"social-container\">\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://facebook.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Facebook_Solid.svg\" alt=\"Facebook\"></a>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://instagram.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Instagram_Solid.svg\" alt=\"Instagram\"></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</li>\n\t</ul>\n</nav>\n";
 
 /***/ },
-/* 23 */
+/* 21 */
 /*!************************************************!*\
   !*** ./src/components/sidenav/sidenav-ctrl.js ***!
   \************************************************/
@@ -15830,7 +15762,7 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
+	var _jquery = __webpack_require__(/*! jquery */ 14);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -15859,7 +15791,7 @@
 	exports.default = sideNavCtrl;
 
 /***/ },
-/* 24 */
+/* 22 */
 /*!****************************************************************!*\
   !*** ./src/components/sidenav/assets/icons/Facebook_Solid.svg ***!
   \****************************************************************/
@@ -15868,7 +15800,7 @@
 	module.exports = __webpack_require__.p + "assets/icons/Facebook_Solid.svg";
 
 /***/ },
-/* 25 */
+/* 23 */
 /*!*****************************************************************!*\
   !*** ./src/components/sidenav/assets/icons/Instagram_Solid.svg ***!
   \*****************************************************************/
@@ -15877,7 +15809,7 @@
 	module.exports = __webpack_require__.p + "assets/icons/Instagram_Solid.svg";
 
 /***/ },
-/* 26 */
+/* 24 */
 /*!***********************************************!*\
   !*** ./src/components/headernav/headernav.js ***!
   \***********************************************/
@@ -15889,11 +15821,11 @@
 		value: true
 	});
 	
-	var _headernavTmpl = __webpack_require__(/*! ./headernav-tmpl.html */ 27);
+	var _headernavTmpl = __webpack_require__(/*! ./headernav-tmpl.html */ 25);
 	
 	var _headernavTmpl2 = _interopRequireDefault(_headernavTmpl);
 	
-	var _headernavCtrl = __webpack_require__(/*! ./headernav-ctrl.js */ 28);
+	var _headernavCtrl = __webpack_require__(/*! ./headernav-ctrl.js */ 26);
 	
 	var _headernavCtrl2 = _interopRequireDefault(_headernavCtrl);
 	
@@ -15908,7 +15840,7 @@
 	exports.default = headerNavOptions;
 
 /***/ },
-/* 27 */
+/* 25 */
 /*!******************************************************!*\
   !*** ./src/components/headernav/headernav-tmpl.html ***!
   \******************************************************/
@@ -15917,7 +15849,7 @@
 	module.exports = "<!DOCTYPE html>\n<nav class=\"headernav\">\n\n\t<div class=\"item-container\" ng-repeat=\"menuitem in hnCtrl.menuItems track by $index\" ng-mouseenter=\"hnCtrl.showTalentList( $index, $event )\" ng-mouseleave=\"hnCtrl.hideTalentList( $index, $event )\">\n\t\t<p class=\"menuitem\">{{ menuitem.title }}</p>\n\t\t<p>/</p>\n\t\t<div class=\"talentlist\" id=\"talentlist{{ $index }}\">\n\t\t\t<div class=\"talentlist-container\">\n\t\t\t\t<div class=\"talent-container\" ng-repeat=\"talent in menuitem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuitem.title.toLowerCase(), id: talent.id, name: talent.url_name } )\">{{ talent.name }}</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" ui-sref=\"about\">ABOUT</p>\n\t\t<p>/</p>\n\t</div>\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" id=\"lastMenuItem\" ui-sref=\"contact\">CONTACT</p>\n\t</div>\n\n</nav>\n";
 
 /***/ },
-/* 28 */
+/* 26 */
 /*!****************************************************!*\
   !*** ./src/components/headernav/headernav-ctrl.js ***!
   \****************************************************/
@@ -15944,7 +15876,7 @@
 	exports.default = headerNavCtrl;
 
 /***/ },
-/* 29 */
+/* 27 */
 /*!************************************!*\
   !*** ./src/views/home/homeCtrl.js ***!
   \************************************/
@@ -15983,7 +15915,7 @@
 	exports.default = HomeController;
 
 /***/ },
-/* 30 */
+/* 28 */
 /*!****************************************!*\
   !*** ./src/views/talent/talentCtrl.js ***!
   \****************************************/
@@ -16033,7 +15965,20 @@
 	exports.default = TalentController;
 
 /***/ },
-/* 31 */
+/* 29 */
+/*!*******************************************!*\
+  !*** ./src/views/upload/upload-tmpl.html ***!
+  \*******************************************/
+/***/ function(module, exports) {
+
+	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.240589729365562550.5872730683014851xxx\" alt=\"\">\n\t</div>\n</div>\n";
+
+/***/ },
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
 /*!****************************************!*\
   !*** ./src/views/upload/uploadCtrl.js ***!
   \****************************************/
@@ -16045,7 +15990,7 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
+	var _jquery = __webpack_require__(/*! jquery */ 14);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -16093,6 +16038,62 @@
 	}
 	
 	exports.default = UploadController;
+
+/***/ },
+/* 35 */
+/*!***************************************************!*\
+  !*** ./src/services/photoService/photoService.js ***!
+  \***************************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	photoService.$inject = ['$http'];
+	
+	function photoService($http) {
+	
+		return {
+			uploadToAWS: uploadToAWS,
+			createObjForAWS: createObjForAWS,
+			getAllPhotos: getAllPhotos
+		};
+	
+		/****************************************************************************\
+	 	All general logic goes above this comment.
+	 	All detailed logic(function definitions) goes below this comment.
+	 \****************************************************************************/
+	
+		function uploadToAWS(imageObj) {
+			return $http.post('/api/photo', imageObj);
+		}
+	
+		function createObjForAWS(base64File, fileName, talent) {
+			var imageExtension = base64File.split(';')[0].split('/')[1];
+			return {
+				imageName: fileName,
+				imageBody: base64File,
+				imageExtension: imageExtension,
+				talent: 'obama@usa.gov'
+			};
+		}
+	
+		function getAllPhotos() {
+			return $http.get('/api/photo').then(function (photos) {
+				return photos.data;
+			});
+		}
+	
+		/**************************************************************************\
+	 	# Helper functions
+	 \**************************************************************************/
+	
+		//CODE HERE
+	}
+	
+	exports.default = photoService;
 
 /***/ }
 /******/ ]);

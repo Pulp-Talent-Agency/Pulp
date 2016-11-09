@@ -17,7 +17,7 @@ const session = require( `express-session` );
   #MY DEPENDENCIES
 \*------------------------------------*/
 
-// const config = require( `./config.js` );
+const config = require( `./config.js` );
 
 
 
@@ -43,8 +43,8 @@ const app = express();
 
 app.use( express.static( `./dist` ) ) ;
 app.use( express.static( `${__dirname}/../node_modules` ) ) ;
-app.use( bodyParser.json( { limit: '50mb' } ) );
-app.use( bodyParser.urlencoded( { limit: '50mb', extended: true } ) );
+app.use( bodyParser.json( { limit: '10mb' } ) );
+app.use( bodyParser.urlencoded( { limit: '10mb', extended: true } ) );
 app.use( session( {
 	secret: sessionSecret,
 	resave: true,
