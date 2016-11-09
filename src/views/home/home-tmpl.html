@@ -8,7 +8,7 @@
 	<div class="masonry" data-masonry="{ 'gutter': '.gutter-sizer', 'percentPosition': true }">
 		<div class="gutter-sizer"></div>
     <div masonry-brick class="masonry-brick" ng-repeat="brick in homeCtrl.bricks">
-      <img ng-src="{{ brick.src }}" alt="" />
+      <img ng-src="{{ brick.amazonS3.Location }}" alt="" />
     </div>
 	</div>
 

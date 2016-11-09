@@ -7,8 +7,6 @@
 const express = require( `express` );
 const mongoose = require( `mongoose` );
 const bodyParser = require( `body-parser` );
-const passport = require( `passport` );
-const FacebookStrategy = require( `passport-facebook` ).Strategy;
 const session = require( `express-session` );
 
 
@@ -32,9 +30,6 @@ const config = require( `./config.js` );
 const port = process.env.PORT || 8080;
 const mongoURI = process.env.MONGO_URI || config.mongo.mongoURI;
 const sessionSecret = process.env.SESSION_SECRET || config.session.secret;
-const facebookClientID = process.env.FACEBOOK_CLIENT_ID || config.facebook.clientID;
-const facebookClientSecret = process.env.FACEBOOK_CLIENT_SECRET || config.facebook.clientSecret;
-const facebookCallbackUrl = process.env.FACEBOOK_CALLBACK_URL || config.facebook.callbackURL;
 
 
 
@@ -54,26 +49,6 @@ app.use( session( {
 	secret: sessionSecret,
 	resave: true,
 	saveUninitialized: true
-} ) );
-app.use( passport.initialize() );
-app.use( passport.session() );
-
-
-
-
-
-
-
-/*------------------------------------*\
-  #PASSPORT
-\*------------------------------------*/
-
-passport.use( new FacebookStrategy( {
-	clientID: facebookClientID,
-	clientSecret: facebookClientSecret,
-	callbackURL: facebookCallbackUrl
-}, function( token, refreshToken, profile, done ) {
-  return done( null, profile );
 } ) );
 
 
