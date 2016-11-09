@@ -1,11 +1,11 @@
 const Photo = require( './Photo.js' );
 const AWS = require( 'aws-sdk' );
-const config = require( './../../config.js' );
+// const config = require( './../../config.js' );
 
 AWS.config.update( {
-  accessKeyId: config.amazonS3.accessKeyId,
-	secretAccessKey: config.amazonS3.secretAccessKey,
-	region: config.amazonS3.region
+  accessKeyId: process.env.AMAZON_ACCESSID || config.amazonS3.accessKeyId,
+	secretAccessKey: process.env.AMAZON_SECRETKEY || config.amazonS3.secretAccessKey,
+	region: process.env.AMAZON_REGION || config.amazonS3.region
 } );
 
 const s3 = new AWS.S3();
