@@ -16,7 +16,9 @@ function UploadController( $scope, $state, photoService ) {
 		var reader = new FileReader();
 
 		reader.onload = function( loadEvent ) {
+
 			const file = loadEvent.target.result;
+			console.log(file);
 
 			$( '.preview-image' )[ 0 ].src = file;
 			vm.file = photoService.createObjForAWS( file, changeEvent.target.files[ 0 ].name );

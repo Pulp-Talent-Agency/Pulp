@@ -9,9 +9,9 @@
 
 	<div class="masonry" data-masonry="{ 'gutter': '.gutter-sizer', 'percentPosition': true }">
 		<div class="gutter-sizer"></div>
-    <div masonry-brick class="masonry-brick" ng-repeat="photo in talentCtrl.talent.photos" ng-click="talentCtrl.showModalOfPhoto( photo )">
+    <div masonry-brick class="masonry-brick" ng-repeat="photo in talentCtrl.bricks" ng-click="talentCtrl.showModalOfPhoto( photo )">
 			<p class="photo-description">{{ photo.desc }}</p>
-      <img ng-src="{{ photo.src }}" alt="" />
+      <img ng-src="{{ photo.amazonS3.Location }}" alt=""/>
     </div>
 	</div>
 
@@ -20,5 +20,5 @@
 	<p>✕</p>
 </div>
 <div class="overlay" ng-if="talentCtrl.selectedPhoto">
-	<img ng-src="{{ talentCtrl.selectedPhoto.src }}" alt="" ng-click="talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto">
+	<img ng-src="{{ talentCtrl.selectedPhoto.amazonS3.Location }}" alt="" ng-click="talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto">
 </div>

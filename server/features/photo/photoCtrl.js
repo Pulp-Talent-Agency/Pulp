@@ -2,11 +2,11 @@ const Photo = require( './Photo.js' );
 const AWS = require( 'aws-sdk' );
 const config = require( './../../config.js' );
 
-AWS.config.update({
+AWS.config.update( {
   accessKeyId: config.amazonS3.accessKeyId,
 	secretAccessKey: config.amazonS3.secretAccessKey,
 	region: config.amazonS3.region
-});
+} );
 
 const s3 = new AWS.S3();
 
@@ -29,8 +29,9 @@ module.exports = {
 	    if (err) {
 				return res.status(500).send(err);
 			};
+			console.log( s3data );
 			Photo.create( { amazonS3: s3data }, function( error, photo ) {
-				if ( 'Pulp', error ) {
+				if ( error ) {
 					return res.status( 500 ).send( error );
 				}
 				else {
