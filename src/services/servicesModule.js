@@ -1,11 +1,12 @@
-// import angular from 'angular';
 import talentService from './talentService/talentService.js';
 import navService from './navService/navService.js';
+import photoService from './photoService/photoService.js';
 
 export default angular.module( 'PulpServices', [] )
-		.config( config )
-		.service( 'talentService', talentService )
-		.service( 'navService', navService );
+	.config( config )
+	.factory( 'talentService', talentService )
+	.factory( 'navService', navService )
+	.factory( 'photoService', photoService );
 
 	config.$inject = [
 		'$compileProvider'
