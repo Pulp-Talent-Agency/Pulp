@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <nav class="headernav">
 
-	<div class="item-container" ng-repeat="menuitem in hnCtrl.menuItems track by $index" ng-click="hnCtrl.showTalentList( $index, $event )" ng-mouseleave="hnCtrl.hideTalentList( $index, $event )">
+	<div class="item-container" ng-repeat="menuitem in hnCtrl.menuItems track by $index" ng-mouseenter="hnCtrl.showTalentList( $index, $event )" ng-mouseleave="hnCtrl.hideTalentList( $index, $event )">
 		<p class="menuitem">{{ menuitem.title }}</p>
 		<p>/</p>
 		<div class="talentlist" id="talentlist{{ $index }}">
