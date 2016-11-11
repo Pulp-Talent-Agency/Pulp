@@ -5,21 +5,23 @@ module.exports = {
 	postNewTalent: function( req, res ) {
 		Talent.create( req.body, function( err, talent ) {
 			if( err ) {
-				return res.json( err );
+				return res.status( 500 ).json( err );
 			} else {
-				return res.json( talent );
+				return res.status( 200 ).json( talent );
 			}
 		} );
 	},
 
 	getAllTalent: function( req, res ) {
-		Talent.find( {}, function( err, talents ) {
-			if( err ) {
-				return res.json( err );
-			} else {
-				return res.json( talents );
-			}
-		} );
+		Talent.find( {} )
+			.populate( 'photos' )
+			.exec( function( err, talents ) {
+				if( err ) {
+					return res.status( 500 ).json( err );
+				} else {
+					return res.status( 200 ).json( talents );
+				}
+			} );
 	},
 
 	updateExistingTalent: function(arguments) {

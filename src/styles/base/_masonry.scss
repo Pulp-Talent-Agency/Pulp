@@ -29,11 +29,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			img {
-				width: 100%;
-			}
 			.photo-description {
 				display: none;
+			}
+			img {
+				width: 100%;
 			}
 		}
 	}
@@ -111,22 +111,27 @@
 			.masonry-brick {
 				width: 24%;
 				margin-bottom: 1%;
-				img {
-					transition: opacity 0.5s ease;
-					width: 100%;
-				}
 				.photo-description {
 					transition: display 0.5s ease;
 					display: none;
+				}
+				img {
+					transition: opacity 0.5s ease;
+					width: 100%;
 				}
 				&:hover {
 					.photo-description {
 						font: Helvetica, sans-serif;
 						font-weight: 600;
-						display: block;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
 						position: absolute;
 						color: black;
-						// z-index: 5;
+						&-sub {
+							font-size: 0.8rem;
+						}
 					}
 					img {
 						opacity: 0.3;

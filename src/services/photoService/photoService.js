@@ -6,8 +6,8 @@ function photoService( $http ) {
 
 	return {
 		uploadToAWS: uploadToAWS,
-		createObjForAWS: createObjForAWS,
-		getAllPhotos: getAllPhotos
+		getAllFeaturedPhotos: getAllFeaturedPhotos,
+		getAllTalentPhotos: getAllTalentPhotos
 	};
 
 
@@ -19,22 +19,21 @@ function photoService( $http ) {
 		All detailed logic(function definitions) goes below this comment.
 	\****************************************************************************/
 
-	function uploadToAWS( imageObj ) {
-		return $http.post( '/api/photo', imageObj );
+	function uploadToAWS( file, talent ) {
+		const awsObj = createObjForAWS( file, talent );
+		return $http.post( '/api/photo', awsObj );
 	}
 
-	function createObjForAWS( base64File, fileName ) {
-		const imageExtension = base64File.split( ';' )[ 0 ].split( '/' )[ 1 ];
-		return {
-      imageName: fileName,
-      imageBody: base64File,
-      imageExtension: imageExtension,
-      userEmail: 'obama@usa.gov'
-    };
+	function getAllFeaturedPhotos() {
+		return $http.get( '/api/photo/featured' )
+			.then( function( photos ) {
+				photos.data = formatTalentName( photos.data )
+				return photos.data;
+			} );
 	}
 
-	function getAllPhotos() {
-		return $http.get( '/api/photo' )
+	function getAllTalentPhotos( talentId ) {
+		return $http.get( '/api/photo/' + talentId )
 			.then( function( photos ) {
 				return photos.data;
 			} );
@@ -48,7 +47,28 @@ function photoService( $http ) {
 		# Helper functions
 	\**************************************************************************/
 
-	//CODE HERE
+	function formatTalentName( photos ) {
+		photos.forEach( function( val, idx, arr ) {
+			val.talent.name = val.talent.name.split( ' ' ).join( '_' );
+		} );
+		return photos;
+	}
+
+	function createObjForAWS( file, talent ) {
+		talent.name = talent.name.split( ' ' ).join( '_' );
+		const imageExtension = file.base64.split( ';' )[ 0 ].split( '/' )[ 1 ];
+		file.projectTitle = file.projectTitle.split( ' ' ).join( '_' );
+		return {
+			originalFilename: file.originalFilename,
+      imageName: file.projectTitle,
+      imageBody: file.base64,
+      imageExtension: imageExtension,
+      talent: {
+				name: talent.name,
+				id: talent._id
+			}
+    };
+	}
 
 }
 

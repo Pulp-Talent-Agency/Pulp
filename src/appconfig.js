@@ -27,10 +27,15 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 			controllerAs: 'homeCtrl'
 		} )
 		.state( 'talent', {
-			url: '/:category/:id/:name',
+			url: '/:category/:talentid/:talentname',
 			template: talentHtml,
 			controller: 'TalentController',
-			controllerAs: 'talentCtrl'
+			controllerAs: 'talentCtrl',
+			resolve: {
+				talentPhotos: function( $stateParams, talentService ) {
+					return talentService.getTalentPhotos( $stateParams.talentid );
+				}
+			}
 		} )
 		.state( 'about', {
 			url: '/about',
@@ -41,24 +46,25 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 			template: contactHtml
 		} )
 		.state( 'upload', {
-			url: '/upload',
+			url: '/secretplacewhereicanuploadimages',
 			template: uploadHtml,
 			controller: 'UploadController',
-			controllerAs: 'uploadCtrl'
+			controllerAs: 'uploadCtrl',
+			resolve: {
+				allTalent: function( talentService ) {
+					return talentService.getAllTalent();
+				}
+			}
 		} )
 
 		// ADMIN STATES
-		.state( 'admin', {
-			url: '/admin',
-			template: '<h1>Admin</h1><ui-view></ui-view>'
+		.state( 'adminLogin', {
+			url: '/admin/login',
+			template: adminLogin
 		} )
-			.state( 'admin.login', {
-				url: '/login',
-				template: adminLogin
-			} )
-			.state( 'admin.dashboard', {
-				url: '/dashboard',
-				template: adminDashboard
-			} );
+		.state( 'adminDashboard', {
+			url: '/admin/dashboard',
+			template: adminDashboard
+		} );
 
 }

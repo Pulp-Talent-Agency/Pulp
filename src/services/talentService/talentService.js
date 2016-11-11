@@ -5,8 +5,13 @@ talentService.$inject = [
 
 function talentService( $q, $http ) {
 
+	let allTalent;
+	let menuItems;
+
 	return {
-		getMenuItems: getMenuItems
+		getMenuItems: getMenuItems,
+		getAllTalent: getAllTalent,
+		getTalentPhotos: getTalentPhotos
 	};
 
 
@@ -19,17 +24,45 @@ function talentService( $q, $http ) {
 	\**************************************************************************/
 
 	function getMenuItems() {
-		return $http.get( '/api/talent' )
-			.then( function( talent ) {
-				var menuItems = formatDataForMenu( talent.data );
-				menuItems.forEach( function( val, index, array ) {
-					val.talent.forEach( function( v, i , a ) {
-						v.uppercase_name = v.name.toUpperCase();
-						v.url_name = v.name.split( ' ' ).join( '_' );
+		if( !menuItems ) {
+			return $http.get( '/api/talent' )
+				.then( function( talent ) {
+					allTalent = talent.data;
+					var menuItems = formatDataForMenu( talent.data );
+					menuItems.forEach( function( val, index, array ) {
+						val.talent.forEach( function( v, i , a ) {
+							v.uppercase_name = v.name.toUpperCase();
+							v.url_name = v.name.split( ' ' ).join( '_' );
+						} );
 					} );
+					return menuItems;
 				} );
-				return menuItems;
-			} );
+		} else {
+			return $q.when( menuItems );
+		}
+	}
+
+	function getAllTalent() {
+		if( !allTalent ) {
+			return $http.get( '/api/talent' )
+				.then( function( talentResponse ) {
+					allTalent = talentResponse.data;
+					return allTalent;
+				} );
+		} else {
+			return $q.when( allTalent );
+		}
+	}
+
+	function getTalentPhotos( talentId ) {
+		if( !allTalent ) {
+			return getAllTalent()
+				.then( function( talents ) {
+					return findTalentAndReturnPhotos( talentId, talents );
+				} );
+		} else {
+			return $q.when( findTalentAndReturnPhotos( talentId, allTalent ) );
+		}
 	}
 
 
@@ -82,6 +115,14 @@ function talentService( $q, $http ) {
 					}
 				]
 			} );
+		}
+	}
+
+	function findTalentAndReturnPhotos( talentId, allTalent ) {
+		for( let i = 0; i < allTalent.length; i++ ) {
+			if( allTalent[ i ]._id === talentId ) {
+				return allTalent[ i ].photos;
+			}
 		}
 	}
 
