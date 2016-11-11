@@ -5189,7 +5189,7 @@
   \*******************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.0480952348863858960.8260194814946864xxx\" alt=\"\">\n\t</div>\n</div>\n";
+	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.46495974634534610.8099370717555228xxx\" alt=\"\">\n\t</div>\n</div>\n";
 
 /***/ },
 /* 14 */
