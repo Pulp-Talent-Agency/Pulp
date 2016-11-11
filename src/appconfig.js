@@ -27,10 +27,15 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 			controllerAs: 'homeCtrl'
 		} )
 		.state( 'talent', {
-			url: '/:category/:id/:name',
+			url: '/:category/:talentid/:talentname',
 			template: talentHtml,
 			controller: 'TalentController',
-			controllerAs: 'talentCtrl'
+			controllerAs: 'talentCtrl',
+			resolve: {
+				talentPhotos: function( $stateParams, talentService ) {
+					return talentService.getTalentPhotos( $stateParams.talentid );
+				}
+			}
 		} )
 		.state( 'about', {
 			url: '/about',
@@ -41,10 +46,15 @@ export default function config( $stateProvider, $urlRouterProvider, $compileProv
 			template: contactHtml
 		} )
 		.state( 'upload', {
-			url: '/upload',
+			url: '/secretplacewhereicanuploadimages',
 			template: uploadHtml,
 			controller: 'UploadController',
-			controllerAs: 'uploadCtrl'
+			controllerAs: 'uploadCtrl',
+			resolve: {
+				allTalent: function( talentService ) {
+					return talentService.getAllTalent();
+				}
+			}
 		} )
 
 		// ADMIN STATES

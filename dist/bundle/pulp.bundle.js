@@ -59,23 +59,23 @@
 	
 	var _appconfig2 = _interopRequireDefault(_appconfig);
 	
-	var _apprun = __webpack_require__(/*! ./apprun.js */ 13);
+	var _apprun = __webpack_require__(/*! ./apprun.js */ 14);
 	
 	var _apprun2 = _interopRequireDefault(_apprun);
 	
-	__webpack_require__(/*! ./services/servicesModule.js */ 15);
+	__webpack_require__(/*! ./services/servicesModule.js */ 16);
 	
-	__webpack_require__(/*! ./components/componentsModule.js */ 18);
+	__webpack_require__(/*! ./components/componentsModule.js */ 20);
 	
-	var _homeCtrl = __webpack_require__(/*! ./views/home/homeCtrl.js */ 27);
+	var _homeCtrl = __webpack_require__(/*! ./views/home/homeCtrl.js */ 29);
 	
 	var _homeCtrl2 = _interopRequireDefault(_homeCtrl);
 	
-	var _talentCtrl = __webpack_require__(/*! ./views/talent/talentCtrl.js */ 28);
+	var _talentCtrl = __webpack_require__(/*! ./views/talent/talentCtrl.js */ 30);
 	
 	var _talentCtrl2 = _interopRequireDefault(_talentCtrl);
 	
-	var _uploadCtrl = __webpack_require__(/*! ./views/upload/uploadCtrl.js */ 34);
+	var _uploadCtrl = __webpack_require__(/*! ./views/upload/uploadCtrl.js */ 31);
 	
 	var _uploadCtrl2 = _interopRequireDefault(_uploadCtrl);
 	
@@ -4723,7 +4723,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);", ""]);
 	
 	// module
-	exports.push([module.id, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  font-size: 62.5%;\n  vertical-align: baseline;\n  box-sizing: border-box; }\n\nhtml::-moz-selection, body::-moz-selection, div::-moz-selection, span::-moz-selection, applet::-moz-selection, object::-moz-selection, iframe::-moz-selection,\nh1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, blockquote::-moz-selection, pre::-moz-selection,\na::-moz-selection, abbr::-moz-selection, acronym::-moz-selection, address::-moz-selection, big::-moz-selection, cite::-moz-selection, code::-moz-selection,\ndel::-moz-selection, dfn::-moz-selection, em::-moz-selection, img::-moz-selection, ins::-moz-selection, kbd::-moz-selection, q::-moz-selection, s::-moz-selection, samp::-moz-selection,\nsmall::-moz-selection, strike::-moz-selection, strong::-moz-selection, sub::-moz-selection, sup::-moz-selection, tt::-moz-selection, var::-moz-selection,\nb::-moz-selection, u::-moz-selection, i::-moz-selection, center::-moz-selection, input::-moz-selection,\ndl::-moz-selection, dt::-moz-selection, dd::-moz-selection, ol::-moz-selection, ul::-moz-selection, li::-moz-selection,\nfieldset::-moz-selection, form::-moz-selection, label::-moz-selection, legend::-moz-selection,\ntable::-moz-selection, caption::-moz-selection, tbody::-moz-selection, tfoot::-moz-selection, thead::-moz-selection, tr::-moz-selection, th::-moz-selection, td::-moz-selection,\narticle::-moz-selection, aside::-moz-selection, canvas::-moz-selection, details::-moz-selection, embed::-moz-selection,\nfigure::-moz-selection, figcaption::-moz-selection, footer::-moz-selection, header::-moz-selection, hgroup::-moz-selection,\nmenu::-moz-selection, nav::-moz-selection, output::-moz-selection, ruby::-moz-selection, section::-moz-selection, summary::-moz-selection,\ntime::-moz-selection, mark::-moz-selection, audio::-moz-selection, video::-moz-selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\nhtml::selection, body::selection, div::selection, span::selection, applet::selection, object::selection, iframe::selection,\nh1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, blockquote::selection, pre::selection,\na::selection, abbr::selection, acronym::selection, address::selection, big::selection, cite::selection, code::selection,\ndel::selection, dfn::selection, em::selection, img::selection, ins::selection, kbd::selection, q::selection, s::selection, samp::selection,\nsmall::selection, strike::selection, strong::selection, sub::selection, sup::selection, tt::selection, var::selection,\nb::selection, u::selection, i::selection, center::selection, input::selection,\ndl::selection, dt::selection, dd::selection, ol::selection, ul::selection, li::selection,\nfieldset::selection, form::selection, label::selection, legend::selection,\ntable::selection, caption::selection, tbody::selection, tfoot::selection, thead::selection, tr::selection, th::selection, td::selection,\narticle::selection, aside::selection, canvas::selection, details::selection, embed::selection,\nfigure::selection, figcaption::selection, footer::selection, header::selection, hgroup::selection,\nmenu::selection, nav::selection, output::selection, ruby::selection, section::selection, summary::selection,\ntime::selection, mark::selection, audio::selection, video::selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer; }\n\nbutton:focus {\n  outline: none; }\n\na {\n  text-decoration: none; }\n\nimg {\n  margin-bottom: -0.3rem; }\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif; }\n\nui-view {\n  width: 90%;\n  height: 200vh;\n  margin: 0 auto; }\n\nh1 {\n  font-weight: 600;\n  font-size: 1.2rem;\n  letter-spacing: 0.5rem; }\n\nh6 {\n  font-size: 1.8rem;\n  font-weight: 600;\n  letter-spacing: 0.5rem; }\n\np {\n  font-size: 1.4rem;\n  letter-spacing: 0.2rem;\n  line-height: 1.8rem; }\n\n@media (min-width: 425px) {\n  h1 {\n    font-size: 1.8rem; } }\n\n@media (min-width: 769px) {\n  h1 {\n    font-size: 2.4rem; } }\n\nheader {\n  width: 320px;\n  background-color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  header .title {\n    width: 320px;\n    height: 6rem;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    header .title h1 {\n      cursor: pointer; }\n  header header-nav {\n    display: none; }\n\nui-view {\n  width: 320px;\n  height: 200vh; }\n\nfooter {\n  width: 100%;\n  height: 2rem;\n  background-color: #333;\n  position: fixed;\n  bottom: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  footer p {\n    font-size: 0.8rem;\n    color: #999; }\n\n@media (min-width: 320px) {\n  header {\n    width: 100%; }\n    header .title {\n      width: 100%; }\n  ui-view {\n    width: 100%; } }\n\n@media (min-width: 769px) {\n  header {\n    position: fixed;\n    z-index: 5; }\n    header .title {\n      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }\n    header header-nav {\n      width: 100%;\n      z-index: 5;\n      display: block; }\n  ui-view {\n    position: relative;\n    top: 9.5rem; }\n  .container {\n    padding-top: 4rem; } }\n\n.wrapper {\n  padding-bottom: 5rem;\n  width: 320px;\n  margin: 0 auto; }\n  .wrapper .talent-title {\n    width: 100%;\n    height: auto;\n    padding: 2rem 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    .wrapper .talent-title h2 {\n      font-style: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n      font-size: 2rem;\n      border-bottom: 1px solid #000;\n      margin-bottom: 1rem; }\n  .wrapper .masonry {\n    width: 100%;\n    margin: 0 auto; }\n    .wrapper .masonry .gutter-sizer {\n      width: 0; }\n    .wrapper .masonry .masonry-brick {\n      width: 100%;\n      margin-bottom: 0;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .wrapper .masonry .masonry-brick img {\n        width: 100%; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        display: none; }\n\n.overlay {\n  color: black;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  padding: 3%;\n  background-color: #ffffff;\n  z-index: 100;\n  overflow: hidden; }\n  .overlay img {\n    max-width: 80vw;\n    max-height: 90vh; }\n\n.fade {\n  position: fixed;\n  left: 0%;\n  top: 0%;\n  background-color: black;\n  opacity: .90;\n  width: 100%;\n  height: 100%;\n  z-index: 99; }\n  .fade p {\n    font-size: 4rem;\n    position: fixed;\n    top: 3rem;\n    right: 3rem;\n    color: #999;\n    cursor: pointer;\n    -webkit-transition: color 0.2s ease;\n    transition: color 0.2s ease; }\n    .fade p:hover {\n      color: #fff; }\n\n@media (min-width: 320px) {\n  .wrapper {\n    width: 100%; } }\n\n@media (min-width: 415px) {\n  .wrapper .masonry .masonry-brick {\n    width: 50%; } }\n\n@media (min-width: 768px) {\n  .wrapper {\n    width: 98%; }\n    .wrapper .talent-title {\n      height: 8rem; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 24%;\n      margin-bottom: 1%; }\n      .wrapper .masonry .masonry-brick img {\n        -webkit-transition: opacity 0.5s ease;\n        transition: opacity 0.5s ease;\n        width: 100%; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        -webkit-transition: display 0.5s ease;\n        transition: display 0.5s ease;\n        display: none; }\n      .wrapper .masonry .masonry-brick:hover .photo-description {\n        font: Helvetica, sans-serif;\n        font-weight: 600;\n        display: block;\n        position: absolute;\n        color: black; }\n      .wrapper .masonry .masonry-brick:hover img {\n        opacity: 0.3; }\n      .wrapper .masonry .masonry-brick:active img {\n        -webkit-transition: opacity 0.2s ease;\n        transition: opacity 0.2s ease;\n        opacity: 0.6; }\n  .overlay {\n    padding: 25px; } }\n\n@media (min-width: 1441px) {\n  .wrapper {\n    width: 98%;\n    max-width: 2000px; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 19%;\n      margin-bottom: 1%; } }\n\n.headernav {\n  width: auto;\n  height: 3.5rem;\n  background-color: white;\n  margin: 0 auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  .headernav .item-container {\n    width: auto;\n    height: 3.5rem;\n    background-color: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 5;\n    position: relative; }\n    .headernav .item-container p {\n      margin-right: 2rem;\n      font-size: 1.2rem; }\n    .headernav .item-container .menuitem {\n      cursor: pointer; }\n    .headernav .item-container .talentlist {\n      width: 100%;\n      height: 15rem;\n      background-color: rgba(237, 237, 237, 0.95);\n      padding: 2rem 0;\n      display: none;\n      position: fixed;\n      top: 9.5rem;\n      left: 0;\n      z-index: -100; }\n      .headernav .item-container .talentlist .talentlist-container {\n        width: 80%;\n        max-width: 80rem;\n        margin: 0 auto;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: start;\n            -ms-flex-pack: start;\n                justify-content: flex-start;\n        -webkit-box-align: start;\n            -ms-flex-align: start;\n                align-items: flex-start;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap; }\n        .headernav .item-container .talentlist .talentlist-container .talent-container {\n          width: 25%; }\n          .headernav .item-container .talentlist .talentlist-container .talent-container p {\n            cursor: pointer;\n            padding-left: 1rem; }\n            .headernav .item-container .talentlist .talentlist-container .talent-container p:hover {\n              background-color: #a1a1a1;\n              color: #ededed; }\n    .headernav .item-container #lastMenuItem {\n      margin-right: 0; }\n\n.hamburger {\n  width: 4rem;\n  height: 4rem;\n  background-color: white;\n  position: fixed;\n  top: 1rem;\n  right: 1rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2); }\n  .hamburger p {\n    font-size: 3rem;\n    cursor: pointer; }\n\n.sidenav {\n  width: 250px;\n  height: 100vh;\n  padding: 3rem;\n  position: fixed;\n  top: 0;\n  left: -50rem;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2);\n  background-color: #eee;\n  overflow-y: scroll; }\n  .sidenav::-webkit-scrollbar {\n    width: 0.4rem;\n    background: transparent; }\n  .sidenav::-webkit-scrollbar-thumb {\n    background: rgba(0, 0, 0, 0.2);\n    border-radius: 0.2rem; }\n  .sidenav .menuitem {\n    margin-bottom: 2rem;\n    font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n    font-size: 1.8rem;\n    letter-spacing: 0.2rem; }\n    .sidenav .menuitem p {\n      cursor: pointer; }\n      .sidenav .menuitem p:hover {\n        color: rgba(0, 0, 0, 0.5); }\n      .sidenav .menuitem p:active {\n        color: white; }\n    .sidenav .menuitem .sub-menu {\n      padding: 3rem 0 0.8rem 2rem; }\n      .sidenav .menuitem .sub-menuitem {\n        margin-bottom: 2rem;\n        font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n        font-size: 1.8rem; }\n    .sidenav .menuitem .social-container {\n      width: 100%;\n      height: 4rem;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: start;\n          -ms-flex-pack: start;\n              justify-content: flex-start;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .sidenav .menuitem .social-container .social-icon {\n        width: 3rem;\n        height: 3rem;\n        margin-right: 1rem; }\n\n@media (min-width: 375px) {\n  .sidenav {\n    width: 30rem; } }\n\n@media (min-width: 769px) {\n  .hamburger {\n    display: none; }\n  .sidenav {\n    display: none; } }\n\n.wrapper .about-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .about-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .about-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .about-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .about-container {\n    width: 80rem; } }\n\n.wrapper .contact-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .contact-container h6 {\n    line-height: 1.8rem; }\n  .wrapper .contact-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .contact-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .contact-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .contact-container {\n    width: 80rem; } }\n\n.wrapper .button-container {\n  width: auto;\n  height: auto;\n  padding: 3rem 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  .wrapper .button-container div {\n    margin-right: 1rem; }\n    .wrapper .button-container div .inputfile {\n      width: 0.1px;\n      height: 0.1px;\n      opacity: 0;\n      overflow: hidden;\n      position: absolute;\n      z-index: -1; }\n    .wrapper .button-container div .inputfile + label {\n      background-color: white;\n      padding: 15px;\n      font-size: 1.25rem;\n      border: 1px solid #333;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);\n      display: inline-block;\n      cursor: pointer;\n      -webkit-transition: all 0.2s;\n      transition: all 0.2s; }\n    .wrapper .button-container div .inputfile:focus + label,\n    .wrapper .button-container div .inputfile + label:hover {\n      background-color: #333;\n      color: white;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n    .wrapper .button-container div .inputfile + label:active {\n      background-color: #555;\n      box-shadow: none; }\n    .wrapper .button-container div .inputfile:focus + label {\n      outline: 1px solid #333; }\n    .wrapper .button-container div button {\n      background-color: white;\n      padding: 15px;\n      border: 1px solid #333;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);\n      display: inline-block;\n      cursor: pointer;\n      -webkit-transition: all 0.2s;\n      transition: all 0.2s; }\n      .wrapper .button-container div button:hover {\n        background-color: #333;\n        color: white;\n        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n      .wrapper .button-container div button:active {\n        background-color: #555;\n        box-shadow: none; }\n\n.wrapper .preview {\n  max-width: 30rem;\n  height: auto;\n  padding: 2rem;\n  background-color: #333;\n  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n  .wrapper .preview .preview-image {\n    width: 100%; }\n", ""]);
+	exports.push([module.id, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  font-size: 62.5%;\n  vertical-align: baseline;\n  box-sizing: border-box; }\n\nhtml::-moz-selection, body::-moz-selection, div::-moz-selection, span::-moz-selection, applet::-moz-selection, object::-moz-selection, iframe::-moz-selection,\nh1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, blockquote::-moz-selection, pre::-moz-selection,\na::-moz-selection, abbr::-moz-selection, acronym::-moz-selection, address::-moz-selection, big::-moz-selection, cite::-moz-selection, code::-moz-selection,\ndel::-moz-selection, dfn::-moz-selection, em::-moz-selection, img::-moz-selection, ins::-moz-selection, kbd::-moz-selection, q::-moz-selection, s::-moz-selection, samp::-moz-selection,\nsmall::-moz-selection, strike::-moz-selection, strong::-moz-selection, sub::-moz-selection, sup::-moz-selection, tt::-moz-selection, var::-moz-selection,\nb::-moz-selection, u::-moz-selection, i::-moz-selection, center::-moz-selection, input::-moz-selection,\ndl::-moz-selection, dt::-moz-selection, dd::-moz-selection, ol::-moz-selection, ul::-moz-selection, li::-moz-selection,\nfieldset::-moz-selection, form::-moz-selection, label::-moz-selection, legend::-moz-selection,\ntable::-moz-selection, caption::-moz-selection, tbody::-moz-selection, tfoot::-moz-selection, thead::-moz-selection, tr::-moz-selection, th::-moz-selection, td::-moz-selection,\narticle::-moz-selection, aside::-moz-selection, canvas::-moz-selection, details::-moz-selection, embed::-moz-selection,\nfigure::-moz-selection, figcaption::-moz-selection, footer::-moz-selection, header::-moz-selection, hgroup::-moz-selection,\nmenu::-moz-selection, nav::-moz-selection, output::-moz-selection, ruby::-moz-selection, section::-moz-selection, summary::-moz-selection,\ntime::-moz-selection, mark::-moz-selection, audio::-moz-selection, video::-moz-selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\nhtml::selection, body::selection, div::selection, span::selection, applet::selection, object::selection, iframe::selection,\nh1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, blockquote::selection, pre::selection,\na::selection, abbr::selection, acronym::selection, address::selection, big::selection, cite::selection, code::selection,\ndel::selection, dfn::selection, em::selection, img::selection, ins::selection, kbd::selection, q::selection, s::selection, samp::selection,\nsmall::selection, strike::selection, strong::selection, sub::selection, sup::selection, tt::selection, var::selection,\nb::selection, u::selection, i::selection, center::selection, input::selection,\ndl::selection, dt::selection, dd::selection, ol::selection, ul::selection, li::selection,\nfieldset::selection, form::selection, label::selection, legend::selection,\ntable::selection, caption::selection, tbody::selection, tfoot::selection, thead::selection, tr::selection, th::selection, td::selection,\narticle::selection, aside::selection, canvas::selection, details::selection, embed::selection,\nfigure::selection, figcaption::selection, footer::selection, header::selection, hgroup::selection,\nmenu::selection, nav::selection, output::selection, ruby::selection, section::selection, summary::selection,\ntime::selection, mark::selection, audio::selection, video::selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer; }\n\nbutton:focus {\n  outline: none; }\n\na {\n  text-decoration: none; }\n\nimg {\n  margin-bottom: -0.3rem; }\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif; }\n\nui-view {\n  width: 90%;\n  height: 200vh;\n  margin: 0 auto; }\n\nh1 {\n  font-weight: 600;\n  font-size: 1.2rem;\n  letter-spacing: 0.5rem; }\n\nh6 {\n  font-size: 1.8rem;\n  font-weight: 600;\n  letter-spacing: 0.5rem; }\n\np {\n  font-size: 1.4rem;\n  letter-spacing: 0.2rem;\n  line-height: 1.8rem; }\n\n@media (min-width: 425px) {\n  h1 {\n    font-size: 1.8rem; } }\n\n@media (min-width: 769px) {\n  h1 {\n    font-size: 2.4rem; } }\n\nheader {\n  width: 320px;\n  background-color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  header .title {\n    width: 320px;\n    height: 6rem;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    header .title h1 {\n      cursor: pointer; }\n  header header-nav {\n    display: none; }\n\nui-view {\n  width: 320px;\n  height: 200vh; }\n\nfooter {\n  width: 100%;\n  height: 2rem;\n  background-color: #333;\n  position: fixed;\n  bottom: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  footer p {\n    font-size: 0.8rem;\n    color: #999; }\n\n@media (min-width: 320px) {\n  header {\n    width: 100%; }\n    header .title {\n      width: 100%; }\n  ui-view {\n    width: 100%; } }\n\n@media (min-width: 769px) {\n  header {\n    position: fixed;\n    z-index: 5; }\n    header .title {\n      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }\n    header header-nav {\n      width: 100%;\n      z-index: 5;\n      display: block; }\n  ui-view {\n    position: relative;\n    top: 9.5rem; }\n  .container {\n    padding-top: 4rem; } }\n\n.wrapper {\n  padding-bottom: 5rem;\n  width: 320px;\n  margin: 0 auto; }\n  .wrapper .talent-title {\n    width: 100%;\n    height: auto;\n    padding: 2rem 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    .wrapper .talent-title h2 {\n      font-style: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n      font-size: 2rem;\n      border-bottom: 1px solid #000;\n      margin-bottom: 1rem; }\n  .wrapper .masonry {\n    width: 100%;\n    margin: 0 auto; }\n    .wrapper .masonry .gutter-sizer {\n      width: 0; }\n    .wrapper .masonry .masonry-brick {\n      width: 100%;\n      margin-bottom: 0;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        display: none; }\n      .wrapper .masonry .masonry-brick img {\n        width: 100%; }\n\n.overlay {\n  color: black;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  padding: 3%;\n  background-color: #ffffff;\n  z-index: 100;\n  overflow: hidden; }\n  .overlay img {\n    max-width: 80vw;\n    max-height: 90vh; }\n\n.fade {\n  position: fixed;\n  left: 0%;\n  top: 0%;\n  background-color: black;\n  opacity: .90;\n  width: 100%;\n  height: 100%;\n  z-index: 99; }\n  .fade p {\n    font-size: 4rem;\n    position: fixed;\n    top: 3rem;\n    right: 3rem;\n    color: #999;\n    cursor: pointer;\n    -webkit-transition: color 0.2s ease;\n    transition: color 0.2s ease; }\n    .fade p:hover {\n      color: #fff; }\n\n@media (min-width: 320px) {\n  .wrapper {\n    width: 100%; } }\n\n@media (min-width: 415px) {\n  .wrapper .masonry .masonry-brick {\n    width: 50%; } }\n\n@media (min-width: 768px) {\n  .wrapper {\n    width: 98%; }\n    .wrapper .talent-title {\n      height: 8rem; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 24%;\n      margin-bottom: 1%; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        -webkit-transition: display 0.5s ease;\n        transition: display 0.5s ease;\n        display: none; }\n      .wrapper .masonry .masonry-brick img {\n        -webkit-transition: opacity 0.5s ease;\n        transition: opacity 0.5s ease;\n        width: 100%; }\n      .wrapper .masonry .masonry-brick:hover .photo-description {\n        font: Helvetica, sans-serif;\n        font-weight: 600;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: absolute;\n        color: black; }\n        .wrapper .masonry .masonry-brick:hover .photo-description-sub {\n          font-size: 0.8rem; }\n      .wrapper .masonry .masonry-brick:hover img {\n        opacity: 0.3; }\n      .wrapper .masonry .masonry-brick:active img {\n        -webkit-transition: opacity 0.2s ease;\n        transition: opacity 0.2s ease;\n        opacity: 0.6; }\n  .overlay {\n    padding: 25px; } }\n\n@media (min-width: 1441px) {\n  .wrapper {\n    width: 98%;\n    max-width: 2000px; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 19%;\n      margin-bottom: 1%; } }\n\n.headernav {\n  width: auto;\n  height: 3.5rem;\n  background-color: white;\n  margin: 0 auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  .headernav .item-container {\n    width: auto;\n    height: 3.5rem;\n    background-color: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 5;\n    position: relative; }\n    .headernav .item-container p {\n      margin-right: 2rem;\n      font-size: 1.2rem; }\n    .headernav .item-container .menuitem {\n      cursor: pointer; }\n    .headernav .item-container .talentlist {\n      width: 100%;\n      height: 15rem;\n      background-color: rgba(237, 237, 237, 0.95);\n      padding: 2rem 0;\n      display: none;\n      position: fixed;\n      top: 9.5rem;\n      left: 0;\n      z-index: -100; }\n      .headernav .item-container .talentlist .talentlist-container {\n        width: 80%;\n        max-width: 80rem;\n        margin: 0 auto;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: start;\n            -ms-flex-pack: start;\n                justify-content: flex-start;\n        -webkit-box-align: start;\n            -ms-flex-align: start;\n                align-items: flex-start;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap; }\n        .headernav .item-container .talentlist .talentlist-container .talent-container {\n          width: 25%; }\n          .headernav .item-container .talentlist .talentlist-container .talent-container p {\n            cursor: pointer;\n            padding-left: 1rem; }\n            .headernav .item-container .talentlist .talentlist-container .talent-container p:hover {\n              background-color: #a1a1a1;\n              color: #ededed; }\n    .headernav .item-container #lastMenuItem {\n      margin-right: 0; }\n\n.hamburger {\n  width: 4rem;\n  height: 4rem;\n  background-color: white;\n  position: fixed;\n  top: 1rem;\n  right: 1rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2); }\n  .hamburger p {\n    font-size: 3rem;\n    cursor: pointer; }\n\n.sidenav {\n  width: 250px;\n  height: 100vh;\n  padding: 3rem;\n  position: fixed;\n  top: 0;\n  left: -50rem;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2);\n  background-color: #eee;\n  overflow-y: scroll; }\n  .sidenav::-webkit-scrollbar {\n    width: 0.4rem;\n    background: transparent; }\n  .sidenav::-webkit-scrollbar-thumb {\n    background: rgba(0, 0, 0, 0.2);\n    border-radius: 0.2rem; }\n  .sidenav .menuitem {\n    margin-bottom: 2rem;\n    font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n    font-size: 1.8rem;\n    letter-spacing: 0.2rem; }\n    .sidenav .menuitem p {\n      cursor: pointer; }\n      .sidenav .menuitem p:hover {\n        color: rgba(0, 0, 0, 0.5); }\n      .sidenav .menuitem p:active {\n        color: white; }\n    .sidenav .menuitem .sub-menu {\n      padding: 3rem 0 0.8rem 2rem; }\n      .sidenav .menuitem .sub-menuitem {\n        margin-bottom: 2rem;\n        font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n        font-size: 1.8rem; }\n    .sidenav .menuitem .social-container {\n      width: 100%;\n      height: 4rem;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: start;\n          -ms-flex-pack: start;\n              justify-content: flex-start;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .sidenav .menuitem .social-container .social-icon {\n        width: 3rem;\n        height: 3rem;\n        margin-right: 1rem; }\n\n@media (min-width: 375px) {\n  .sidenav {\n    width: 30rem; } }\n\n@media (min-width: 769px) {\n  .hamburger {\n    display: none; }\n  .sidenav {\n    display: none; } }\n\n.wrapper .about-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .about-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .about-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .about-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .about-container {\n    width: 80rem; } }\n\n.wrapper .contact-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .contact-container h6 {\n    line-height: 1.8rem; }\n  .wrapper .contact-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .contact-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .contact-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .contact-container {\n    width: 80rem; } }\n\n.wrapper .button-container {\n  width: auto;\n  height: auto;\n  padding: 3rem 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  .wrapper .button-container div {\n    margin-right: 1rem; }\n    .wrapper .button-container div .inputfile {\n      width: 0.1px;\n      height: 0.1px;\n      opacity: 0;\n      overflow: hidden;\n      position: absolute;\n      z-index: -1; }\n    .wrapper .button-container div .inputfile + label {\n      background-color: white;\n      padding: 15px;\n      font-size: 1.25rem;\n      border: 1px solid #333;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);\n      display: inline-block;\n      cursor: pointer;\n      -webkit-transition: all 0.2s;\n      transition: all 0.2s; }\n    .wrapper .button-container div .inputfile:focus + label,\n    .wrapper .button-container div .inputfile + label:hover {\n      background-color: #333;\n      color: white;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n    .wrapper .button-container div .inputfile + label:active {\n      background-color: #555;\n      box-shadow: none; }\n    .wrapper .button-container div .inputfile:focus + label {\n      outline: 1px solid #333; }\n    .wrapper .button-container div button {\n      background-color: white;\n      padding: 15px;\n      border: 1px solid #333;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);\n      display: inline-block;\n      cursor: pointer;\n      -webkit-transition: all 0.2s;\n      transition: all 0.2s; }\n      .wrapper .button-container div button:hover {\n        background-color: #333;\n        color: white;\n        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n      .wrapper .button-container div button:active {\n        background-color: #555;\n        box-shadow: none; }\n\n.wrapper .preview {\n  max-width: 30rem;\n  height: auto;\n  padding: 2rem;\n  background-color: #333;\n  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n  .wrapper .preview .preview-image {\n    width: 100%; }\n", ""]);
 	
 	// exports
 
@@ -5080,7 +5080,7 @@
 	
 	var _dashboardTmpl2 = _interopRequireDefault(_dashboardTmpl);
 	
-	var _uploadTmpl = __webpack_require__(/*! ./views/upload/upload-tmpl.html */ 29);
+	var _uploadTmpl = __webpack_require__(/*! ./views/upload/upload-tmpl.html */ 13);
 	
 	var _uploadTmpl2 = _interopRequireDefault(_uploadTmpl);
 	
@@ -5101,10 +5101,15 @@
 			controller: 'HomeController',
 			controllerAs: 'homeCtrl'
 		}).state('talent', {
-			url: '/:category/:id/:name',
+			url: '/:category/:talentid/:talentname',
 			template: _talentTmpl2.default,
 			controller: 'TalentController',
-			controllerAs: 'talentCtrl'
+			controllerAs: 'talentCtrl',
+			resolve: {
+				talentPhotos: function talentPhotos($stateParams, talentService) {
+					return talentService.getTalentPhotos($stateParams.talentid);
+				}
+			}
 		}).state('about', {
 			url: '/about',
 			template: _aboutTmpl2.default
@@ -5112,10 +5117,15 @@
 			url: '/contact',
 			template: _contactTmpl2.default
 		}).state('upload', {
-			url: '/upload',
+			url: '/secretplacewhereicanuploadimages',
 			template: _uploadTmpl2.default,
 			controller: 'UploadController',
-			controllerAs: 'uploadCtrl'
+			controllerAs: 'uploadCtrl',
+			resolve: {
+				allTalent: function allTalent(talentService) {
+					return talentService.getAllTalent();
+				}
+			}
 		})
 	
 		// ADMIN STATES
@@ -5135,7 +5145,7 @@
   \***************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\n\t<div class=\"talent-title\">\n\n\t</div>\n\n\t<div class=\"masonry\" data-masonry=\"{ 'gutter': '.gutter-sizer', 'percentPosition': true }\">\n\t\t<div class=\"gutter-sizer\"></div>\n    <div masonry-brick class=\"masonry-brick\" ng-repeat=\"brick in homeCtrl.bricks\">\n      <img ng-src=\"{{ brick.amazonS3.Location }}\" alt=\"\" />\n    </div>\n\t</div>\n\n</div>\n";
+	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\n\t<div class=\"talent-title\">\n\n\t</div>\n\n\t<div class=\"masonry\" data-masonry=\"{ 'gutter': '.gutter-sizer', 'percentPosition': true }\">\n\t\t<div class=\"gutter-sizer\"></div>\n    <div masonry-brick class=\"masonry-brick\" ng-repeat=\"brick in homeCtrl.bricks\">\n\t\t\t<div class=\"photo-description\">\n\t\t\t\t<p>{{ brick.talent.name }}</p>\n\t\t\t\t<p class=\"photo-description-sub\">{{ brick.talent.department[ 0 ] }}</p>\n\t\t\t</div>\n      <img ng-src=\"{{ brick.amazonS3.small500width.Location }}\" ui-sref=\"talent( { category: brick.talent.department[ 0 ], talentid: brick.talent._id, talentname: brick.talent.name } )\" alt=\"\" />\n    </div>\n\t</div>\n\n</div>\n";
 
 /***/ },
 /* 8 */
@@ -5144,7 +5154,7 @@
   \*******************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\n\t<div class=\"talent-title\">\n\t\t<h2>{{ talentCtrl.talent.name }}</h2>\n\t\t<p>{{ talentCtrl.talent.dept }}</p>\n\t</div>\n\n\t<div class=\"masonry\" data-masonry=\"{ 'gutter': '.gutter-sizer', 'percentPosition': true }\">\n\t\t<div class=\"gutter-sizer\"></div>\n    <div masonry-brick class=\"masonry-brick\" ng-repeat=\"photo in talentCtrl.bricks\" ng-click=\"talentCtrl.showModalOfPhoto( photo )\">\n\t\t\t<p class=\"photo-description\">{{ photo.desc }}</p>\n      <img ng-src=\"{{ photo.amazonS3.Location }}\" alt=\"\"/>\n    </div>\n\t</div>\n\n</div>\n<div class=\"fade\" ng-if=\"talentCtrl.selectedPhoto\" ng-click=\"talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto\">\n\t<p>✕</p>\n</div>\n<div class=\"overlay\" ng-if=\"talentCtrl.selectedPhoto\">\n\t<img ng-src=\"{{ talentCtrl.selectedPhoto.amazonS3.Location }}\" alt=\"\" ng-click=\"talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto\">\n</div>\n";
+	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\n\t<div class=\"talent-title\">\n\t\t<h2>{{ talentCtrl.talent.name }}</h2>\n\t\t<p>{{ talentCtrl.talent.dept }}</p>\n\t</div>\n\n\t<div class=\"masonry\" data-masonry=\"{ 'gutter': '.gutter-sizer', 'percentPosition': true }\">\n\t\t<div class=\"gutter-sizer\"></div>\n    <div masonry-brick class=\"masonry-brick\" ng-repeat=\"photo in talentCtrl.bricks\" ng-click=\"talentCtrl.showModalOfPhoto( photo )\">\n\t\t\t<p class=\"photo-description\">{{ photo.title }}</p>\n      <img ng-src=\"{{ photo.amazonS3.small500width.Location }}\" alt=\"\"/>\n    </div>\n\t</div>\n\n</div>\n<div class=\"fade\" ng-if=\"talentCtrl.selectedPhoto\" ng-click=\"talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto\">\n\t<p>✕</p>\n</div>\n<div class=\"overlay\" ng-if=\"talentCtrl.selectedPhoto\">\n\t<img ng-src=\"{{ talentCtrl.selectedPhoto.amazonS3.full_size.Location }}\" alt=\"\" ng-click=\"talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto\">\n</div>\n";
 
 /***/ },
 /* 9 */
@@ -5184,6 +5194,15 @@
 
 /***/ },
 /* 13 */
+/*!*******************************************!*\
+  !*** ./src/views/upload/upload-tmpl.html ***!
+  \*******************************************/
+/***/ function(module, exports) {
+
+	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"select-talent\">\n\t\t\t<select name=\"talentSelect\" ng-model=\"uploadCtrl.talentIndex\">\n\t\t\t\t<option ng-repeat=\"talent in uploadCtrl.talents track by $index\" ng-value=\"$index\">{{ talent.name }}</option>\n\t\t\t</select>\n\t\t</div>\n\t\t<div class=\"project-title\">\n\t\t\t<input type=\"text\" ng-model=\"uploadCtrl.projectTitle\">\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file, uploadCtrl.talents[ uploadCtrl.talentIndex ], uploadCtrl.projectTitle )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.250954739001997050.7803075980227732xxx\" alt=\"\">\n\t</div>\n</div>\n";
+
+/***/ },
+/* 14 */
 /*!***********************!*\
   !*** ./src/apprun.js ***!
   \***********************/
@@ -5196,7 +5215,7 @@
 	});
 	exports.default = run;
 	
-	var _jquery = __webpack_require__(/*! jquery */ 14);
+	var _jquery = __webpack_require__(/*! jquery */ 15);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -5216,7 +5235,7 @@
 	}
 
 /***/ },
-/* 14 */
+/* 15 */
 /*!*********************************!*\
   !*** ./~/jquery/dist/jquery.js ***!
   \*********************************/
@@ -15445,7 +15464,7 @@
 
 
 /***/ },
-/* 15 */
+/* 16 */
 /*!****************************************!*\
   !*** ./src/services/servicesModule.js ***!
   \****************************************/
@@ -15457,15 +15476,15 @@
 		value: true
 	});
 	
-	var _talentService = __webpack_require__(/*! ./talentService/talentService.js */ 16);
+	var _talentService = __webpack_require__(/*! ./talentService/talentService.js */ 17);
 	
 	var _talentService2 = _interopRequireDefault(_talentService);
 	
-	var _navService = __webpack_require__(/*! ./navService/navService.js */ 17);
+	var _navService = __webpack_require__(/*! ./navService/navService.js */ 18);
 	
 	var _navService2 = _interopRequireDefault(_navService);
 	
-	var _photoService = __webpack_require__(/*! ./photoService/photoService.js */ 35);
+	var _photoService = __webpack_require__(/*! ./photoService/photoService.js */ 19);
 	
 	var _photoService2 = _interopRequireDefault(_photoService);
 	
@@ -15487,7 +15506,7 @@
 	}
 
 /***/ },
-/* 16 */
+/* 17 */
 /*!*****************************************************!*\
   !*** ./src/services/talentService/talentService.js ***!
   \*****************************************************/
@@ -15502,8 +15521,13 @@
 	
 	function talentService($q, $http) {
 	
+		var allTalent = void 0;
+		var menuItems = void 0;
+	
 		return {
-			getMenuItems: getMenuItems
+			getMenuItems: getMenuItems,
+			getAllTalent: getAllTalent,
+			getTalentPhotos: getTalentPhotos
 		};
 	
 		/**************************************************************************\
@@ -15512,16 +15536,42 @@
 	 \**************************************************************************/
 	
 		function getMenuItems() {
-			return $http.get('/api/talent').then(function (talent) {
-				var menuItems = formatDataForMenu(talent.data);
-				menuItems.forEach(function (val, index, array) {
-					val.talent.forEach(function (v, i, a) {
-						v.uppercase_name = v.name.toUpperCase();
-						v.url_name = v.name.split(' ').join('_');
+			if (!menuItems) {
+				return $http.get('/api/talent').then(function (talent) {
+					allTalent = talent.data;
+					var menuItems = formatDataForMenu(talent.data);
+					menuItems.forEach(function (val, index, array) {
+						val.talent.forEach(function (v, i, a) {
+							v.uppercase_name = v.name.toUpperCase();
+							v.url_name = v.name.split(' ').join('_');
+						});
 					});
+					return menuItems;
 				});
-				return menuItems;
-			});
+			} else {
+				return $q.when(menuItems);
+			}
+		}
+	
+		function getAllTalent() {
+			if (!allTalent) {
+				return $http.get('/api/talent').then(function (talentResponse) {
+					allTalent = talentResponse.data;
+					return allTalent;
+				});
+			} else {
+				return $q.when(allTalent);
+			}
+		}
+	
+		function getTalentPhotos(talentId) {
+			if (!allTalent) {
+				return getAllTalent().then(function (talents) {
+					return findTalentAndReturnPhotos(talentId, talents);
+				});
+			} else {
+				return $q.when(findTalentAndReturnPhotos(talentId, allTalent));
+			}
 		}
 	
 		/**************************************************************************\
@@ -15568,12 +15618,20 @@
 				});
 			}
 		}
+	
+		function findTalentAndReturnPhotos(talentId, allTalent) {
+			for (var i = 0; i < allTalent.length; i++) {
+				if (allTalent[i]._id === talentId) {
+					return allTalent[i].photos;
+				}
+			}
+		}
 	}
 	
 	exports.default = talentService;
 
 /***/ },
-/* 17 */
+/* 18 */
 /*!***********************************************!*\
   !*** ./src/services/navService/navService.js ***!
   \***********************************************/
@@ -15585,7 +15643,7 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 14);
+	var _jquery = __webpack_require__(/*! jquery */ 15);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -15667,7 +15725,82 @@
 	exports.default = navService;
 
 /***/ },
-/* 18 */
+/* 19 */
+/*!***************************************************!*\
+  !*** ./src/services/photoService/photoService.js ***!
+  \***************************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	photoService.$inject = ['$http'];
+	
+	function photoService($http) {
+	
+		return {
+			uploadToAWS: uploadToAWS,
+			getAllFeaturedPhotos: getAllFeaturedPhotos,
+			getAllTalentPhotos: getAllTalentPhotos
+		};
+	
+		/****************************************************************************\
+	 	All general logic goes above this comment.
+	 	All detailed logic(function definitions) goes below this comment.
+	 \****************************************************************************/
+	
+		function uploadToAWS(file, talent) {
+			var awsObj = createObjForAWS(file, talent);
+			return $http.post('/api/photo', awsObj);
+		}
+	
+		function getAllFeaturedPhotos() {
+			return $http.get('/api/photo/featured').then(function (photos) {
+				photos.data = formatTalentName(photos.data);
+				return photos.data;
+			});
+		}
+	
+		function getAllTalentPhotos(talentId) {
+			return $http.get('/api/photo/' + talentId).then(function (photos) {
+				return photos.data;
+			});
+		}
+	
+		/**************************************************************************\
+	 	# Helper functions
+	 \**************************************************************************/
+	
+		function formatTalentName(photos) {
+			photos.forEach(function (val, idx, arr) {
+				val.talent.name = val.talent.name.split(' ').join('_');
+			});
+			return photos;
+		}
+	
+		function createObjForAWS(file, talent) {
+			talent.name = talent.name.split(' ').join('_');
+			var imageExtension = file.base64.split(';')[0].split('/')[1];
+			file.projectTitle = file.projectTitle.split(' ').join('_');
+			return {
+				originalFilename: file.originalFilename,
+				imageName: file.projectTitle,
+				imageBody: file.base64,
+				imageExtension: imageExtension,
+				talent: {
+					name: talent.name,
+					id: talent._id
+				}
+			};
+		}
+	}
+	
+	exports.default = photoService;
+
+/***/ },
+/* 20 */
 /*!********************************************!*\
   !*** ./src/components/componentsModule.js ***!
   \********************************************/
@@ -15679,11 +15812,11 @@
 		value: true
 	});
 	
-	var _sidenav = __webpack_require__(/*! ./sidenav/sidenav.js */ 19);
+	var _sidenav = __webpack_require__(/*! ./sidenav/sidenav.js */ 21);
 	
 	var _sidenav2 = _interopRequireDefault(_sidenav);
 	
-	var _headernav = __webpack_require__(/*! ./headernav/headernav.js */ 24);
+	var _headernav = __webpack_require__(/*! ./headernav/headernav.js */ 26);
 	
 	var _headernav2 = _interopRequireDefault(_headernav);
 	
@@ -15705,7 +15838,7 @@
 	}
 
 /***/ },
-/* 19 */
+/* 21 */
 /*!*******************************************!*\
   !*** ./src/components/sidenav/sidenav.js ***!
   \*******************************************/
@@ -15717,17 +15850,17 @@
 		value: true
 	});
 	
-	var _sidenavTmpl = __webpack_require__(/*! ./sidenav-tmpl.html */ 20);
+	var _sidenavTmpl = __webpack_require__(/*! ./sidenav-tmpl.html */ 22);
 	
 	var _sidenavTmpl2 = _interopRequireDefault(_sidenavTmpl);
 	
-	var _sidenavCtrl = __webpack_require__(/*! ./sidenav-ctrl.js */ 21);
+	var _sidenavCtrl = __webpack_require__(/*! ./sidenav-ctrl.js */ 23);
 	
 	var _sidenavCtrl2 = _interopRequireDefault(_sidenavCtrl);
 	
-	__webpack_require__(/*! ./assets/icons/Facebook_Solid.svg */ 22);
+	__webpack_require__(/*! ./assets/icons/Facebook_Solid.svg */ 24);
 	
-	__webpack_require__(/*! ./assets/icons/Instagram_Solid.svg */ 23);
+	__webpack_require__(/*! ./assets/icons/Instagram_Solid.svg */ 25);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -15741,16 +15874,16 @@
 	exports.default = sideNavOptions;
 
 /***/ },
-/* 20 */
+/* 22 */
 /*!**************************************************!*\
   !*** ./src/components/sidenav/sidenav-tmpl.html ***!
   \**************************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<div class=\"hamburger\" ng-click=\"snCtrl.toggleSideNav( snCtrl.menuItems )\">\n\t<p id=\"hamburger-symbol\">☰</p>\n</div>\n<nav class=\"sidenav\">\n\t<ul>\n\t\t<li class=\"menuitem\" ng-repeat=\"menuItem in snCtrl.menuItems\">\n\t\t\t<p ng-click=\"snCtrl.closeOthers( snCtrl.menuItems ); menuItem.open = !menuItem.open\">{{ menuItem.title }}</p>\n\t\t\t<ul class=\"sub-menu\" ng-show=\"menuItem.open\">\n\t\t\t\t<li class=\"sub-menuitem\" ng-repeat=\"talent in menuItem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuItem.title.toLowerCase(), id: talent.id, name: talent.url_name } )\">{{ talent.uppercase_name }}</p>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"about\">\n\t\t\t<p>ABOUT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"contact\">\n\t\t\t<p>CONTACT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\">\n\t\t\t<div class=\"social-container\">\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://facebook.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Facebook_Solid.svg\" alt=\"Facebook\"></a>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://instagram.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Instagram_Solid.svg\" alt=\"Instagram\"></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</li>\n\t</ul>\n</nav>\n";
+	module.exports = "<!DOCTYPE html>\n<div class=\"hamburger\" ng-click=\"snCtrl.toggleSideNav( snCtrl.menuItems )\">\n\t<p id=\"hamburger-symbol\">☰</p>\n</div>\n<nav class=\"sidenav\">\n\t<ul>\n\t\t<li class=\"menuitem\" ng-repeat=\"menuItem in snCtrl.menuItems\">\n\t\t\t<p ng-click=\"snCtrl.closeOthers( snCtrl.menuItems ); menuItem.open = !menuItem.open\">{{ menuItem.title }}</p>\n\t\t\t<ul class=\"sub-menu\" ng-show=\"menuItem.open\">\n\t\t\t\t<li class=\"sub-menuitem\" ng-repeat=\"talent in menuItem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuItem.title.toLowerCase(), talentid: talent.id, talentname: talent.url_name } )\">{{ talent.uppercase_name }}</p>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"about\">\n\t\t\t<p>ABOUT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"contact\">\n\t\t\t<p>CONTACT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\">\n\t\t\t<div class=\"social-container\">\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://facebook.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Facebook_Solid.svg\" alt=\"Facebook\"></a>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://instagram.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Instagram_Solid.svg\" alt=\"Instagram\"></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</li>\n\t</ul>\n</nav>\n";
 
 /***/ },
-/* 21 */
+/* 23 */
 /*!************************************************!*\
   !*** ./src/components/sidenav/sidenav-ctrl.js ***!
   \************************************************/
@@ -15762,7 +15895,7 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 14);
+	var _jquery = __webpack_require__(/*! jquery */ 15);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -15791,7 +15924,7 @@
 	exports.default = sideNavCtrl;
 
 /***/ },
-/* 22 */
+/* 24 */
 /*!****************************************************************!*\
   !*** ./src/components/sidenav/assets/icons/Facebook_Solid.svg ***!
   \****************************************************************/
@@ -15800,7 +15933,7 @@
 	module.exports = __webpack_require__.p + "assets/icons/Facebook_Solid.svg";
 
 /***/ },
-/* 23 */
+/* 25 */
 /*!*****************************************************************!*\
   !*** ./src/components/sidenav/assets/icons/Instagram_Solid.svg ***!
   \*****************************************************************/
@@ -15809,7 +15942,7 @@
 	module.exports = __webpack_require__.p + "assets/icons/Instagram_Solid.svg";
 
 /***/ },
-/* 24 */
+/* 26 */
 /*!***********************************************!*\
   !*** ./src/components/headernav/headernav.js ***!
   \***********************************************/
@@ -15821,11 +15954,11 @@
 		value: true
 	});
 	
-	var _headernavTmpl = __webpack_require__(/*! ./headernav-tmpl.html */ 25);
+	var _headernavTmpl = __webpack_require__(/*! ./headernav-tmpl.html */ 27);
 	
 	var _headernavTmpl2 = _interopRequireDefault(_headernavTmpl);
 	
-	var _headernavCtrl = __webpack_require__(/*! ./headernav-ctrl.js */ 26);
+	var _headernavCtrl = __webpack_require__(/*! ./headernav-ctrl.js */ 28);
 	
 	var _headernavCtrl2 = _interopRequireDefault(_headernavCtrl);
 	
@@ -15840,16 +15973,16 @@
 	exports.default = headerNavOptions;
 
 /***/ },
-/* 25 */
+/* 27 */
 /*!******************************************************!*\
   !*** ./src/components/headernav/headernav-tmpl.html ***!
   \******************************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<nav class=\"headernav\">\n\n\t<div class=\"item-container\" ng-repeat=\"menuitem in hnCtrl.menuItems track by $index\" ng-mouseenter=\"hnCtrl.showTalentList( $index, $event )\" ng-mouseleave=\"hnCtrl.hideTalentList( $index, $event )\">\n\t\t<p class=\"menuitem\">{{ menuitem.title }}</p>\n\t\t<p>/</p>\n\t\t<div class=\"talentlist\" id=\"talentlist{{ $index }}\">\n\t\t\t<div class=\"talentlist-container\">\n\t\t\t\t<div class=\"talent-container\" ng-repeat=\"talent in menuitem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuitem.title.toLowerCase(), id: talent.id, name: talent.url_name } )\">{{ talent.name }}</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" ui-sref=\"about\">ABOUT</p>\n\t\t<p>/</p>\n\t</div>\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" id=\"lastMenuItem\" ui-sref=\"contact\">CONTACT</p>\n\t</div>\n\n</nav>\n";
+	module.exports = "<!DOCTYPE html>\n<nav class=\"headernav\">\n\n\t<div class=\"item-container\" ng-repeat=\"menuitem in hnCtrl.menuItems track by $index\" ng-click=\"hnCtrl.showTalentList( $index, $event )\" ng-mouseleave=\"hnCtrl.hideTalentList( $index, $event )\">\n\t\t<p class=\"menuitem\">{{ menuitem.title }}</p>\n\t\t<p>/</p>\n\t\t<div class=\"talentlist\" id=\"talentlist{{ $index }}\">\n\t\t\t<div class=\"talentlist-container\">\n\t\t\t\t<div class=\"talent-container\" ng-repeat=\"talent in menuitem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuitem.title.toLowerCase(), talentid: talent.id, talentname: talent.url_name } )\">{{ talent.name }}</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" ui-sref=\"about\">ABOUT</p>\n\t\t<p>/</p>\n\t</div>\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" id=\"lastMenuItem\" ui-sref=\"contact\">CONTACT</p>\n\t</div>\n\n</nav>\n";
 
 /***/ },
-/* 26 */
+/* 28 */
 /*!****************************************************!*\
   !*** ./src/components/headernav/headernav-ctrl.js ***!
   \****************************************************/
@@ -15876,7 +16009,7 @@
 	exports.default = headerNavCtrl;
 
 /***/ },
-/* 27 */
+/* 29 */
 /*!************************************!*\
   !*** ./src/views/home/homeCtrl.js ***!
   \************************************/
@@ -15893,7 +16026,7 @@
 	
 		var vm = this;
 	
-		photoService.getAllPhotos().then(function (photos) {
+		photoService.getAllFeaturedPhotos().then(function (photos) {
 			vm.bricks = photos;
 		});
 	
@@ -15915,7 +16048,7 @@
 	exports.default = HomeController;
 
 /***/ },
-/* 28 */
+/* 30 */
 /*!****************************************!*\
   !*** ./src/views/talent/talentCtrl.js ***!
   \****************************************/
@@ -15926,25 +16059,19 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	TalentController.$inject = ['$stateParams', 'photoService'];
+	TalentController.$inject = ['$stateParams', 'talentPhotos'];
 	
-	function TalentController($stateParams, photoService) {
+	function TalentController($stateParams, talentPhotos) {
 	
 		var vm = this;
 	
+		vm.bricks = talentPhotos;
 		vm.showModalOfPhoto = showModalOfPhoto;
 	
 		vm.talent = {
-			name: $stateParams.name.split('_').join(' '),
+			name: $stateParams.talentname.split('_').join(' '),
 			dept: $stateParams.category
 		};
-	
-		photoService.getAllPhotos().then(function (photos) {
-			photos.forEach(function (val, idx, arr) {
-				val.desc = 'Project Name';
-			});
-			vm.bricks = photos;
-		});
 	
 		/**************************************************************************\
 	 	All general logic goes above this comment.
@@ -15965,20 +16092,7 @@
 	exports.default = TalentController;
 
 /***/ },
-/* 29 */
-/*!*******************************************!*\
-  !*** ./src/views/upload/upload-tmpl.html ***!
-  \*******************************************/
-/***/ function(module, exports) {
-
-	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.240589729365562550.5872730683014851xxx\" alt=\"\">\n\t</div>\n</div>\n";
-
-/***/ },
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
+/* 31 */
 /*!****************************************!*\
   !*** ./src/views/upload/uploadCtrl.js ***!
   \****************************************/
@@ -15990,18 +16104,19 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 14);
+	var _jquery = __webpack_require__(/*! jquery */ 15);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	UploadController.$inject = ['$scope', '$state', 'photoService'];
+	UploadController.$inject = ['$scope', '$state', 'photoService', 'allTalent'];
 	
-	function UploadController($scope, $state, photoService) {
+	function UploadController($scope, $state, photoService, allTalent) {
 	
 		var vm = this;
 	
+		vm.talents = allTalent;
 		vm.uploadPhoto = uploadPhoto;
 	
 		(0, _jquery2.default)('#file').on('change', function (changeEvent) {
@@ -16010,10 +16125,13 @@
 			reader.onload = function (loadEvent) {
 	
 				var file = loadEvent.target.result;
-				console.log(file);
 	
 				(0, _jquery2.default)('.preview-image')[0].src = file;
-				vm.file = photoService.createObjForAWS(file, changeEvent.target.files[0].name);
+	
+				vm.file = {
+					base64: file,
+					originalFilename: changeEvent.target.files[0].name
+				};
 			};
 	
 			reader.readAsDataURL(changeEvent.target.files[0]);
@@ -16024,8 +16142,9 @@
 	 	All detailed logic(function definitions) goes below this comment.
 	 \**************************************************************************/
 	
-		function uploadPhoto(file) {
-			photoService.uploadToAWS(file).then(function (response) {
+		function uploadPhoto(file, talent, projectTitle) {
+			file.projectTitle = projectTitle;
+			photoService.uploadToAWS(file, talent).then(function (response) {
 				$state.go('home');
 			});
 		}
@@ -16038,62 +16157,6 @@
 	}
 	
 	exports.default = UploadController;
-
-/***/ },
-/* 35 */
-/*!***************************************************!*\
-  !*** ./src/services/photoService/photoService.js ***!
-  \***************************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	photoService.$inject = ['$http'];
-	
-	function photoService($http) {
-	
-		return {
-			uploadToAWS: uploadToAWS,
-			createObjForAWS: createObjForAWS,
-			getAllPhotos: getAllPhotos
-		};
-	
-		/****************************************************************************\
-	 	All general logic goes above this comment.
-	 	All detailed logic(function definitions) goes below this comment.
-	 \****************************************************************************/
-	
-		function uploadToAWS(imageObj) {
-			return $http.post('/api/photo', imageObj);
-		}
-	
-		function createObjForAWS(base64File, fileName, talent) {
-			var imageExtension = base64File.split(';')[0].split('/')[1];
-			return {
-				imageName: fileName,
-				imageBody: base64File,
-				imageExtension: imageExtension,
-				talent: 'obama@usa.gov'
-			};
-		}
-	
-		function getAllPhotos() {
-			return $http.get('/api/photo').then(function (photos) {
-				return photos.data;
-			});
-		}
-	
-		/**************************************************************************\
-	 	# Helper functions
-	 \**************************************************************************/
-	
-		//CODE HERE
-	}
-	
-	exports.default = photoService;
 
 /***/ }
 /******/ ]);
