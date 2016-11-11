@@ -7,8 +7,16 @@
 			<input type="file" images="images" accept="image/*" name="file" id="file" class="inputfile" />
 			<label for="file">Choose a photo</label>
 		</div>
+		<div class="select-talent">
+			<select name="talentSelect" ng-model="uploadCtrl.talentIndex">
+				<option ng-repeat="talent in uploadCtrl.talents track by $index" ng-value="$index">{{ talent.name }}</option>
+			</select>
+		</div>
+		<div class="project-title">
+			<input type="text" ng-model="uploadCtrl.projectTitle">
+		</div>
 		<div class="upload-photo">
-			<button ng-click="uploadCtrl.uploadPhoto( uploadCtrl.file )">Upload photo</button>
+			<button ng-click="uploadCtrl.uploadPhoto( uploadCtrl.file, uploadCtrl.talents[ uploadCtrl.talentIndex ], uploadCtrl.projectTitle )">Upload photo</button>
 		</div>
 	</div>
 	<div class="preview" >

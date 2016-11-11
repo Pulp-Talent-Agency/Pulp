@@ -8,7 +8,7 @@ function HomeController( $q, $http, photoService ) {
 
 	const vm = this;
 
-	photoService.getAllPhotos()
+	photoService.getAllFeaturedPhotos()
 		.then( function( photos ) {
 			vm.bricks = photos;
 		} );

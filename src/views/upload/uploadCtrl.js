@@ -3,13 +3,15 @@ import $ from 'jquery';
 UploadController.$inject = [
 	'$scope',
 	'$state',
-	'photoService'
+	'photoService',
+	'allTalent'
 ];
 
-function UploadController( $scope, $state, photoService ) {
+function UploadController( $scope, $state, photoService, allTalent ) {
 
 	const vm = this;
 
+	vm.talents = allTalent;
 	vm.uploadPhoto = uploadPhoto;
 
 	$( '#file' ).on( 'change', function ( changeEvent ) {
@@ -18,10 +20,13 @@ function UploadController( $scope, $state, photoService ) {
 		reader.onload = function( loadEvent ) {
 
 			const file = loadEvent.target.result;
-			console.log(file);
 
 			$( '.preview-image' )[ 0 ].src = file;
-			vm.file = photoService.createObjForAWS( file, changeEvent.target.files[ 0 ].name );
+
+			vm.file = {
+				base64: file,
+				originalFilename: changeEvent.target.files[ 0 ].name
+			}
 		}
 
 		reader.readAsDataURL( changeEvent.target.files[ 0 ] );
@@ -36,8 +41,9 @@ function UploadController( $scope, $state, photoService ) {
 		All detailed logic(function definitions) goes below this comment.
 	\**************************************************************************/
 
-	function uploadPhoto( file ) {
-		photoService.uploadToAWS( file )
+	function uploadPhoto( file, talent, projectTitle ) {
+		file.projectTitle = projectTitle;
+		photoService.uploadToAWS( file, talent )
 			.then( function( response ) {
 				$state.go( 'home' );
 			} );

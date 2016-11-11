@@ -1,26 +1,19 @@
 TalentController.$inject = [
 	'$stateParams',
-	'photoService'
+	'talentPhotos'
 ];
 
-function TalentController( $stateParams, photoService ) {
+function TalentController( $stateParams, talentPhotos ) {
 
 	const vm = this;
-
+	
+	vm.bricks = talentPhotos;
 	vm.showModalOfPhoto = showModalOfPhoto;
 
 	vm.talent = {
-		name: $stateParams.name.split( '_' ).join( ' ' ),
+		name: $stateParams.talentname.split( '_' ).join( ' ' ),
 		dept: $stateParams.category
 	}
-
-	photoService.getAllPhotos()
-		.then( function( photos ) {
-			photos.forEach( function( val, idx, arr ) {
-				val.desc = 'Project Name';
-			} );
-			vm.bricks = photos;
-		} );
 
 
 
