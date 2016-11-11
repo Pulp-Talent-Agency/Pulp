@@ -1,6 +1,6 @@
 const Photo = require( './Photo.js' );
 const AWS = require( 'aws-sdk' );
-const config = require( './../../config.js' );
+// const config = require( './../../config.js' );
 
 const accessKeyId = process.env.AMAZON_ACCESSID || config.amazonS3.accessKeyId;
 const secretAccessKey = process.env.AMAZON_SECRETKEY || config.amazonS3.secretAccessKey;
