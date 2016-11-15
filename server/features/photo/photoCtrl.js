@@ -24,19 +24,11 @@ const s3 = new AWS.S3();
 module.exports = {
 
 	postNewPhoto: function( req, res ) {
-		const buf = new Buffer( req.body.imageBody.replace( /^data:image\/\w+;base64,/, '' ), 'base64' );
 
-	  // bucketName var below crates a "folder" for each user
-	  const bucketName = 'pulp-photos/' + req.body.talent.name;
-	  const params = {
-      Bucket: bucketName,
-			Key: req.body.talent.name + '-' + req.body.imageName + '.' + req.body.imageExtension,
-			Body: buf,
-			ContentType: 'image/' + req.body.imageExtension,
-			ACL: 'public-read'
-	  };
+		const params = buildS3Object( req, res );
 
-	  s3.upload(params, function ( err, s3DataForFullSizeImg ) {
+	  s3.upload( params, function ( err, s3DataForFullSizeImg ) {
+			
 	    if( err ) {
 				console.log( err );
 				return res.status( 500 ).send( err );
@@ -144,4 +136,27 @@ module.exports = {
 		} );
 	}
 
+}
+
+
+
+
+
+/******************************************************************************\
+	# Helper functions
+\******************************************************************************/
+
+function buildS3Object( req, res ) {
+	const buf = new Buffer( req.body.imageBody.replace( /^data:image\/\w+;base64,/, '' ), 'base64' );
+
+	// bucketName var below crates a "folder" for each user
+	const bucketName = 'pulp-photos/' + req.body.talent.name;
+
+	return {
+		Bucket: bucketName,
+		Key: req.body.talent.name + '-' + req.body.imageName + '.' + req.body.imageExtension,
+		Body: buf,
+		ContentType: 'image/' + req.body.imageExtension,
+		ACL: 'public-read'
+	};
 }

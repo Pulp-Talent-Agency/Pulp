@@ -6,7 +6,7 @@ TalentController.$inject = [
 function TalentController( $stateParams, talentPhotos ) {
 
 	const vm = this;
-	
+
 	vm.bricks = talentPhotos;
 	vm.showModalOfPhoto = showModalOfPhoto;
 
@@ -19,10 +19,10 @@ function TalentController( $stateParams, talentPhotos ) {
 
 
 
-	/**************************************************************************\
+	/****************************************************************************\
 		All general logic goes above this comment.
 		All detailed logic(function definitions) goes below this comment.
-	\**************************************************************************/
+	\****************************************************************************/
 
 	function showModalOfPhoto( photo ) {
 		vm.selectedPhoto = photo;
@@ -32,9 +32,9 @@ function TalentController( $stateParams, talentPhotos ) {
 
 
 
-	/**************************************************************************\
+	/****************************************************************************\
 		# Helper functions
-	\**************************************************************************/
+	\****************************************************************************/
 
 	// Code here
 
