@@ -17,7 +17,7 @@ const session = require( `express-session` );
   #MY DEPENDENCIES
 \*------------------------------------*/
 
-const config = require( `./config.js` );
+// const config = require( `./config.js` );
 
 
 
@@ -27,7 +27,7 @@ const config = require( `./config.js` );
   #VARIABLES
 \*------------------------------------*/
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4444;
 const mongoURI = process.env.MONGO_URI || config.mongo.mongoURI;
 const sessionSecret = process.env.SESSION_SECRET || config.session.secret;
 
