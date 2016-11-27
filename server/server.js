@@ -27,7 +27,7 @@ const config = require( `./config.js` );
   #VARIABLES
 \*------------------------------------*/
 
-const port = process.env.PORT || 4444;
+const port = config.port;
 const mongoURI = process.env.MONGO_URI || config.mongo.mongoURI;
 const sessionSecret = process.env.SESSION_SECRET || config.session.secret;
 
