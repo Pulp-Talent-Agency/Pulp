@@ -5199,7 +5199,7 @@
   \*******************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"select-talent\">\n\t\t\t<select name=\"talentSelect\" ng-model=\"uploadCtrl.talentIndex\">\n\t\t\t\t<option ng-repeat=\"talent in uploadCtrl.talents track by $index\" ng-value=\"$index\">{{ talent.name }}</option>\n\t\t\t</select>\n\t\t</div>\n\t\t<div class=\"project-title\">\n\t\t\t<input type=\"text\" ng-model=\"uploadCtrl.projectTitle\">\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file, uploadCtrl.talents[ uploadCtrl.talentIndex ], uploadCtrl.projectTitle )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.59830172772249650.6776620150865666xxx\" alt=\"\">\n\t</div>\n</div>\n";
+	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"select-talent\">\n\t\t\t<select name=\"talentSelect\" ng-model=\"uploadCtrl.talentIndex\">\n\t\t\t\t<option ng-repeat=\"talent in uploadCtrl.talents track by $index\" ng-value=\"$index\">{{ talent.name }}</option>\n\t\t\t</select>\n\t\t</div>\n\t\t<div class=\"project-title\">\n\t\t\t<input type=\"text\" ng-model=\"uploadCtrl.projectTitle\">\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file, uploadCtrl.talents[ uploadCtrl.talentIndex ], uploadCtrl.projectTitle )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.60283565714864730.7569713295914609xxx\" alt=\"\">\n\t</div>\n</div>\n";
 
 /***/ },
 /* 14 */
@@ -15567,10 +15567,10 @@
 		function getTalentPhotos(talentId) {
 			if (!allTalent) {
 				return getAllTalent().then(function (talents) {
-					return findTalentAndReturnPhotos(talentId, talents);
+					return findTalentAndReturnPhotos(talentId, talents.items);
 				});
 			} else {
-				return $q.when(findTalentAndReturnPhotos(talentId, allTalent));
+				return $q.when(findTalentAndReturnPhotos(talentId, allTalent.items));
 			}
 		}
 	
@@ -15620,9 +15620,9 @@
 		}
 	
 		function findTalentAndReturnPhotos(talentId, allTalent) {
-			console.log(allTalent);
 			for (var i = 0; i < allTalent.length; i++) {
 				if (allTalent[i].sys.id === talentId) {
+					console.log(allTalent[i]);
 					return allTalent[i].photos;
 				}
 			}
@@ -15737,12 +15737,13 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	photoService.$inject = ['$http'];
+	photoService.$inject = ['$http', '$q'];
 	
-	function photoService($http) {
+	function photoService($http, $q) {
+	
+		var featuredPhotos = void 0;
 	
 		return {
-			uploadToAWS: uploadToAWS,
 			getAllFeaturedPhotos: getAllFeaturedPhotos,
 			getAllTalentPhotos: getAllTalentPhotos
 		};
@@ -15752,16 +15753,15 @@
 	 	All detailed logic(function definitions) goes below this comment.
 	 \****************************************************************************/
 	
-		function uploadToAWS(file, talent) {
-			var awsObj = createObjForAWS(file, talent);
-			return $http.post('/api/photo', awsObj);
-		}
-	
 		function getAllFeaturedPhotos() {
-			return $http.get('/api/photo/featured').then(function (photos) {
-				photos.data = formatTalentName(photos.data);
-				return photos.data;
-			});
+			if (!featuredPhotos) {
+				return $http.get('/api/photo/featured').then(function (photos) {
+					photos.data = formatTalentName(photos.data.items);
+					return photos.data;
+				});
+			} else {
+				return $q.when(featuredPhotos);
+			}
 		}
 	
 		function getAllTalentPhotos(talentId) {
@@ -15776,25 +15776,9 @@
 	
 		function formatTalentName(photos) {
 			photos.forEach(function (val, idx, arr) {
-				val.talent.name = val.talent.name.split(' ').join('_');
+				val.fields.talent.fields.name = val.fields.talent.fields.name.split(' ').join('_');
 			});
 			return photos;
-		}
-	
-		function createObjForAWS(file, talent) {
-			talent.name = talent.name.split(' ').join('_');
-			var imageExtension = file.base64.split(';')[0].split('/')[1];
-			file.projectTitle = file.projectTitle.split(' ').join('_');
-			return {
-				originalFilename: file.originalFilename,
-				imageName: file.projectTitle,
-				imageBody: file.base64,
-				imageExtension: imageExtension,
-				talent: {
-					name: talent.name,
-					id: talent._id
-				}
-			};
 		}
 	}
 	

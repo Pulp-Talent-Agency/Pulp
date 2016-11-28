@@ -58,10 +58,10 @@ function talentService( $q, $http ) {
 		if( !allTalent ) {
 			return getAllTalent()
 				.then( function( talents ) {
-					return findTalentAndReturnPhotos( talentId, talents );
+					return findTalentAndReturnPhotos( talentId, talents.items );
 				} );
 		} else {
-			return $q.when( findTalentAndReturnPhotos( talentId, allTalent ) );
+			return $q.when( findTalentAndReturnPhotos( talentId, allTalent.items ) );
 		}
 	}
 
@@ -119,9 +119,9 @@ function talentService( $q, $http ) {
 	}
 
 	function findTalentAndReturnPhotos( talentId, allTalent ) {
-		console.log( allTalent );
 		for( let i = 0; i < allTalent.length; i++ ) {
 			if( allTalent[ i ].sys.id === talentId ) {
+				console.log( allTalent[ i ] );
 				return allTalent[ i ].photos;
 			}
 		}

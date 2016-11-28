@@ -1,11 +1,13 @@
 photoService.$inject = [
-	'$http'
+	'$http',
+	'$q'
 ];
 
-function photoService( $http ) {
+function photoService( $http, $q ) {
+
+	let featuredPhotos;
 
 	return {
-		uploadToAWS: uploadToAWS,
 		getAllFeaturedPhotos: getAllFeaturedPhotos,
 		getAllTalentPhotos: getAllTalentPhotos
 	};
@@ -19,17 +21,16 @@ function photoService( $http ) {
 		All detailed logic(function definitions) goes below this comment.
 	\****************************************************************************/
 
-	function uploadToAWS( file, talent ) {
-		const awsObj = createObjForAWS( file, talent );
-		return $http.post( '/api/photo', awsObj );
-	}
-
 	function getAllFeaturedPhotos() {
-		return $http.get( '/api/photo/featured' )
-			.then( function( photos ) {
-				photos.data = formatTalentName( photos.data )
-				return photos.data;
-			} );
+		if( !featuredPhotos ) {
+			return $http.get( '/api/photo/featured' )
+				.then( function( photos ) {
+					photos.data = formatTalentName( photos.data.items )
+					return photos.data;
+				} );
+		} else {
+			return $q.when( featuredPhotos );
+		}
 	}
 
 	function getAllTalentPhotos( talentId ) {
@@ -49,25 +50,9 @@ function photoService( $http ) {
 
 	function formatTalentName( photos ) {
 		photos.forEach( function( val, idx, arr ) {
-			val.talent.name = val.talent.name.split( ' ' ).join( '_' );
+			val.fields.talent.fields.name = val.fields.talent.fields.name.split( ' ' ).join( '_' );
 		} );
 		return photos;
-	}
-
-	function createObjForAWS( file, talent ) {
-		talent.name = talent.name.split( ' ' ).join( '_' );
-		const imageExtension = file.base64.split( ';' )[ 0 ].split( '/' )[ 1 ];
-		file.projectTitle = file.projectTitle.split( ' ' ).join( '_' );
-		return {
-			originalFilename: file.originalFilename,
-      imageName: file.projectTitle,
-      imageBody: file.base64,
-      imageExtension: imageExtension,
-      talent: {
-				name: talent.name,
-				id: talent._id
-			}
-    };
 	}
 
 }
