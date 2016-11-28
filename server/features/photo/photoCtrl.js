@@ -28,11 +28,11 @@ function getAllPhotos( req, res ) {
 	client.getEntries( {
   	'content_type': 'photos'
 	} )
-		.then(function ( entries ) {
-		  return res.status( 200 ).send( entries );
+		.then(function ( photos ) {
+		  return res.status( 200 ).send( photos );
 		} )
 		.catch( function( error ) {
-			console.log( error );
+			return res.status( 500 ).send( error );
 		} );
 }
 
@@ -41,11 +41,11 @@ function getAllFeaturedPhotos( req, res ) {
   	'content_type': 'photos',
 		'fields.isFeatured': true
 	} )
-		.then(function ( entries ) {
-		  return res.status( 200 ).send( entries );
+		.then(function ( featuredPhotos ) {
+		  return res.status( 200 ).send( featuredPhotos );
 		} )
 		.catch( function( error ) {
-			console.log( error );
+			return res.status( 500 ).send( error );
 		} );
 }
 
@@ -54,11 +54,12 @@ function getAllTalentPhotos( req, res ) {
   	'content_type': 'photos',
 		'fields.talent.sys.id': req.params.talentId
 	} )
-		.then(function ( entries ) {
-		  return res.status( 200 ).send( entries );
+		.then(function ( talentPhotos ) {
+		  return res.status( 200 ).send( talentPhotos );
 		} )
 		.catch( function( error ) {
 			console.log( error );
+			return res.status( 500 ).send( error );
 		} );
 }
 
