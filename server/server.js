@@ -28,7 +28,7 @@ const config = require( `./config.js` );
 \*------------------------------------*/
 
 const port = config.port;
-const mongoURI = process.env.MONGO_URI || config.mongo.mongoURI;
+// const mongoURI = process.env.MONGO_URI || config.mongo.mongoURI;
 const sessionSecret = process.env.SESSION_SECRET || config.session.secret;
 
 
@@ -59,10 +59,10 @@ app.use( session( {
   #DATABASE
 \*------------------------------------*/
 
-mongoose.connect( mongoURI, function ( err, res ) {
-	if ( err ) console.log( 'Error connecting to database' )
-	else console.log( 'Pulp database now connected!' )
-} );
+// mongoose.connect( mongoURI, function ( err, res ) {
+// 	if ( err ) console.log( 'Error connecting to database' )
+// 	else console.log( 'Pulp database now connected!' )
+// } );
 
 
 

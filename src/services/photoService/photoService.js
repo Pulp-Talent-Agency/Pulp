@@ -1,9 +1,9 @@
 photoService.$inject = [
-	'$http',
-	'$q'
+	'$q',
+	'$http'
 ];
 
-function photoService( $http, $q ) {
+function photoService( $q, $http ) {
 
 	let featuredPhotos;
 
@@ -49,6 +49,7 @@ function photoService( $http, $q ) {
 	\**************************************************************************/
 
 	function formatTalentName( photos ) {
+		console.log( photos );
 		photos.forEach( function( val, idx, arr ) {
 			val.fields.talent.fields.name = val.fields.talent.fields.name.split( ' ' ).join( '_' );
 		} );

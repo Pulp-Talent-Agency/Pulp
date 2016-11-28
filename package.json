@@ -34,6 +34,7 @@
     "angular-ui-router": "^0.3.1",
     "angulargrid": "^0.6.3",
     "body-parser": "^1.15.2",
+    "circular-json": "^0.3.1",
     "contentful": "^3.7.1",
     "cors": "^2.8.1",
     "ev-emitter": "^1.0.3",

@@ -1,5 +1,6 @@
 const config = require( './../../config.js' );
-const contentful = require('contentful');
+const CircularJSON = require('circular-json'); // https://github.com/WebReflection/circular-json
+const contentful = require('contentful'); // https://contentful.github.io/contentful.js/contentful/3.7.1/
 
 const contentfulSpaceId = process.env.CONTENTFUL_SPACEID || config.contentful.space;
 const contentfulAccessToken = process.env.CONTENTFUL_ACCESSTOKEN || config.contentful.accessToken;
@@ -27,7 +28,7 @@ function getAllTalent( req, res ) {
 		'content_type': 'talent'
 	} )
 		.then( function( talents ) {
-			return res.status( 200 ).send( talents );
+			return res.status( 200 ).send( CircularJSON.stringify( talents ) );
 		} )
 		.catch( function( error ) {
 			return res.status( 500 ).send( error );
