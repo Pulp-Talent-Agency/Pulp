@@ -15538,8 +15538,8 @@
 		function getMenuItems() {
 			if (!menuItems) {
 				return $http.get('/api/talent').then(function (talent) {
-					allTalent = talent.data;
-					var menuItems = formatDataForMenu(talent.data);
+					allTalent = talent.data.items;
+					var menuItems = formatDataForMenu(allTalent);
 					menuItems.forEach(function (val, index, array) {
 						val.talent.forEach(function (v, i, a) {
 							v.uppercase_name = v.name.toUpperCase();
@@ -15581,8 +15581,8 @@
 		function formatDataForMenu(talentData) {
 			var menuItems = [];
 			for (var i = 0; i < talentData.length; i++) {
-				if (talentData[i].department.length === 1) {
-					var yup = deptExists(talentData[i].department[0], 'title', menuItems);
+				if (talentData[i].fields.department.length === 1) {
+					var yup = deptExists(talentData[i].fields.department[0], 'title', menuItems);
 					pushTalentToMenu(yup, menuItems, talentData, i);
 				} else {
 					// handle talent with multiple departments
@@ -15604,24 +15604,25 @@
 		function pushTalentToMenu(arr, list, talent, index) {
 			if (arr[0]) {
 				list[arr[1]].talent.push({
-					name: talent[index].name,
-					id: talent[index]._id
+					name: talent[index].fields.name,
+					id: talent[index].sys.id
 				});
 			} else {
 				list.push({
 					open: false,
-					title: talent[index].department[0],
+					title: talent[index].fields.department[0],
 					talent: [{
-						name: talent[index].name,
-						id: talent[index]._id
+						name: talent[index].fields.name,
+						id: talent[index].sys.id
 					}]
 				});
 			}
 		}
 	
 		function findTalentAndReturnPhotos(talentId, allTalent) {
+			console.log(allTalent);
 			for (var i = 0; i < allTalent.length; i++) {
-				if (allTalent[i]._id === talentId) {
+				if (allTalent[i].sys.id === talentId) {
 					return allTalent[i].photos;
 				}
 			}
