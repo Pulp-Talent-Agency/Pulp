@@ -49,7 +49,6 @@ function photoService( $q, $http ) {
 	\**************************************************************************/
 
 	function formatTalentName( photos ) {
-		console.log( photos );
 		photos.forEach( function( val, idx, arr ) {
 			val.fields.talent.fields.name = val.fields.talent.fields.name.split( ' ' ).join( '_' );
 		} );

@@ -51,8 +51,7 @@ function getAllPhotos( req, res ) {
 function getAllFeaturedPhotos( req, res ) {
 	client.getEntries( {
   	'content_type': 'photos',
-		'fields.isFeatured': true,
-		'resolveLinks': true
+		'fields.isFeatured': true
 	} )
 		.then( function ( featuredPhotos ) {
 		  return res.status( 200 ).send( CircularJSON.stringify( featuredPhotos ) );
@@ -65,8 +64,7 @@ function getAllFeaturedPhotos( req, res ) {
 function getAllTalentPhotos( req, res ) {
 	client.getEntries( {
   	'content_type': 'photos',
-		'fields.talent.sys.id': req.params.talentId,
-		'resolveLinks': true
+		'fields.talent.sys.id': req.params.talentId
 	} )
 		.then( function ( talentPhotos ) {
 		  return res.status( 200 ).send( CircularJSON.stringify( talentPhotos ) );

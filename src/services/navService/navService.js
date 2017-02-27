@@ -5,10 +5,7 @@ navService.$inject = [];
 function navService() {
 
 	return {
-		toggleSideNav: toggleSideNav,
-		closeOthers: closeOthers,
-		showTalentList: showTalentList,
-		hideTalentList: hideTalentList
+		toggleSideNav: toggleSideNav
 	};
 
 
@@ -31,23 +28,6 @@ function navService() {
 			document.getElementById( 'hamburger-symbol' ).innerHTML = '✕';
 			moveAnimation( $sideNav, 'left', -50, 0, 'rem' );
 		}
-		closeOthers( menuItems );
-	}
-
-	function closeOthers( menuItems ) {
-		for( var i = 0; i < menuItems.length; i++ ) {
-			if( menuItems[ i ].open ) {
-				menuItems[ i ].open = false
-			}
-		}
-	}
-
-	function showTalentList( index, event ) {
-		$( `#talentlist${ index }` ).slideDown();
-	}
-
-	function hideTalentList( index, event ) {
-		$( `#talentlist${ index }` ).slideUp();
 	}
 
 

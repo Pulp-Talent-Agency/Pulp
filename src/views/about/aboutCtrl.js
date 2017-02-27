@@ -1,18 +1,12 @@
-HomeController.$inject = [
-	'$q',
-	'$http',
-	'photoService',
+AboutController.$inject = [
 	'dataService'
 ];
 
-function HomeController( $q, $http, photoService, dataService ) {
+function AboutController( dataService ) {
 
 	const vm = this;
 
-	photoService.getAllFeaturedPhotos()
-		.then( function( photos ) {
-			vm.bricks = photos;
-		} );
+	getAboutText();
 
 
 
@@ -23,7 +17,15 @@ function HomeController( $q, $http, photoService, dataService ) {
 		All detailed logic(function definitions) goes below this comment.
 	\**************************************************************************/
 
-	// Code here
+	function getAboutText() {
+
+		dataService
+			.getAboutText()
+			.then( function( aboutText ) {
+				vm.text = aboutText.fields.about;
+			} );
+
+	}
 
 
 
@@ -37,4 +39,4 @@ function HomeController( $q, $http, photoService, dataService ) {
 
 }
 
-export default HomeController;
+export default AboutController;

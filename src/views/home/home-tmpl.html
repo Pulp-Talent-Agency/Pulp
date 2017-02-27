@@ -9,10 +9,14 @@
 		<div class="gutter-sizer"></div>
     <div masonry-brick class="masonry-brick" ng-repeat="brick in homeCtrl.bricks">
 			<div class="photo-description">
-				<p>{{ brick.talent.name }}</p>
-				<p class="photo-description-sub">{{ brick.talent.department[ 0 ] }}</p>
+				<p>{{ brick.fields.talent.fields.name }}</p>
+				<p class="photo-description-sub">{{ brick.fields.talent.fields.department[ 0 ] }}</p>
 			</div>
-      <img ng-src="{{ brick.amazonS3.small_image.Location }}" ui-sref="talent( { category: brick.talent.department[ 0 ], talentid: brick.talent._id, talentname: brick.talent.name } )" alt="" />
+      <img
+				ng-src="{{ 'https:' + brick.fields.image.fields.file.url + '?w=450' }}"
+				ui-sref="talent( { category: brick.fields.talent.fields.department[ 0 ], talentid: brick.fields.talent.sys.id, talentname: brick.fields.talent.fields.name } )"
+				alt="{{ brick.fields.image.fields.description }}"
+			/>
     </div>
 	</div>
 

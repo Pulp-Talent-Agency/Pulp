@@ -59,25 +59,25 @@
 	
 	var _appconfig2 = _interopRequireDefault(_appconfig);
 	
-	var _apprun = __webpack_require__(/*! ./apprun.js */ 14);
+	var _apprun = __webpack_require__(/*! ./apprun.js */ 10);
 	
 	var _apprun2 = _interopRequireDefault(_apprun);
 	
-	__webpack_require__(/*! ./services/servicesModule.js */ 16);
+	__webpack_require__(/*! ./services/servicesModule.js */ 12);
 	
-	__webpack_require__(/*! ./components/componentsModule.js */ 20);
+	__webpack_require__(/*! ./components/componentsModule.js */ 16);
 	
-	var _homeCtrl = __webpack_require__(/*! ./views/home/homeCtrl.js */ 29);
+	var _homeCtrl = __webpack_require__(/*! ./views/home/homeCtrl.js */ 25);
 	
 	var _homeCtrl2 = _interopRequireDefault(_homeCtrl);
 	
-	var _talentCtrl = __webpack_require__(/*! ./views/talent/talentCtrl.js */ 30);
+	var _aboutCtrl = __webpack_require__(/*! ./views/about/aboutCtrl.js */ 26);
 	
-	var _talentCtrl2 = _interopRequireDefault(_talentCtrl);
+	var _aboutCtrl2 = _interopRequireDefault(_aboutCtrl);
 	
-	var _uploadCtrl = __webpack_require__(/*! ./views/upload/uploadCtrl.js */ 31);
+	var _contactCtrl = __webpack_require__(/*! ./views/contact/contactCtrl.js */ 27);
 	
-	var _uploadCtrl2 = _interopRequireDefault(_uploadCtrl);
+	var _contactCtrl2 = _interopRequireDefault(_contactCtrl);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -87,7 +87,7 @@
 	// STYLES
 	angular.module('Pulp', [_angularUiRouter2.default, 'wu.masonry', 'PulpServices', // Custom services placed in their own module
 	'PulpComponents' // Custom components placed in their own module
-	]).config(_appconfig2.default).run(_apprun2.default).controller('HomeController', _homeCtrl2.default).controller('TalentController', _talentCtrl2.default).controller('UploadController', _uploadCtrl2.default);
+	]).config(_appconfig2.default).run(_apprun2.default).controller('HomeController', _homeCtrl2.default).controller('AboutController', _aboutCtrl2.default).controller('ContactController', _contactCtrl2.default);
 	
 	// CONTROLLERS
 	
@@ -4723,7 +4723,7 @@
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700);", ""]);
 	
 	// module
-	exports.push([module.id, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  font-size: 62.5%;\n  vertical-align: baseline;\n  box-sizing: border-box; }\n\nhtml::-moz-selection, body::-moz-selection, div::-moz-selection, span::-moz-selection, applet::-moz-selection, object::-moz-selection, iframe::-moz-selection,\nh1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, blockquote::-moz-selection, pre::-moz-selection,\na::-moz-selection, abbr::-moz-selection, acronym::-moz-selection, address::-moz-selection, big::-moz-selection, cite::-moz-selection, code::-moz-selection,\ndel::-moz-selection, dfn::-moz-selection, em::-moz-selection, img::-moz-selection, ins::-moz-selection, kbd::-moz-selection, q::-moz-selection, s::-moz-selection, samp::-moz-selection,\nsmall::-moz-selection, strike::-moz-selection, strong::-moz-selection, sub::-moz-selection, sup::-moz-selection, tt::-moz-selection, var::-moz-selection,\nb::-moz-selection, u::-moz-selection, i::-moz-selection, center::-moz-selection, input::-moz-selection,\ndl::-moz-selection, dt::-moz-selection, dd::-moz-selection, ol::-moz-selection, ul::-moz-selection, li::-moz-selection,\nfieldset::-moz-selection, form::-moz-selection, label::-moz-selection, legend::-moz-selection,\ntable::-moz-selection, caption::-moz-selection, tbody::-moz-selection, tfoot::-moz-selection, thead::-moz-selection, tr::-moz-selection, th::-moz-selection, td::-moz-selection,\narticle::-moz-selection, aside::-moz-selection, canvas::-moz-selection, details::-moz-selection, embed::-moz-selection,\nfigure::-moz-selection, figcaption::-moz-selection, footer::-moz-selection, header::-moz-selection, hgroup::-moz-selection,\nmenu::-moz-selection, nav::-moz-selection, output::-moz-selection, ruby::-moz-selection, section::-moz-selection, summary::-moz-selection,\ntime::-moz-selection, mark::-moz-selection, audio::-moz-selection, video::-moz-selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\nhtml::selection, body::selection, div::selection, span::selection, applet::selection, object::selection, iframe::selection,\nh1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, blockquote::selection, pre::selection,\na::selection, abbr::selection, acronym::selection, address::selection, big::selection, cite::selection, code::selection,\ndel::selection, dfn::selection, em::selection, img::selection, ins::selection, kbd::selection, q::selection, s::selection, samp::selection,\nsmall::selection, strike::selection, strong::selection, sub::selection, sup::selection, tt::selection, var::selection,\nb::selection, u::selection, i::selection, center::selection, input::selection,\ndl::selection, dt::selection, dd::selection, ol::selection, ul::selection, li::selection,\nfieldset::selection, form::selection, label::selection, legend::selection,\ntable::selection, caption::selection, tbody::selection, tfoot::selection, thead::selection, tr::selection, th::selection, td::selection,\narticle::selection, aside::selection, canvas::selection, details::selection, embed::selection,\nfigure::selection, figcaption::selection, footer::selection, header::selection, hgroup::selection,\nmenu::selection, nav::selection, output::selection, ruby::selection, section::selection, summary::selection,\ntime::selection, mark::selection, audio::selection, video::selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer; }\n\nbutton:focus {\n  outline: none; }\n\na {\n  text-decoration: none; }\n\nimg {\n  margin-bottom: -0.3rem; }\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif; }\n\nui-view {\n  width: 90%;\n  height: 200vh;\n  margin: 0 auto; }\n\nh1 {\n  font-weight: 600;\n  font-size: 1.2rem;\n  letter-spacing: 0.5rem; }\n\nh6 {\n  font-size: 1.8rem;\n  font-weight: 600;\n  letter-spacing: 0.5rem; }\n\np {\n  font-size: 1.4rem;\n  letter-spacing: 0.2rem;\n  line-height: 1.8rem; }\n\n@media (min-width: 425px) {\n  h1 {\n    font-size: 1.8rem; } }\n\n@media (min-width: 769px) {\n  h1 {\n    font-size: 2.4rem; } }\n\nheader {\n  width: 320px;\n  background-color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  header .title {\n    width: 320px;\n    height: 6rem;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    header .title h1 {\n      cursor: pointer; }\n  header header-nav {\n    display: none; }\n\nui-view {\n  width: 320px;\n  height: 200vh; }\n\nfooter {\n  width: 100%;\n  height: 2rem;\n  background-color: #333;\n  position: fixed;\n  bottom: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  footer p {\n    font-size: 0.8rem;\n    color: #999; }\n\n@media (min-width: 320px) {\n  header {\n    width: 100%; }\n    header .title {\n      width: 100%; }\n  ui-view {\n    width: 100%; } }\n\n@media (min-width: 769px) {\n  header {\n    position: fixed;\n    z-index: 5; }\n    header .title {\n      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }\n    header header-nav {\n      width: 100%;\n      z-index: 5;\n      display: block; }\n  ui-view {\n    position: relative;\n    top: 9.5rem; }\n  .container {\n    padding-top: 4rem; } }\n\n.wrapper {\n  padding-bottom: 5rem;\n  width: 320px;\n  margin: 0 auto; }\n  .wrapper .talent-title {\n    width: 100%;\n    height: auto;\n    padding: 2rem 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    .wrapper .talent-title h2 {\n      font-style: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n      font-size: 2rem;\n      border-bottom: 1px solid #000;\n      margin-bottom: 1rem; }\n  .wrapper .masonry {\n    width: 100%;\n    margin: 0 auto; }\n    .wrapper .masonry .gutter-sizer {\n      width: 0; }\n    .wrapper .masonry .masonry-brick {\n      width: 100%;\n      margin-bottom: 0;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        display: none; }\n      .wrapper .masonry .masonry-brick img {\n        width: 100%; }\n\n.overlay {\n  color: black;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  padding: 3%;\n  background-color: #ffffff;\n  z-index: 100;\n  overflow: hidden; }\n  .overlay img {\n    max-width: 80vw;\n    max-height: 90vh; }\n\n.fade {\n  position: fixed;\n  left: 0%;\n  top: 0%;\n  background-color: black;\n  opacity: .90;\n  width: 100%;\n  height: 100%;\n  z-index: 99; }\n  .fade p {\n    font-size: 4rem;\n    position: fixed;\n    top: 3rem;\n    right: 3rem;\n    color: #999;\n    cursor: pointer;\n    -webkit-transition: color 0.2s ease;\n    transition: color 0.2s ease; }\n    .fade p:hover {\n      color: #fff; }\n\n@media (min-width: 320px) {\n  .wrapper {\n    width: 100%; } }\n\n@media (min-width: 415px) {\n  .wrapper .masonry .masonry-brick {\n    width: 50%; } }\n\n@media (min-width: 768px) {\n  .wrapper {\n    width: 98%; }\n    .wrapper .talent-title {\n      height: 8rem; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 24%;\n      margin-bottom: 1%; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        -webkit-transition: display 0.5s ease;\n        transition: display 0.5s ease;\n        display: none; }\n      .wrapper .masonry .masonry-brick img {\n        -webkit-transition: opacity 0.5s ease;\n        transition: opacity 0.5s ease;\n        width: 100%; }\n      .wrapper .masonry .masonry-brick:hover .photo-description {\n        width: 100%;\n        height: 100%;\n        font: Helvetica, sans-serif;\n        font-weight: 600;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: absolute;\n        color: black; }\n        .wrapper .masonry .masonry-brick:hover .photo-description-sub {\n          font-size: 0.8rem; }\n      .wrapper .masonry .masonry-brick:hover img {\n        opacity: 0.3; }\n      .wrapper .masonry .masonry-brick:active img {\n        -webkit-transition: opacity 0.2s ease;\n        transition: opacity 0.2s ease;\n        opacity: 0.6; }\n  .overlay {\n    padding: 25px; } }\n\n@media (min-width: 1441px) {\n  .wrapper {\n    width: 98%;\n    max-width: 2000px; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 19%;\n      margin-bottom: 1%; } }\n\n.headernav {\n  width: auto;\n  height: 3.5rem;\n  background-color: white;\n  margin: 0 auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  .headernav .item-container {\n    width: auto;\n    height: 3.5rem;\n    background-color: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 5;\n    position: relative; }\n    .headernav .item-container p {\n      margin-right: 2rem;\n      font-size: 1.2rem; }\n    .headernav .item-container .menuitem {\n      cursor: pointer; }\n    .headernav .item-container .talentlist {\n      width: 100%;\n      height: 15rem;\n      background-color: rgba(237, 237, 237, 0.95);\n      padding: 2rem 0;\n      display: none;\n      position: fixed;\n      top: 9.5rem;\n      left: 0;\n      z-index: -100; }\n      .headernav .item-container .talentlist .talentlist-container {\n        width: 80%;\n        max-width: 80rem;\n        margin: 0 auto;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: start;\n            -ms-flex-pack: start;\n                justify-content: flex-start;\n        -webkit-box-align: start;\n            -ms-flex-align: start;\n                align-items: flex-start;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap; }\n        .headernav .item-container .talentlist .talentlist-container .talent-container {\n          width: 25%; }\n          .headernav .item-container .talentlist .talentlist-container .talent-container p {\n            cursor: pointer;\n            padding-left: 1rem; }\n            .headernav .item-container .talentlist .talentlist-container .talent-container p:hover {\n              background-color: #a1a1a1;\n              color: #ededed; }\n    .headernav .item-container #lastMenuItem {\n      margin-right: 0; }\n\n.hamburger {\n  width: 4rem;\n  height: 4rem;\n  background-color: white;\n  position: fixed;\n  top: 1rem;\n  right: 1rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2); }\n  .hamburger p {\n    font-size: 3rem;\n    cursor: pointer; }\n\n.sidenav {\n  width: 250px;\n  height: 100vh;\n  padding: 3rem;\n  position: fixed;\n  top: 0;\n  left: -50rem;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2);\n  background-color: #eee;\n  overflow-y: scroll; }\n  .sidenav::-webkit-scrollbar {\n    width: 0.4rem;\n    background: transparent; }\n  .sidenav::-webkit-scrollbar-thumb {\n    background: rgba(0, 0, 0, 0.2);\n    border-radius: 0.2rem; }\n  .sidenav .menuitem {\n    margin-bottom: 2rem;\n    font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n    font-size: 1.8rem;\n    letter-spacing: 0.2rem; }\n    .sidenav .menuitem p {\n      cursor: pointer; }\n      .sidenav .menuitem p:hover {\n        color: rgba(0, 0, 0, 0.5); }\n      .sidenav .menuitem p:active {\n        color: white; }\n    .sidenav .menuitem .sub-menu {\n      padding: 3rem 0 0.8rem 2rem; }\n      .sidenav .menuitem .sub-menuitem {\n        margin-bottom: 2rem;\n        font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n        font-size: 1.8rem; }\n    .sidenav .menuitem .social-container {\n      width: 100%;\n      height: 4rem;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: start;\n          -ms-flex-pack: start;\n              justify-content: flex-start;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .sidenav .menuitem .social-container .social-icon {\n        width: 3rem;\n        height: 3rem;\n        margin-right: 1rem; }\n\n@media (min-width: 375px) {\n  .sidenav {\n    width: 30rem; } }\n\n@media (min-width: 769px) {\n  .hamburger {\n    display: none; }\n  .sidenav {\n    display: none; } }\n\n.wrapper .about-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .about-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .about-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .about-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .about-container {\n    width: 80rem; } }\n\n.wrapper .contact-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .contact-container h6 {\n    line-height: 1.8rem; }\n  .wrapper .contact-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .contact-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .contact-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .contact-container {\n    width: 80rem; } }\n\n.wrapper .button-container {\n  width: auto;\n  height: auto;\n  padding: 3rem 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n  .wrapper .button-container div {\n    margin-right: 1rem; }\n    .wrapper .button-container div .inputfile {\n      width: 0.1px;\n      height: 0.1px;\n      opacity: 0;\n      overflow: hidden;\n      position: absolute;\n      z-index: -1; }\n    .wrapper .button-container div .inputfile + label {\n      background-color: white;\n      padding: 15px;\n      font-size: 1.25rem;\n      border: 1px solid #333;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);\n      display: inline-block;\n      cursor: pointer;\n      -webkit-transition: all 0.2s;\n      transition: all 0.2s; }\n    .wrapper .button-container div .inputfile:focus + label,\n    .wrapper .button-container div .inputfile + label:hover {\n      background-color: #333;\n      color: white;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n    .wrapper .button-container div .inputfile + label:active {\n      background-color: #555;\n      box-shadow: none; }\n    .wrapper .button-container div .inputfile:focus + label {\n      outline: 1px solid #333; }\n    .wrapper .button-container div button {\n      background-color: white;\n      padding: 15px;\n      border: 1px solid #333;\n      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);\n      display: inline-block;\n      cursor: pointer;\n      -webkit-transition: all 0.2s;\n      transition: all 0.2s; }\n      .wrapper .button-container div button:hover {\n        background-color: #333;\n        color: white;\n        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n      .wrapper .button-container div button:active {\n        background-color: #555;\n        box-shadow: none; }\n\n.wrapper .preview {\n  max-width: 30rem;\n  height: auto;\n  padding: 2rem;\n  background-color: #333;\n  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }\n  .wrapper .preview .preview-image {\n    width: 100%; }\n", ""]);
+	exports.push([module.id, "html, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font: inherit;\n  font-size: 62.5%;\n  vertical-align: baseline;\n  box-sizing: border-box; }\n\nhtml::-moz-selection, body::-moz-selection, div::-moz-selection, span::-moz-selection, applet::-moz-selection, object::-moz-selection, iframe::-moz-selection,\nh1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, p::-moz-selection, blockquote::-moz-selection, pre::-moz-selection,\na::-moz-selection, abbr::-moz-selection, acronym::-moz-selection, address::-moz-selection, big::-moz-selection, cite::-moz-selection, code::-moz-selection,\ndel::-moz-selection, dfn::-moz-selection, em::-moz-selection, img::-moz-selection, ins::-moz-selection, kbd::-moz-selection, q::-moz-selection, s::-moz-selection, samp::-moz-selection,\nsmall::-moz-selection, strike::-moz-selection, strong::-moz-selection, sub::-moz-selection, sup::-moz-selection, tt::-moz-selection, var::-moz-selection,\nb::-moz-selection, u::-moz-selection, i::-moz-selection, center::-moz-selection, input::-moz-selection,\ndl::-moz-selection, dt::-moz-selection, dd::-moz-selection, ol::-moz-selection, ul::-moz-selection, li::-moz-selection,\nfieldset::-moz-selection, form::-moz-selection, label::-moz-selection, legend::-moz-selection,\ntable::-moz-selection, caption::-moz-selection, tbody::-moz-selection, tfoot::-moz-selection, thead::-moz-selection, tr::-moz-selection, th::-moz-selection, td::-moz-selection,\narticle::-moz-selection, aside::-moz-selection, canvas::-moz-selection, details::-moz-selection, embed::-moz-selection,\nfigure::-moz-selection, figcaption::-moz-selection, footer::-moz-selection, header::-moz-selection, hgroup::-moz-selection,\nmenu::-moz-selection, nav::-moz-selection, output::-moz-selection, ruby::-moz-selection, section::-moz-selection, summary::-moz-selection,\ntime::-moz-selection, mark::-moz-selection, audio::-moz-selection, video::-moz-selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\nhtml::selection, body::selection, div::selection, span::selection, applet::selection, object::selection, iframe::selection,\nh1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, blockquote::selection, pre::selection,\na::selection, abbr::selection, acronym::selection, address::selection, big::selection, cite::selection, code::selection,\ndel::selection, dfn::selection, em::selection, img::selection, ins::selection, kbd::selection, q::selection, s::selection, samp::selection,\nsmall::selection, strike::selection, strong::selection, sub::selection, sup::selection, tt::selection, var::selection,\nb::selection, u::selection, i::selection, center::selection, input::selection,\ndl::selection, dt::selection, dd::selection, ol::selection, ul::selection, li::selection,\nfieldset::selection, form::selection, label::selection, legend::selection,\ntable::selection, caption::selection, tbody::selection, tfoot::selection, thead::selection, tr::selection, th::selection, td::selection,\narticle::selection, aside::selection, canvas::selection, details::selection, embed::selection,\nfigure::selection, figcaption::selection, footer::selection, header::selection, hgroup::selection,\nmenu::selection, nav::selection, output::selection, ruby::selection, section::selection, summary::selection,\ntime::selection, mark::selection, audio::selection, video::selection {\n  background: #ffdc26;\n  /* WebKit/Blink Browsers */ }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer; }\n\nbutton:focus {\n  outline: none; }\n\na {\n  text-decoration: none; }\n\nimg {\n  margin-bottom: -0.3rem; }\n\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif; }\n\nui-view {\n  width: 90%;\n  height: 200vh;\n  margin: 0 auto; }\n\nh1 {\n  font-weight: 600;\n  font-size: 1.2rem;\n  letter-spacing: 0.5rem; }\n\nh6 {\n  font-size: 1.8rem;\n  font-weight: 600;\n  letter-spacing: 0.5rem; }\n\np {\n  font-size: 1.4rem;\n  letter-spacing: 0.2rem;\n  line-height: 1.8rem; }\n\n@media (min-width: 425px) {\n  h1 {\n    font-size: 1.8rem; } }\n\n@media (min-width: 769px) {\n  h1 {\n    font-size: 2.4rem; } }\n\nheader {\n  width: 320px;\n  background-color: white;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  header .title {\n    width: 320px;\n    height: 6rem;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    header .title h1 {\n      cursor: pointer; }\n  header header-nav {\n    display: none; }\n\nui-view {\n  width: 320px;\n  height: 200vh; }\n\nfooter {\n  width: 100%;\n  height: 2rem;\n  background-color: #333;\n  position: fixed;\n  bottom: 0;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  footer p {\n    font-size: 0.8rem;\n    color: #999; }\n\n@media (min-width: 320px) {\n  header {\n    width: 100%; }\n    header .title {\n      width: 100%; }\n  ui-view {\n    width: 100%; } }\n\n@media (min-width: 769px) {\n  header {\n    position: fixed;\n    z-index: 5; }\n    header .title {\n      border-bottom: 1px solid rgba(0, 0, 0, 0.2); }\n    header header-nav {\n      width: 100%;\n      z-index: 5;\n      display: block; }\n  ui-view {\n    position: relative;\n    top: 9.5rem; }\n  .container {\n    padding-top: 4rem; } }\n\n.wrapper {\n  padding-bottom: 5rem;\n  width: 320px;\n  margin: 0 auto; }\n  .wrapper .talent-title {\n    width: 100%;\n    height: auto;\n    padding: 2rem 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n    .wrapper .talent-title h2 {\n      font-style: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n      font-size: 2rem;\n      border-bottom: 1px solid #000;\n      margin-bottom: 1rem; }\n  .wrapper .masonry {\n    width: 100%;\n    margin: 0 auto; }\n    .wrapper .masonry .gutter-sizer {\n      width: 0; }\n    .wrapper .masonry .masonry-brick {\n      width: 100%;\n      margin-bottom: 0;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        display: none; }\n      .wrapper .masonry .masonry-brick img {\n        width: 100%; }\n\n.overlay {\n  color: black;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  padding: 3%;\n  background-color: #ffffff;\n  z-index: 100;\n  overflow: hidden; }\n  .overlay img {\n    max-width: 80vw;\n    max-height: 90vh; }\n\n.fade {\n  position: fixed;\n  left: 0%;\n  top: 0%;\n  background-color: black;\n  opacity: .90;\n  width: 100%;\n  height: 100%;\n  z-index: 99; }\n  .fade p {\n    font-size: 4rem;\n    position: fixed;\n    top: 3rem;\n    right: 3rem;\n    color: #999;\n    cursor: pointer;\n    -webkit-transition: color 0.2s ease;\n    transition: color 0.2s ease; }\n    .fade p:hover {\n      color: #fff; }\n\n@media (min-width: 320px) {\n  .wrapper {\n    width: 100%; } }\n\n@media (min-width: 415px) {\n  .wrapper .masonry .masonry-brick {\n    width: 50%; } }\n\n@media (min-width: 768px) {\n  .wrapper {\n    width: 98%; }\n    .wrapper .talent-title {\n      height: 8rem; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 24%;\n      margin-bottom: 1%; }\n      .wrapper .masonry .masonry-brick .photo-description {\n        -webkit-transition: display 0.5s ease;\n        transition: display 0.5s ease;\n        display: none; }\n      .wrapper .masonry .masonry-brick img {\n        -webkit-transition: opacity 0.5s ease;\n        transition: opacity 0.5s ease;\n        width: 100%; }\n      .wrapper .masonry .masonry-brick:hover .photo-description {\n        width: 100%;\n        height: 100%;\n        font: Helvetica, sans-serif;\n        font-weight: 600;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        position: absolute;\n        color: black; }\n        .wrapper .masonry .masonry-brick:hover .photo-description-sub {\n          font-size: 0.8rem; }\n      .wrapper .masonry .masonry-brick:hover img {\n        opacity: 0.3; }\n      .wrapper .masonry .masonry-brick:active img {\n        -webkit-transition: opacity 0.2s ease;\n        transition: opacity 0.2s ease;\n        opacity: 0.6; }\n  .overlay {\n    padding: 25px; } }\n\n@media (min-width: 1441px) {\n  .wrapper {\n    width: 98%;\n    max-width: 2000px; }\n    .wrapper .masonry .gutter-sizer {\n      width: 1%; }\n    .wrapper .masonry .masonry-brick {\n      width: 19%;\n      margin-bottom: 1%; } }\n\n.headernav {\n  width: auto;\n  height: 3.5rem;\n  background-color: white;\n  margin: 0 auto;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2); }\n  .headernav .item-container {\n    width: auto;\n    height: 3.5rem;\n    background-color: white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    z-index: 5;\n    position: relative; }\n    .headernav .item-container p {\n      margin-right: 2rem;\n      font-size: 1.2rem; }\n    .headernav .item-container .menuitem {\n      cursor: pointer; }\n    .headernav .item-container .talentlist {\n      width: 100%;\n      height: 15rem;\n      background-color: rgba(237, 237, 237, 0.95);\n      padding: 2rem 0;\n      display: none;\n      position: fixed;\n      top: 9.5rem;\n      left: 0;\n      z-index: -100; }\n      .headernav .item-container .talentlist .talentlist-container {\n        width: 80%;\n        max-width: 80rem;\n        margin: 0 auto;\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: start;\n            -ms-flex-pack: start;\n                justify-content: flex-start;\n        -webkit-box-align: start;\n            -ms-flex-align: start;\n                align-items: flex-start;\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap; }\n        .headernav .item-container .talentlist .talentlist-container .talent-container {\n          width: 25%; }\n          .headernav .item-container .talentlist .talentlist-container .talent-container p {\n            cursor: pointer;\n            padding-left: 1rem; }\n            .headernav .item-container .talentlist .talentlist-container .talent-container p:hover {\n              background-color: #a1a1a1;\n              color: #ededed; }\n    .headernav .item-container #lastMenuItem {\n      margin-right: 0; }\n\n.hamburger {\n  width: 4rem;\n  height: 4rem;\n  background-color: white;\n  position: fixed;\n  top: 1rem;\n  right: 1rem;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2); }\n  .hamburger p {\n    font-size: 3rem;\n    cursor: pointer; }\n\n.sidenav {\n  width: 250px;\n  height: 100vh;\n  padding: 3rem;\n  position: fixed;\n  top: 0;\n  left: -50rem;\n  z-index: 5;\n  box-shadow: 0.1rem 0 0.3rem rgba(0, 0, 0, 0.2);\n  background-color: #eee;\n  overflow-y: scroll; }\n  .sidenav::-webkit-scrollbar {\n    width: 0.4rem;\n    background: transparent; }\n  .sidenav::-webkit-scrollbar-thumb {\n    background: rgba(0, 0, 0, 0.2);\n    border-radius: 0.2rem; }\n  .sidenav .menuitem {\n    margin-bottom: 2rem;\n    font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n    font-size: 1.8rem;\n    letter-spacing: 0.2rem; }\n    .sidenav .menuitem p {\n      cursor: pointer; }\n      .sidenav .menuitem p:hover {\n        color: rgba(0, 0, 0, 0.5); }\n      .sidenav .menuitem p:active {\n        color: white; }\n    .sidenav .menuitem .sub-menu {\n      padding: 3rem 0 0.8rem 2rem; }\n      .sidenav .menuitem .sub-menuitem {\n        margin-bottom: 2rem;\n        font-family: \"Source Sans Pro\", Helvetica, Arial, sans-serif;\n        font-size: 1.8rem; }\n    .sidenav .menuitem .social-container {\n      width: 100%;\n      height: 4rem;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: start;\n          -ms-flex-pack: start;\n              justify-content: flex-start;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center; }\n      .sidenav .menuitem .social-container .social-icon {\n        width: 3rem;\n        height: 3rem;\n        margin-right: 1rem; }\n\n@media (min-width: 375px) {\n  .sidenav {\n    width: 30rem; } }\n\n@media (min-width: 769px) {\n  .hamburger {\n    display: none; }\n  .sidenav {\n    display: none; } }\n\n.wrapper .about-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .about-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .about-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .about-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .about-container {\n    width: 80rem; } }\n\n.wrapper .contact-container {\n  padding: 5rem 0 0;\n  margin: 0 auto; }\n  .wrapper .contact-container h6 {\n    line-height: 1.8rem; }\n  .wrapper .contact-container p {\n    font-weight: 300; }\n\n@media (min-width: 769px) {\n  .contact-container {\n    width: 80%; } }\n\n@media (min-width: 1025px) {\n  .contact-container {\n    width: 60%; } }\n\n@media (min-width: 1441px) {\n  .contact-container {\n    width: 80rem; } }\n", ""]);
 	
 	// exports
 
@@ -5060,29 +5060,13 @@
 	
 	var _homeTmpl2 = _interopRequireDefault(_homeTmpl);
 	
-	var _talentTmpl = __webpack_require__(/*! ./views/talent/talent-tmpl.html */ 8);
-	
-	var _talentTmpl2 = _interopRequireDefault(_talentTmpl);
-	
-	var _aboutTmpl = __webpack_require__(/*! ./views/about/about-tmpl.html */ 9);
+	var _aboutTmpl = __webpack_require__(/*! ./views/about/about-tmpl.html */ 8);
 	
 	var _aboutTmpl2 = _interopRequireDefault(_aboutTmpl);
 	
-	var _contactTmpl = __webpack_require__(/*! ./views/contact/contact-tmpl.html */ 10);
+	var _contactTmpl = __webpack_require__(/*! ./views/contact/contact-tmpl.html */ 9);
 	
 	var _contactTmpl2 = _interopRequireDefault(_contactTmpl);
-	
-	var _loginTmpl = __webpack_require__(/*! ./views/admin/login/login-tmpl.html */ 11);
-	
-	var _loginTmpl2 = _interopRequireDefault(_loginTmpl);
-	
-	var _dashboardTmpl = __webpack_require__(/*! ./views/admin/dashboard/dashboard-tmpl.html */ 12);
-	
-	var _dashboardTmpl2 = _interopRequireDefault(_dashboardTmpl);
-	
-	var _uploadTmpl = __webpack_require__(/*! ./views/upload/upload-tmpl.html */ 13);
-	
-	var _uploadTmpl2 = _interopRequireDefault(_uploadTmpl);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -5093,49 +5077,24 @@
 		// https://docs.angularjs.org/guide/production
 		$compileProvider.debugInfoEnabled(false);
 	
-		$urlRouterProvider.otherwise('/');
-	
 		$stateProvider.state('home', {
 			url: '/',
 			template: _homeTmpl2.default,
 			controller: 'HomeController',
 			controllerAs: 'homeCtrl'
-		}).state('talent', {
-			url: '/:category/:talentid/:talentname',
-			template: _talentTmpl2.default,
-			controller: 'TalentController',
-			controllerAs: 'talentCtrl',
-			resolve: {
-				talentPhotos: function talentPhotos($stateParams, talentService) {
-					return talentService.getTalentPhotos($stateParams.talentid);
-				}
-			}
 		}).state('about', {
 			url: '/about',
-			template: _aboutTmpl2.default
+			template: _aboutTmpl2.default,
+			controller: 'AboutController',
+			controllerAs: 'aboutCtrl'
 		}).state('contact', {
 			url: '/contact',
-			template: _contactTmpl2.default
-		}).state('upload', {
-			url: '/secretplacewhereicanuploadimages',
-			template: _uploadTmpl2.default,
-			controller: 'UploadController',
-			controllerAs: 'uploadCtrl',
-			resolve: {
-				allTalent: function allTalent(talentService) {
-					return talentService.getAllTalent();
-				}
-			}
-		})
-	
-		// ADMIN STATES
-		.state('adminLogin', {
-			url: '/admin/login',
-			template: _loginTmpl2.default
-		}).state('adminDashboard', {
-			url: '/admin/dashboard',
-			template: _dashboardTmpl2.default
+			template: _contactTmpl2.default,
+			controller: 'ContactController',
+			controllerAs: 'contactCtrl'
 		});
+	
+		$urlRouterProvider.otherwise('/');
 	}
 
 /***/ },
@@ -5145,64 +5104,28 @@
   \***************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\n\t<div class=\"talent-title\">\n\n\t</div>\n\n\t<div class=\"masonry\" data-masonry=\"{ 'gutter': '.gutter-sizer', 'percentPosition': true }\">\n\t\t<div class=\"gutter-sizer\"></div>\n    <div masonry-brick class=\"masonry-brick\" ng-repeat=\"brick in homeCtrl.bricks\">\n\t\t\t<div class=\"photo-description\">\n\t\t\t\t<p>{{ brick.talent.name }}</p>\n\t\t\t\t<p class=\"photo-description-sub\">{{ brick.talent.department[ 0 ] }}</p>\n\t\t\t</div>\n      <img ng-src=\"{{ brick.amazonS3.small_image.Location }}\" ui-sref=\"talent( { category: brick.talent.department[ 0 ], talentid: brick.talent._id, talentname: brick.talent.name } )\" alt=\"\" />\n    </div>\n\t</div>\n\n</div>\n";
+	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\n\t<div class=\"talent-title\">\n\n\t</div>\n\n\t<div class=\"masonry\" data-masonry=\"{ 'gutter': '.gutter-sizer', 'percentPosition': true }\">\n\t\t<div class=\"gutter-sizer\"></div>\n    <div masonry-brick class=\"masonry-brick\" ng-repeat=\"brick in homeCtrl.bricks\">\n\t\t\t<div class=\"photo-description\">\n\t\t\t\t<p>{{ brick.fields.talent.fields.name }}</p>\n\t\t\t\t<p class=\"photo-description-sub\">{{ brick.fields.talent.fields.department[ 0 ] }}</p>\n\t\t\t</div>\n      <img\n\t\t\t\tng-src=\"{{ 'https:' + brick.fields.image.fields.file.url + '?w=450' }}\"\n\t\t\t\tui-sref=\"talent( { category: brick.fields.talent.fields.department[ 0 ], talentid: brick.fields.talent.sys.id, talentname: brick.fields.talent.fields.name } )\"\n\t\t\t\talt=\"{{ brick.fields.image.fields.description }}\"\n\t\t\t/>\n    </div>\n\t</div>\n\n</div>\n";
 
 /***/ },
 /* 8 */
-/*!*******************************************!*\
-  !*** ./src/views/talent/talent-tmpl.html ***!
-  \*******************************************/
-/***/ function(module, exports) {
-
-	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\n\t<div class=\"talent-title\">\n\t\t<h2>{{ talentCtrl.talent.name }}</h2>\n\t\t<p>{{ talentCtrl.talent.dept }}</p>\n\t</div>\n\n\t<div class=\"masonry\" data-masonry=\"{ 'gutter': '.gutter-sizer', 'percentPosition': true }\">\n\t\t<div class=\"gutter-sizer\"></div>\n    <div masonry-brick class=\"masonry-brick\" ng-repeat=\"photo in talentCtrl.bricks\" ng-click=\"talentCtrl.showModalOfPhoto( photo )\">\n\t\t\t<p class=\"photo-description\">{{ photo.title }}</p>\n      <img ng-src=\"{{ photo.amazonS3.small_image.Location }}\" alt=\"\"/>\n    </div>\n\t</div>\n\n</div>\n<div class=\"fade\" ng-if=\"talentCtrl.selectedPhoto\" ng-click=\"talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto\">\n\t<p>✕</p>\n</div>\n<div class=\"overlay\" ng-if=\"talentCtrl.selectedPhoto\">\n\t<img ng-src=\"{{ talentCtrl.selectedPhoto.amazonS3.large_image.Location }}\" alt=\"\" ng-click=\"talentCtrl.selectedPhoto = !talentCtrl.selectedPhoto\">\n</div>\n";
-
-/***/ },
-/* 9 */
 /*!*****************************************!*\
   !*** ./src/views/about/about-tmpl.html ***!
   \*****************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"wrapper\">\n  <div class=\"about-container\">\n    <p>Started from the desire to cultivate fresh new expression to a seemingly old world industry. PULP stands as a pillar of creativity and innovation. Representing the renegades and experimentalists and the pioneers of the industry. PULP is proud of its roster of individualists and revolutionaries. Standing with endless talent and highest quality of vision.</p>\n  </div>\n</section>\n";
+	module.exports = "<section class=\"wrapper\">\n  <div class=\"about-container\">\n    <p>{{ aboutCtrl.text }}</p>\n  </div>\n</section>\n";
 
 /***/ },
-/* 10 */
+/* 9 */
 /*!*********************************************!*\
   !*** ./src/views/contact/contact-tmpl.html ***!
   \*********************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<section class=\"wrapper\">\n  <div class=\"contact-container\">\n    <h6>LOS ANGELES</h6>\n    <p>PULP TALENT AGENCY</p>\n    <p>CONTINENTAL, 842 S. BROADWAY</p>\n    <p>LOS ANGELES, CA 90014</p>\n    <p>+1 (888) 888 8888</p>\n  </div>\n\n</section>\n";
+	module.exports = "<section class=\"wrapper\">\n  <div class=\"contact-container\">\n    <h6>{{ contactCtrl.contactinfo.locationName }}</h6>\n    <p>{{ contactCtrl.contactinfo.addressLine1 }}</p>\n    <p>{{ contactCtrl.contactinfo.addressLine2 }}</p>\n    <p>{{ contactCtrl.contactinfo.addressLine3 }}</p>\n    <p>{{ contactCtrl.contactinfo.phoneNumber }}</p>\n  </div>\n\n</section>\n";
 
 /***/ },
-/* 11 */
-/*!***********************************************!*\
-  !*** ./src/views/admin/login/login-tmpl.html ***!
-  \***********************************************/
-/***/ function(module, exports) {
-
-	module.exports = "<!DOCTYPE html>\n<div class=\"wrapper\">\n\t\n\t<div class=\"login-container\">\n\t\t<h1>LOGIN</h1>\n\t\t<button type=\"button\" name=\"button\"></button>\n\t</div>\n\n</div>\n";
-
-/***/ },
-/* 12 */
-/*!*******************************************************!*\
-  !*** ./src/views/admin/dashboard/dashboard-tmpl.html ***!
-  \*******************************************************/
-/***/ function(module, exports) {
-
-	module.exports = "<!DOCTYPE html>\n<h1>DASHBOARD</h1>\n";
-
-/***/ },
-/* 13 */
-/*!*******************************************!*\
-  !*** ./src/views/upload/upload-tmpl.html ***!
-  \*******************************************/
-/***/ function(module, exports) {
-
-	module.exports = "<!DOCTYPE html>\n\n<div class=\"wrapper\">\n\t<div class=\"button-container\">\n\t\t<div class=\"choose-photo\">\n\t\t\t<!-- http://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ -->\n\t\t\t<input type=\"file\" images=\"images\" accept=\"image/*\" name=\"file\" id=\"file\" class=\"inputfile\" />\n\t\t\t<label for=\"file\">Choose a photo</label>\n\t\t</div>\n\t\t<div class=\"select-talent\">\n\t\t\t<select name=\"talentSelect\" ng-model=\"uploadCtrl.talentIndex\">\n\t\t\t\t<option ng-repeat=\"talent in uploadCtrl.talents track by $index\" ng-value=\"$index\">{{ talent.name }}</option>\n\t\t\t</select>\n\t\t</div>\n\t\t<div class=\"project-title\">\n\t\t\t<input type=\"text\" ng-model=\"uploadCtrl.projectTitle\">\n\t\t</div>\n\t\t<div class=\"upload-photo\">\n\t\t\t<button ng-click=\"uploadCtrl.uploadPhoto( uploadCtrl.file, uploadCtrl.talents[ uploadCtrl.talentIndex ], uploadCtrl.projectTitle )\">Upload photo</button>\n\t\t</div>\n\t</div>\n\t<div class=\"preview\" >\n\t\t<img class=\"preview-image\" src=\"xxxHTMLLINKxxx0.84500072019919030.05943062288611212xxx\" alt=\"\">\n\t</div>\n</div>\n";
-
-/***/ },
-/* 14 */
+/* 10 */
 /*!***********************!*\
   !*** ./src/apprun.js ***!
   \***********************/
@@ -5215,7 +5138,7 @@
 	});
 	exports.default = run;
 	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
+	var _jquery = __webpack_require__(/*! jquery */ 11);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -5235,7 +5158,7 @@
 	}
 
 /***/ },
-/* 15 */
+/* 11 */
 /*!*********************************!*\
   !*** ./~/jquery/dist/jquery.js ***!
   \*********************************/
@@ -15464,7 +15387,7 @@
 
 
 /***/ },
-/* 16 */
+/* 12 */
 /*!****************************************!*\
   !*** ./src/services/servicesModule.js ***!
   \****************************************/
@@ -15476,21 +15399,21 @@
 		value: true
 	});
 	
-	var _talentService = __webpack_require__(/*! ./talentService/talentService.js */ 17);
-	
-	var _talentService2 = _interopRequireDefault(_talentService);
-	
-	var _navService = __webpack_require__(/*! ./navService/navService.js */ 18);
+	var _navService = __webpack_require__(/*! ./navService/navService.js */ 13);
 	
 	var _navService2 = _interopRequireDefault(_navService);
 	
-	var _photoService = __webpack_require__(/*! ./photoService/photoService.js */ 19);
+	var _photoService = __webpack_require__(/*! ./photoService/photoService.js */ 14);
 	
 	var _photoService2 = _interopRequireDefault(_photoService);
 	
+	var _dataService = __webpack_require__(/*! ./dataService/dataService.js */ 15);
+	
+	var _dataService2 = _interopRequireDefault(_dataService);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = angular.module('PulpServices', []).config(config).factory('talentService', _talentService2.default).factory('navService', _navService2.default).factory('photoService', _photoService2.default);
+	exports.default = angular.module('PulpServices', []).config(config).factory('navService', _navService2.default).factory('photoService', _photoService2.default).factory('dataService', _dataService2.default);
 	
 	
 	config.$inject = ['$compileProvider'];
@@ -15506,133 +15429,7 @@
 	}
 
 /***/ },
-/* 17 */
-/*!*****************************************************!*\
-  !*** ./src/services/talentService/talentService.js ***!
-  \*****************************************************/
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	talentService.$inject = ['$q', '$http'];
-	
-	function talentService($q, $http) {
-	
-		var allTalent = void 0;
-		var menuItems = void 0;
-	
-		return {
-			getMenuItems: getMenuItems,
-			getAllTalent: getAllTalent,
-			getTalentPhotos: getTalentPhotos
-		};
-	
-		/**************************************************************************\
-	 	All general logic goes above this comment.
-	 	All detailed logic(function definitions) goes below this comment.
-	 \**************************************************************************/
-	
-		function getMenuItems() {
-			if (!menuItems) {
-				return $http.get('/api/talent').then(function (talent) {
-					allTalent = talent.data.items;
-					var menuItems = formatDataForMenu(allTalent);
-					menuItems.forEach(function (val, index, array) {
-						val.talent.forEach(function (v, i, a) {
-							v.uppercase_name = v.name.toUpperCase();
-							v.url_name = v.name.split(' ').join('_');
-						});
-					});
-					return menuItems;
-				});
-			} else {
-				return $q.when(menuItems);
-			}
-		}
-	
-		function getAllTalent() {
-			if (!allTalent) {
-				return $http.get('/api/talent').then(function (talentResponse) {
-					allTalent = talentResponse.data;
-					return allTalent;
-				});
-			} else {
-				return $q.when(allTalent);
-			}
-		}
-	
-		function getTalentPhotos(talentId) {
-			if (!allTalent) {
-				return getAllTalent().then(function (talents) {
-					return findTalentAndReturnPhotos(talentId, talents.items);
-				});
-			} else {
-				return $q.when(findTalentAndReturnPhotos(talentId, allTalent.items));
-			}
-		}
-	
-		/**************************************************************************\
-	 	# Helper functions
-	 \**************************************************************************/
-	
-		function formatDataForMenu(talentData) {
-			var menuItems = [];
-			for (var i = 0; i < talentData.length; i++) {
-				if (talentData[i].fields.department.length === 1) {
-					var yup = deptExists(talentData[i].fields.department[0], 'title', menuItems);
-					pushTalentToMenu(yup, menuItems, talentData, i);
-				} else {
-					// handle talent with multiple departments
-				}
-			}
-			return menuItems;
-		}
-	
-		function deptExists(dept, prop, list) {
-			var i;
-			for (i = 0; i < list.length; i++) {
-				if (list[i][prop] === dept) {
-					return [true, i];
-				}
-			}
-			return [false];
-		}
-	
-		function pushTalentToMenu(arr, list, talent, index) {
-			if (arr[0]) {
-				list[arr[1]].talent.push({
-					name: talent[index].fields.name,
-					id: talent[index].sys.id
-				});
-			} else {
-				list.push({
-					open: false,
-					title: talent[index].fields.department[0],
-					talent: [{
-						name: talent[index].fields.name,
-						id: talent[index].sys.id
-					}]
-				});
-			}
-		}
-	
-		function findTalentAndReturnPhotos(talentId, allTalent) {
-			for (var i = 0; i < allTalent.length; i++) {
-				if (allTalent[i].sys.id === talentId) {
-					console.log(allTalent[i]);
-					return allTalent[i].photos;
-				}
-			}
-		}
-	}
-	
-	exports.default = talentService;
-
-/***/ },
-/* 18 */
+/* 13 */
 /*!***********************************************!*\
   !*** ./src/services/navService/navService.js ***!
   \***********************************************/
@@ -15644,7 +15441,7 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
+	var _jquery = __webpack_require__(/*! jquery */ 11);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
@@ -15655,10 +15452,7 @@
 	function navService() {
 	
 		return {
-			toggleSideNav: toggleSideNav,
-			closeOthers: closeOthers,
-			showTalentList: showTalentList,
-			hideTalentList: hideTalentList
+			toggleSideNav: toggleSideNav
 		};
 	
 		/****************************************************************************\
@@ -15676,23 +15470,6 @@
 				document.getElementById('hamburger-symbol').innerHTML = '✕';
 				moveAnimation($sideNav, 'left', -50, 0, 'rem');
 			}
-			closeOthers(menuItems);
-		}
-	
-		function closeOthers(menuItems) {
-			for (var i = 0; i < menuItems.length; i++) {
-				if (menuItems[i].open) {
-					menuItems[i].open = false;
-				}
-			}
-		}
-	
-		function showTalentList(index, event) {
-			(0, _jquery2.default)('#talentlist' + index).slideDown();
-		}
-	
-		function hideTalentList(index, event) {
-			(0, _jquery2.default)('#talentlist' + index).slideUp();
 		}
 	
 		/**************************************************************************\
@@ -15726,7 +15503,7 @@
 	exports.default = navService;
 
 /***/ },
-/* 19 */
+/* 14 */
 /*!***************************************************!*\
   !*** ./src/services/photoService/photoService.js ***!
   \***************************************************/
@@ -15775,7 +15552,6 @@
 	 \**************************************************************************/
 	
 		function formatTalentName(photos) {
-			console.log(photos);
 			photos.forEach(function (val, idx, arr) {
 				val.fields.talent.fields.name = val.fields.talent.fields.name.split(' ').join('_');
 			});
@@ -15786,7 +15562,56 @@
 	exports.default = photoService;
 
 /***/ },
-/* 20 */
+/* 15 */
+/*!*************************************************!*\
+  !*** ./src/services/dataService/dataService.js ***!
+  \*************************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	dataService.$inject = ['$http'];
+	
+	function dataService($http) {
+	
+		return {
+			getAboutText: getAboutText,
+			getContactInfo: getContactInfo
+		};
+	
+		/****************************************************************************\
+	 	All general logic goes above this comment.
+	 	All detailed logic(function definitions) goes below this comment.
+	 \****************************************************************************/
+	
+		function getAboutText() {
+	
+			return $http.get('/api/companyinfo/about').then(function (about) {
+				return about.data;
+			});
+		}
+	
+		function getContactInfo() {
+	
+			return $http.get('/api/companyinfo/contact').then(function (contact) {
+				return contact.data.fields;
+			});
+		}
+	
+		/**************************************************************************\
+	 	# Helper functions
+	 \**************************************************************************/
+	
+		// Code here
+	}
+	
+	exports.default = dataService;
+
+/***/ },
+/* 16 */
 /*!********************************************!*\
   !*** ./src/components/componentsModule.js ***!
   \********************************************/
@@ -15798,11 +15623,11 @@
 		value: true
 	});
 	
-	var _sidenav = __webpack_require__(/*! ./sidenav/sidenav.js */ 21);
+	var _sidenav = __webpack_require__(/*! ./sidenav/sidenav.js */ 17);
 	
 	var _sidenav2 = _interopRequireDefault(_sidenav);
 	
-	var _headernav = __webpack_require__(/*! ./headernav/headernav.js */ 26);
+	var _headernav = __webpack_require__(/*! ./headernav/headernav.js */ 22);
 	
 	var _headernav2 = _interopRequireDefault(_headernav);
 	
@@ -15824,7 +15649,7 @@
 	}
 
 /***/ },
-/* 21 */
+/* 17 */
 /*!*******************************************!*\
   !*** ./src/components/sidenav/sidenav.js ***!
   \*******************************************/
@@ -15836,17 +15661,17 @@
 		value: true
 	});
 	
-	var _sidenavTmpl = __webpack_require__(/*! ./sidenav-tmpl.html */ 22);
+	var _sidenavTmpl = __webpack_require__(/*! ./sidenav-tmpl.html */ 18);
 	
 	var _sidenavTmpl2 = _interopRequireDefault(_sidenavTmpl);
 	
-	var _sidenavCtrl = __webpack_require__(/*! ./sidenav-ctrl.js */ 23);
+	var _sidenavCtrl = __webpack_require__(/*! ./sidenav-ctrl.js */ 19);
 	
 	var _sidenavCtrl2 = _interopRequireDefault(_sidenavCtrl);
 	
-	__webpack_require__(/*! ./assets/icons/Facebook_Solid.svg */ 24);
+	__webpack_require__(/*! ./assets/icons/Facebook_Solid.svg */ 20);
 	
-	__webpack_require__(/*! ./assets/icons/Instagram_Solid.svg */ 25);
+	__webpack_require__(/*! ./assets/icons/Instagram_Solid.svg */ 21);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -15860,16 +15685,16 @@
 	exports.default = sideNavOptions;
 
 /***/ },
-/* 22 */
+/* 18 */
 /*!**************************************************!*\
   !*** ./src/components/sidenav/sidenav-tmpl.html ***!
   \**************************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<div class=\"hamburger\" ng-click=\"snCtrl.toggleSideNav( snCtrl.menuItems )\">\n\t<p id=\"hamburger-symbol\">☰</p>\n</div>\n<nav class=\"sidenav\">\n\t<ul>\n\t\t<li class=\"menuitem\" ng-repeat=\"menuItem in snCtrl.menuItems\">\n\t\t\t<p ng-click=\"snCtrl.closeOthers( snCtrl.menuItems ); menuItem.open = !menuItem.open\">{{ menuItem.title }}</p>\n\t\t\t<ul class=\"sub-menu\" ng-show=\"menuItem.open\">\n\t\t\t\t<li class=\"sub-menuitem\" ng-repeat=\"talent in menuItem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuItem.title.toLowerCase(), talentid: talent.id, talentname: talent.url_name } )\">{{ talent.uppercase_name }}</p>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"about\">\n\t\t\t<p>ABOUT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"contact\">\n\t\t\t<p>CONTACT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\">\n\t\t\t<div class=\"social-container\">\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://facebook.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Facebook_Solid.svg\" alt=\"Facebook\"></a>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://instagram.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Instagram_Solid.svg\" alt=\"Instagram\"></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</li>\n\t</ul>\n</nav>\n";
+	module.exports = "<!DOCTYPE html>\n<div class=\"hamburger\" ng-click=\"snCtrl.toggleSideNav( snCtrl.menuItems )\">\n\t<p id=\"hamburger-symbol\">☰</p>\n</div>\n<nav class=\"sidenav\">\n\t<ul>\n\t\t<li class=\"menuitem\" ui-sref=\"home\">\n\t\t\t<p>PORTFOLIO</p>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"about\">\n\t\t\t<p>ABOUT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\" ui-sref=\"contact\">\n\t\t\t<p>CONTACT</p>\n\t\t</li>\n\t\t<li class=\"menuitem\">\n\t\t\t<div class=\"social-container\">\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://facebook.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Facebook_Solid.svg\" alt=\"Facebook\"></a>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"social-icon\">\n\t\t\t\t\t<a href=\"https://instagram.com\" target=\"_blank\"><img src=\"/bundle/assets/icons/Instagram_Solid.svg\" alt=\"Instagram\"></a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</li>\n\t</ul>\n</nav>\n";
 
 /***/ },
-/* 23 */
+/* 19 */
 /*!************************************************!*\
   !*** ./src/components/sidenav/sidenav-ctrl.js ***!
   \************************************************/
@@ -15881,15 +15706,16 @@
 		value: true
 	});
 	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
+	var _jquery = __webpack_require__(/*! jquery */ 11);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	sideNavCtrl.$inject = ['$rootScope', 'talentService', 'navService'];
+	sideNavCtrl.$inject = ['$rootScope', 'navService'];
 	
-	function sideNavCtrl($rootScope, talentService, navService) {
+	function sideNavCtrl($rootScope, navService) {
+	
 		var vm = this;
 	
 		$rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
@@ -15898,19 +15724,12 @@
 				navService.toggleSideNav(vm.menuItems);
 			}
 		});
-	
-		talentService.getMenuItems().then(function (menuItems) {
-			vm.menuItems = menuItems;
-		});
-	
-		vm.toggleSideNav = navService.toggleSideNav;
-		vm.closeOthers = navService.closeOthers;
 	}
 	
 	exports.default = sideNavCtrl;
 
 /***/ },
-/* 24 */
+/* 20 */
 /*!****************************************************************!*\
   !*** ./src/components/sidenav/assets/icons/Facebook_Solid.svg ***!
   \****************************************************************/
@@ -15919,7 +15738,7 @@
 	module.exports = __webpack_require__.p + "assets/icons/Facebook_Solid.svg";
 
 /***/ },
-/* 25 */
+/* 21 */
 /*!*****************************************************************!*\
   !*** ./src/components/sidenav/assets/icons/Instagram_Solid.svg ***!
   \*****************************************************************/
@@ -15928,7 +15747,7 @@
 	module.exports = __webpack_require__.p + "assets/icons/Instagram_Solid.svg";
 
 /***/ },
-/* 26 */
+/* 22 */
 /*!***********************************************!*\
   !*** ./src/components/headernav/headernav.js ***!
   \***********************************************/
@@ -15940,11 +15759,11 @@
 		value: true
 	});
 	
-	var _headernavTmpl = __webpack_require__(/*! ./headernav-tmpl.html */ 27);
+	var _headernavTmpl = __webpack_require__(/*! ./headernav-tmpl.html */ 23);
 	
 	var _headernavTmpl2 = _interopRequireDefault(_headernavTmpl);
 	
-	var _headernavCtrl = __webpack_require__(/*! ./headernav-ctrl.js */ 28);
+	var _headernavCtrl = __webpack_require__(/*! ./headernav-ctrl.js */ 24);
 	
 	var _headernavCtrl2 = _interopRequireDefault(_headernavCtrl);
 	
@@ -15959,16 +15778,16 @@
 	exports.default = headerNavOptions;
 
 /***/ },
-/* 27 */
+/* 23 */
 /*!******************************************************!*\
   !*** ./src/components/headernav/headernav-tmpl.html ***!
   \******************************************************/
 /***/ function(module, exports) {
 
-	module.exports = "<!DOCTYPE html>\n<nav class=\"headernav\">\n\n\t<div class=\"item-container\" ng-repeat=\"menuitem in hnCtrl.menuItems track by $index\" ng-click=\"hnCtrl.showTalentList( $index, $event )\" ng-mouseleave=\"hnCtrl.hideTalentList( $index, $event )\">\n\t\t<p class=\"menuitem\">{{ menuitem.title }}</p>\n\t\t<p>/</p>\n\t\t<div class=\"talentlist\" id=\"talentlist{{ $index }}\">\n\t\t\t<div class=\"talentlist-container\">\n\t\t\t\t<div class=\"talent-container\" ng-repeat=\"talent in menuitem.talent\">\n\t\t\t\t\t<p ui-sref=\"talent( { category: menuitem.title.toLowerCase(), talentid: talent.id, talentname: talent.url_name } )\">{{ talent.name }}</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" ui-sref=\"about\">ABOUT</p>\n\t\t<p>/</p>\n\t</div>\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" id=\"lastMenuItem\" ui-sref=\"contact\">CONTACT</p>\n\t</div>\n\n</nav>\n";
+	module.exports = "<!DOCTYPE html>\n<nav class=\"headernav\">\n\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" ui-sref=\"home\">PORTFOLIO</p>\n\t\t<p>/</p>\n\t</div>\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" ui-sref=\"about\">ABOUT</p>\n\t\t<p>/</p>\n\t</div>\n\t<div class=\"item-container\">\n\t\t<p class=\"menuitem\" id=\"lastMenuItem\" ui-sref=\"contact\">CONTACT</p>\n\t</div>\n\n</nav>\n";
 
 /***/ },
-/* 28 */
+/* 24 */
 /*!****************************************************!*\
   !*** ./src/components/headernav/headernav-ctrl.js ***!
   \****************************************************/
@@ -15979,23 +15798,17 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	headerNavCtrl.$inject = ['talentService', 'navService'];
+	headerNavCtrl.$inject = ['navService'];
 	
-	function headerNavCtrl(talentService, navService) {
+	function headerNavCtrl(navService) {
+	
 		var vm = this;
-	
-		talentService.getMenuItems().then(function (menuItems) {
-			vm.menuItems = menuItems;
-		});
-	
-		vm.showTalentList = navService.showTalentList;
-		vm.hideTalentList = navService.hideTalentList;
 	}
 	
 	exports.default = headerNavCtrl;
 
 /***/ },
-/* 29 */
+/* 25 */
 /*!************************************!*\
   !*** ./src/views/home/homeCtrl.js ***!
   \************************************/
@@ -16006,9 +15819,9 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	HomeController.$inject = ['$q', '$http', 'photoService'];
+	HomeController.$inject = ['$q', '$http', 'photoService', 'dataService'];
 	
-	function HomeController($q, $http, photoService) {
+	function HomeController($q, $http, photoService, dataService) {
 	
 		var vm = this;
 	
@@ -16034,10 +15847,10 @@
 	exports.default = HomeController;
 
 /***/ },
-/* 30 */
-/*!****************************************!*\
-  !*** ./src/views/talent/talentCtrl.js ***!
-  \****************************************/
+/* 26 */
+/*!**************************************!*\
+  !*** ./src/views/about/aboutCtrl.js ***!
+  \**************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16045,93 +15858,23 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	TalentController.$inject = ['$stateParams', 'talentPhotos'];
+	AboutController.$inject = ['dataService'];
 	
-	function TalentController($stateParams, talentPhotos) {
-	
-		var vm = this;
-	
-		vm.bricks = talentPhotos;
-		vm.showModalOfPhoto = showModalOfPhoto;
-	
-		vm.talent = {
-			name: $stateParams.talentname.split('_').join(' '),
-			dept: $stateParams.category
-		};
-	
-		/****************************************************************************\
-	 	All general logic goes above this comment.
-	 	All detailed logic(function definitions) goes below this comment.
-	 \****************************************************************************/
-	
-		function showModalOfPhoto(photo) {
-			vm.selectedPhoto = photo;
-		}
-	
-		/****************************************************************************\
-	 	# Helper functions
-	 \****************************************************************************/
-	
-		// Code here
-	}
-	
-	exports.default = TalentController;
-
-/***/ },
-/* 31 */
-/*!****************************************!*\
-  !*** ./src/views/upload/uploadCtrl.js ***!
-  \****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _jquery = __webpack_require__(/*! jquery */ 15);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	UploadController.$inject = ['$scope', '$state', 'photoService', 'allTalent'];
-	
-	function UploadController($scope, $state, photoService, allTalent) {
+	function AboutController(dataService) {
 	
 		var vm = this;
 	
-		vm.talents = allTalent;
-		vm.uploadPhoto = uploadPhoto;
-	
-		(0, _jquery2.default)('#file').on('change', function (changeEvent) {
-			var reader = new FileReader();
-	
-			reader.onload = function (loadEvent) {
-	
-				var file = loadEvent.target.result;
-	
-				(0, _jquery2.default)('.preview-image')[0].src = file;
-	
-				vm.file = {
-					base64: file,
-					originalFilename: changeEvent.target.files[0].name
-				};
-			};
-	
-			reader.readAsDataURL(changeEvent.target.files[0]);
-		});
+		getAboutText();
 	
 		/**************************************************************************\
 	 	All general logic goes above this comment.
 	 	All detailed logic(function definitions) goes below this comment.
 	 \**************************************************************************/
 	
-		function uploadPhoto(file, talent, projectTitle) {
-			file.projectTitle = projectTitle;
-			photoService.uploadToAWS(file, talent).then(function (response) {
-				$state.go('home');
+		function getAboutText() {
+	
+			dataService.getAboutText().then(function (aboutText) {
+				vm.text = aboutText.fields.about;
 			});
 		}
 	
@@ -16139,10 +15882,51 @@
 	 	# Helper functions
 	 \**************************************************************************/
 	
-		// CODE HERE
+		// Code here
 	}
 	
-	exports.default = UploadController;
+	exports.default = AboutController;
+
+/***/ },
+/* 27 */
+/*!******************************************!*\
+  !*** ./src/views/contact/contactCtrl.js ***!
+  \******************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	ContactController.$inject = ['dataService'];
+	
+	function ContactController(dataService) {
+	
+		var vm = this;
+	
+		getContactInfo();
+	
+		/**************************************************************************\
+	 	All general logic goes above this comment.
+	 	All detailed logic(function definitions) goes below this comment.
+	 \**************************************************************************/
+	
+		function getContactInfo() {
+	
+			dataService.getContactInfo().then(function (contactinfo) {
+				vm.contactinfo = contactinfo;
+			});
+		}
+	
+		/**************************************************************************\
+	 	# Helper functions
+	 \**************************************************************************/
+	
+		// Code here
+	}
+	
+	exports.default = ContactController;
 
 /***/ }
 /******/ ]);

@@ -4,13 +4,8 @@
 </div>
 <nav class="sidenav">
 	<ul>
-		<li class="menuitem" ng-repeat="menuItem in snCtrl.menuItems">
-			<p ng-click="snCtrl.closeOthers( snCtrl.menuItems ); menuItem.open = !menuItem.open">{{ menuItem.title }}</p>
-			<ul class="sub-menu" ng-show="menuItem.open">
-				<li class="sub-menuitem" ng-repeat="talent in menuItem.talent">
-					<p ui-sref="talent( { category: menuItem.title.toLowerCase(), talentid: talent.id, talentname: talent.url_name } )">{{ talent.uppercase_name }}</p>
-				</li>
-			</ul>
+		<li class="menuitem" ui-sref="home">
+			<p>PORTFOLIO</p>
 		</li>
 		<li class="menuitem" ui-sref="about">
 			<p>ABOUT</p>

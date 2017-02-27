@@ -15,8 +15,8 @@ import './components/componentsModule.js';
 
 // CONTROLLERS
 import HomeController from './views/home/homeCtrl.js';
-import TalentController from './views/talent/talentCtrl.js';
-import UploadController from './views/upload/uploadCtrl.js';
+import AboutController from './views/about/aboutCtrl.js';
+import ContactController from './views/contact/contactCtrl.js';
 
 angular.module( 'Pulp', [
 	uiRouter,
@@ -27,5 +27,5 @@ angular.module( 'Pulp', [
 	.config( config )
 	.run( run )
 	.controller( 'HomeController', HomeController )
-	.controller( 'TalentController', TalentController )
-	.controller( 'UploadController', UploadController );
+	.controller( 'AboutController', AboutController )
+	.controller( 'ContactController', ContactController );

@@ -1,13 +1,11 @@
 const talentRoutes = require( './features/talent/talentRoutes.js' );
-const userRoutes = require( './features/user/userRoutes.js' );
 const photoRoutes = require( './features/photo/photoRoutes.js' );
+const companyinfoRoutes = require( './features/companyinfo/companyinfoRoutes.js' );
 
 module.exports = function( app ) {
 
 	talentRoutes( app );
-
-	userRoutes( app );
-
 	photoRoutes( app );
+	companyinfoRoutes( app );
 
 }
